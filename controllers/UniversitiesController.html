@@ -1,0 +1,960 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@edu4u/backend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@edu4u/backend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content controller">
+                   <div class="content-data">
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Controllers</li>
+  <li>UniversitiesController</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/universities/universities.controller.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Prefix</h3>
+            </p>
+            <p class="comment">
+                <code>universities</code>
+            </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Universities Controller</p>
+
+            </p>
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#addNode">addNode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteNode">deleteNode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#editNode">editNode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getNode">getNode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getNodes">getNodes</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getNodesPatentID">getNodesPatentID</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getTree">getTree</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addNode"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            addNode
+                        </b>
+                        <a href="#addNode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addNode(res, createNodeDTO: <a href="../interfaces/Node.html">CreateNodeDTO</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Post(&#x27;/add&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="94"
+                            class="link-to-prism">src/universities/universities.controller.ts:94</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Submit a node</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>createNodeDTO</td>
+                                    <td>
+                                                <code><a href="../interfaces/Node.html" target="_self" >CreateNodeDTO</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteNode"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            deleteNode
+                        </b>
+                        <a href="#deleteNode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteNode(res, id)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Delete(&#x27;/delete&#x27;)<br />@ApiQuery({name: &#x27;id&#x27;, type: String})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="138"
+                            class="link-to-prism">src/universities/universities.controller.ts:138</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Delete a node using id</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editNode"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            editNode
+                        </b>
+                        <a href="#editNode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>editNode(res, id, createNodeDTO: <a href="../interfaces/Node.html">CreateNodeDTO</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Put(&#x27;/edit&#x27;)<br />@ApiQuery({name: &#x27;id&#x27;, type: String})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="113"
+                            class="link-to-prism">src/universities/universities.controller.ts:113</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Edit a node</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>createNodeDTO</td>
+                                    <td>
+                                                <code><a href="../interfaces/Node.html" target="_self" >CreateNodeDTO</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getNode"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            getNode
+                        </b>
+                        <a href="#getNode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getNode(res, id)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;:id&#x27;)<br />@ApiOkResponse({description: &#x27;The node has been successfully returned.&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiParam({name: &#x27;id&#x27;, type: String})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">src/universities/universities.controller.ts:63</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fetch a particular node using id</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getNodes"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            getNodes
+                        </b>
+                        <a href="#getNodes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getNodes(res)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;/universities&#x27;)<br />@ApiOkResponse({description: &#x27;The universities list has been successfully returned.&#x27;})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">src/universities/universities.controller.ts:45</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fetch all universities</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getNodesPatentID"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            getNodesPatentID
+                        </b>
+                        <a href="#getNodesPatentID"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getNodesPatentID(res, id)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;nodes/:id&#x27;)<br />@ApiOkResponse({description: &#x27;The nodes has been successfully returned by parent id&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiParam({name: &#x27;id&#x27;, type: String})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="80"
+                            class="link-to-prism">src/universities/universities.controller.ts:80</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fetch nodes using patent ID</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTree"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            getTree
+                        </b>
+                        <a href="#getTree"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getTree(res)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;/tree&#x27;)<br />@ApiOkResponse({description: &#x27;The tree of universities list has been successfully returned.&#x27;})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/universities/universities.controller.ts:31</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fetch all tree of universities</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, UseGuards, Get, Res, Param, Post, Body, Put, Query, Delete, NotFoundException, HttpStatus } from &#x27;@nestjs/common&#x27;;
+import { JwtAuthGuard } from &#x27;src/auth/jwt-auth.guard&#x27;;
+import { ApiTags, ApiBearerAuth, ApiUnauthorizedResponse, ApiOkResponse, ApiForbiddenResponse, ApiNotFoundResponse, ApiBadRequestResponse, ApiParam, ApiQuery } from &#x27;@nestjs/swagger&#x27;;
+import { ObjectID } from &#x27;mongodb&#x27;;
+import { ValidateObjectId } from &#x27;src/pipes/validate-object-id.pipes&#x27;;
+import { UniversitiesService } from &#x27;./universities.service&#x27;;
+import { CreateNodeDTO } from &#x27;./dto/create-node.dto&#x27;;
+import {UsersService} from &#x27;../users/users.service&#x27;;
+import {UsersModule} from &#x27;../users/users.module&#x27;;
+
+/**
+ * Universities Controller
+ */
+@UseGuards(JwtAuthGuard)
+@Controller(&#x27;universities&#x27;)
+@ApiTags(&#x27;Universities&#x27;)
+@ApiBearerAuth()
+@ApiUnauthorizedResponse({description:&#x27;Access Token is not valid or has expired&#x27;})
+@ApiForbiddenResponse({description:&#x27;Forbidden.&#x27;})
+@ApiNotFoundResponse({description:&#x27;Node does not exist.&#x27;})
+export class UniversitiesController {
+      /**@ignore */
+      constructor(private universitiesService: UniversitiesService ,private usersService:UsersService ) { }  
+    
+    /**
+     * Fetch all tree of universities
+     * @param res 
+     */
+    @Get(&#x27;/tree&#x27;)
+    @ApiOkResponse({description:&#x27;The tree of universities list has been successfully returned.&#x27;})
+    async getTree(@Res() res) {      
+      var tree &#x3D; await this.universitiesService.getTree();
+      if (!tree) {
+        throw new NotFoundException(&#x27;Universities does not exist!&#x27;);
+      }
+      return res.status(HttpStatus.OK).json(tree);
+    }
+
+    /**
+     * Fetch all universities
+     * @param res 
+     */
+    @Get(&#x27;/universities&#x27;)
+    @ApiOkResponse({description:&#x27;The universities list has been successfully returned.&#x27;})
+    async getNodes(@Res() res) {
+      const Universities &#x3D; await this.universitiesService.getNodes(&quot;&quot;);
+      if (!Universities) {
+        throw new NotFoundException(&#x27;Universities does not exist!&#x27;);
+      }
+      return res.status(HttpStatus.OK).json(Universities);
+    }
+       
+
+    /**
+     * Fetch a particular node using id
+     * @param res 
+     * @param id 
+     */
+    @Get(&#x27;:id&#x27;)
+    @ApiOkResponse({ description:&#x27;The node has been successfully returned.&#x27;})    
+    @ApiBadRequestResponse({description:&#x27;Invalid id!&#x27;})
+    @ApiParam({ name: &#x27;id&#x27;, type: String })
+    async getNode(@Res() res, @Param(&#x27;id&#x27;, new ValidateObjectId()) id) {
+      const node &#x3D; await this.universitiesService.getNode(new ObjectID(id));
+      if (!node) {
+          throw new NotFoundException(&#x27;Node does not exist!&#x27;);
+      }
+      return res.status(HttpStatus.OK).json(node);
+    }
+    
+    /**
+     * Fetch nodes using patent ID
+     * @param res 
+     * @param id 
+     */
+    @Get(&#x27;nodes/:id&#x27;)
+    @ApiOkResponse({ description:&#x27;The nodes has been successfully returned by parent id&#x27;})
+    @ApiBadRequestResponse({description:&#x27;Invalid id!&#x27;})
+    @ApiParam({ name: &#x27;id&#x27;, type: String })
+    async getNodesPatentID(@Res() res, @Param(&#x27;id&#x27;, new ValidateObjectId()) id) {
+      const nodes &#x3D; await this.universitiesService.getNodes(id);
+      if (!nodes) {
+        throw new NotFoundException(&#x27;nodes does not exist!&#x27;);
+      }
+      return res.status(HttpStatus.OK).json(nodes);
+    }
+
+    /**
+     * Submit a node
+     * @param res 
+     * @param createNodeDTO 
+     */
+    @Post(&#x27;/add&#x27;) 
+    async addNode(@Res() res, @Body() createNodeDTO: CreateNodeDTO) { 
+      const newNode &#x3D; await this.universitiesService.addNode(createNodeDTO);
+      if (!newNode) {
+        throw new NotFoundException(&#x27;newNode does not exist!&#x27;);
+      }
+      return res.status(HttpStatus.OK).json({
+        message: &#x27;Node has been submitted successfully!&#x27;,
+        node: newNode,
+      });
+    }   
+
+    /**
+     * Edit a node
+     * @param res 
+     * @param id 
+     * @param createNodeDTO 
+     */
+    @Put(&#x27;/edit&#x27;)
+    @ApiQuery({ name: &#x27;id&#x27;, type: String }) 
+    async editNode(
+      @Res() res,
+      @Query(&#x27;id&#x27;, new ValidateObjectId()) id,
+      @Body() createNodeDTO: CreateNodeDTO,
+    ) {
+      if (id !&#x3D; createNodeDTO._id) {
+        throw new NotFoundException(&#x27;Incorrect node id&#x27;);
+      }
+      const editedNode&#x3D; await this.universitiesService.editNode(id, createNodeDTO);
+      if (!editedNode) {
+          throw new NotFoundException(&#x27;Node does not exist!&#x27;);
+      }
+      return res.status(HttpStatus.OK).json({
+        message: &#x27;Node has been successfully updated&#x27;,
+        node: editedNode,
+      });
+    }
+    
+    /**
+     * Delete a node using id
+     * @param res 
+     * @param id 
+     */
+    @Delete(&#x27;/delete&#x27;)
+    @ApiQuery({ name: &#x27;id&#x27;, type: String })
+    async deleteNode(@Res() res, @Query(&#x27;id&#x27;, new ValidateObjectId()) id) {
+      const deletedNode &#x3D; await this.universitiesService.deleteNode(id);
+      if (!deletedNode) {
+          throw new NotFoundException(&#x27;Node does not exist!&#x27;);
+      }
+      return res.status(HttpStatus.OK).json({
+        message: &#x27;Node has been deleted!&#x27;,
+        node: deletedNode,
+      });
+    }
+  }</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'controller';
+            var COMPODOC_CURRENT_PAGE_URL = 'UniversitiesController.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
