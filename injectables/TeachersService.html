@@ -27,7 +27,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content class">
+               <div class="content injectable">
                    <div class="content-data">
 
 
@@ -36,13 +36,9 @@
 
 
 
-
-
-
-
 <ol class="breadcrumb">
-  <li>Classes</li>
-  <li>UserLoginDTO</li>
+  <li>Injectables</li>
+  <li>TeachersService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -60,17 +56,16 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/users/dto/userilogin.dto.ts</code>
+            <code>src/teachers/teachers.service.ts</code>
         </p>
 
             <p class="comment">
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>UserLoginDTO</p>
+                <p>Teachers Service</p>
 
             </p>
-
 
 
 
@@ -78,24 +73,22 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+
                 <tr>
                     <td class="col-md-4">
-                        <h6><b>Properties</b></h6>
+                        <h6><b>Methods</b></h6>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#password">password</a>
-                            </li>
-                            <li>
-                                <a href="#username">username</a>
+                                    <span class="modifier">Async</span>
+                                <a href="#getNewTeacher">getNewTeacher</a>
                             </li>
                         </ul>
                     </td>
                 </tr>
-
 
 
 
@@ -108,128 +101,132 @@
 
             <section>
     
-        <h3 id="inputs">
-            Properties
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="password"></a>
-                        <span class="name">
-                            <b>
-                            password</b>
-                            <a href="#password"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getNewTeacher"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            getNewTeacher
+                        </b>
+                        <a href="#getNewTeacher"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getNewTeacher(id: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <b>Decorators : </b>
-                            <br />
-                            <code>
-                                @IsNotEmpty()<br />@ApiProperty({example: &#x27;adminadmin4&#x27;})<br />
-                            </code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/users/dto/userilogin.dto.ts:20</a></div>
-                            </td>
-                        </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>User password</p>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">src/teachers/teachers.service.ts:20</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get New Teacher</p>
 </div>
-                    </td>
-                </tr>
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="username"></a>
-                        <span class="name">
-                            <b>
-                            username</b>
-                            <a href="#username"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <b>Decorators : </b>
-                            <br />
-                            <code>
-                                @IsEmail()<br />@ApiProperty({example: &#x27;admin@admin.com&#x27;})<br />
-                            </code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/users/dto/userilogin.dto.ts:13</a></div>
-                            </td>
-                        </tr>
+                                    <td>
+                                        No
+                                    </td>
 
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>User email</p>
-</div>
-                    </td>
-                </tr>
 
-            </tbody>
-        </table>
+                                    <td>
+                                        <p>Teacher id</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>
-
-
-
-
-
-
 
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ApiProperty } from &quot;@nestjs/swagger&quot;;
-import { IsEmail, IsNotEmpty } from &#x27;class-validator&#x27;;
- 
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ForbiddenException, Injectable, NotFoundException } from &#x27;@nestjs/common&#x27;;
+import { UsersService } from &#x27;src/users/users.service&#x27;;
 /**
- * UserLoginDTO
+ * bcrypt
  */
-export class UserLoginDTO {
-    /**
-     * User email
-     */
-    @IsEmail()
-    @ApiProperty({example:&#x27;admin@admin.com&#x27;})
-    username: string;
+const bcrypt &#x3D; require(&#x27;bcrypt&#x27;);
+
+/**
+ * Teachers Service
+ */
+@Injectable()
+export class TeachersService {
+    /**@ignore */
+    constructor( private usersService: UsersService ) { } 
 
     /**
-     * User password
+     * Get New Teacher
+     * @param id  Teacher id
      */
-    @IsNotEmpty()
-    @ApiProperty({example:&#x27;adminadmin4&#x27;})
-    password: string;
-  }</code></pre>
+    async getNewTeacher(id: any) {
+        const user &#x3D; await this.usersService.getUser(new Object(id));
+        if (!user) {
+            throw new NotFoundException(&#x27;Teacher does not exist!&#x27;);
+        }
+        if (!(await bcrypt.compare(&#x27;newUserPassword&#x27;, user.password))) {
+            throw new ForbiddenException(&#x27;Teacher does not new!&#x27;);
+        }
+        return user;
+    }
+}
+</code></pre>
     </div>
+
 </div>
+
+
+
+
 
 
 
@@ -254,8 +251,8 @@ export class UserLoginDTO {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
-            var COMPODOC_CURRENT_PAGE_URL = 'UserLoginDTO.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'TeachersService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

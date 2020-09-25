@@ -27,18 +27,16 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content injectable">
+               <div class="content controller">
                    <div class="content-data">
 
 
 
 
 
-
-
 <ol class="breadcrumb">
-  <li>Injectables</li>
-  <li>AuthService</li>
+  <li>Controllers</li>
+  <li>TeachersController</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -56,16 +54,24 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/auth/auth.service.ts</code>
+            <code>src/teachers/teachers.controller.ts</code>
         </p>
+
+            <p class="comment">
+                <h3>Prefix</h3>
+            </p>
+            <p class="comment">
+                <code>teachers</code>
+            </p>
 
             <p class="comment">
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Auth Service</p>
+                <p>Teachers Controller</p>
 
             </p>
+
 
 
 
@@ -84,15 +90,11 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#login">login</a>
+                                <a href="#addUser">addUser</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#refresh">refresh</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Async</span>
-                                <a href="#validateUser">validateUser</a>
+                                <a href="#loginNewUser">loginNewUser</a>
                             </li>
                         </ul>
                     </td>
@@ -106,7 +108,6 @@
     </table>
 </section>
 
-
             <section>
     
     <h3 id="methods">
@@ -116,35 +117,42 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="login"></a>
+                    <a name="addUser"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Async</span>
-                            login
+                            addUser
                         </b>
-                        <a href="#login"><span class="icon ion-ios-link"></span></a>
+                        <a href="#addUser"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>login(user: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    <code>addUser(res, createUserDTO: <a href="../interfaces/User.html">CreateUserDTO</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Post(&#x27;/add&#x27;)<br />@ApiForbiddenResponse({description: &#x27;User with this email already exists&#x27;})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/teachers/teachers.controller.ts:46</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="40"
-                            class="link-to-prism">src/auth/auth.service.ts:40</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>login user</p>
+                    <div class="io-description"><p>Submit a new teacher</p>
 </div>
 
                     <div class="io-description">
@@ -159,9 +167,8 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>user</td>
+                                    <td>res</td>
                                     <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
                                     </td>
 
                                     <td>
@@ -170,81 +177,17 @@
 
 
                                 </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>{}</code>
-
-                    </div>
-                    <div class="io-description">
-                        <p>access_token</p>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="refresh"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Async</span>
-                            refresh
-                        </b>
-                        <a href="#refresh"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>refresh(token)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="51"
-                            class="link-to-prism">src/auth/auth.service.ts:51</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Update old token</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
                                 <tr>
-                                    <td>Name</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>token</td>
+                                    <td>createUserDTO</td>
+                                    <td>
+                                                <code><a href="../interfaces/User.html" target="_self" >CreateUserDTO</a></code>
+                                    </td>
 
                                     <td>
                                         No
                                     </td>
 
 
-                                    <td>
-                                        <p>old tocken</p>
-
-                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -266,35 +209,42 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="validateUser"></a>
+                    <a name="loginNewUser"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Async</span>
-                            validateUser
+                            loginNewUser
                         </b>
-                        <a href="#validateUser"><span class="icon ion-ios-link"></span></a>
+                        <a href="#loginNewUser"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>validateUser(email: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, pass: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <code>loginNewUser(res, id)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;/newteacher/:id&#x27;)<br />@ApiParam({name: &#x27;id&#x27;, type: String})<br />@ApiOkResponse({description: &#x27;result new teacher email&#x27;})<br />@ApiForbiddenResponse({description: &#x27;Teacher does not new!&#x27;})<br />@ApiUnauthorizedResponse({description: &#x27;Teacher doesn&#x27;t exist!&#x27;})<br />@ApiNotFoundResponse({description: &#x27;Teacher doesn&#x27;t exist!&#x27;})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/teachers/teachers.controller.ts:32</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="22"
-                            class="link-to-prism">src/auth/auth.service.ts:22</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Validate User </p>
+                    <div class="io-description"><p>Get new teacher by id</p>
 </div>
 
                     <div class="io-description">
@@ -303,43 +253,27 @@
                             <thead>
                                 <tr>
                                     <td>Name</td>
-                                    <td>Type</td>
                                     <td>Optional</td>
-                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>email</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
+                                    <td>res</td>
 
                                     <td>
                                         No
                                     </td>
 
 
-                                    <td>
-                                        <p>user email</p>
-
-                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>pass</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
+                                    <td>id</td>
 
                                     <td>
                                         No
                                     </td>
 
 
-                                    <td>
-                                        <p>user pass</p>
-
-                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -347,7 +281,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+                        <b>Returns : </b>    <code>{}</code>
 
                     </div>
                     <div class="io-description">
@@ -357,74 +291,75 @@
             </tr>
         </tbody>
     </table>
-</section>
-
-    </div>
+</section>    </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
-import { JwtService } from &#x27;@nestjs/jwt&#x27;;
-
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Body, Controller, ForbiddenException, Get, HttpStatus, NotFoundException, Param, Post, Res } from &#x27;@nestjs/common&#x27;;
+import { ApiForbiddenResponse, ApiNotFoundResponse, ApiOkResponse, ApiParam, ApiTags, ApiUnauthorizedResponse } from &#x27;@nestjs/swagger&#x27;;
+import { ValidateObjectId } from &#x27;src/pipes/validate-object-id.pipes&#x27;;
+import { TeachersService} from &#x27;./teachers.service&#x27;
 import { UsersService } from &#x27;../users/users.service&#x27;;
-/**@ignore */
-const bcrypt &#x3D; require(&#x27;bcrypt&#x27;);
+import { AuthService} from &#x27;../auth/auth.service&#x27;;
+import { CreateUserDTO } from &#x27;src/users/dto/create-user.dto&#x27;;
 
 
 /**
- * Auth Service
+ * Teachers Controller
  */
-@Injectable()
-export class AuthService {
-  /**@ignore */
-  constructor(private usersService: UsersService, private jwtService: JwtService) {}
+@ApiTags(&#x27;Teachers&#x27;)
+@Controller(&#x27;teachers&#x27;)
+export class TeachersController {
+    /**@ignore */
+    constructor(private teachersService: TeachersService,
+        private usersService: UsersService,
+        private authService: AuthService) { }  
 
-  /**
-   * Validate User 
-   * @param email user email
-   * @param pass user pass
-   */
-  async validateUser(email: string, pass: string): Promise&lt;any&gt; {
-    const user &#x3D; await this.usersService.findUserByEmail(email);
-    if (!user) {
-      return { message: &quot;User doesn&#x27;t exist&quot;, payload: null };
+    /**
+     * Get new teacher by id
+     * @param res 
+     * @param id 
+     */
+    @Get(&#x27;/newteacher/:id&#x27;)
+    @ApiParam({ name: &#x27;id&#x27;, type: String })
+    @ApiOkResponse({description: &#x27;result new teacher email&#x27;})
+    @ApiForbiddenResponse({description: &#x27;Teacher does not new!&#x27;})
+    @ApiUnauthorizedResponse({description: &#x27;Teacher doesn\&#x27;t exist!&#x27;})
+    @ApiNotFoundResponse({description: &#x27;Teacher doesn\&#x27;t exist!&#x27;})
+    async loginNewUser(
+        @Res() res, @Param(&#x27;id&#x27;, new ValidateObjectId()) id) {
+        const teacher &#x3D; await this.teachersService.getNewTeacher(id);   
+        var result &#x3D; { &#x27;teacher_email&#x27; : teacher.email};
+        return res.status(HttpStatus.OK).json(result);     
+    }    
+
+    /**
+     * Submit a new teacher
+     * @param res 
+     * @param createUserDTO 
+     */    
+    @Post(&#x27;/add&#x27;)
+    @ApiForbiddenResponse({description:&#x27;User with this email already exists&#x27;})
+    async addUser(@Res() res, @Body() createUserDTO: CreateUserDTO) {
+        const teacher &#x3D; await this.teachersService.getNewTeacher(createUserDTO._id); 
+        if(teacher.email !&#x3D; createUserDTO.email){
+            throw new ForbiddenException(&#x27;Teacher has wrong email!&#x27;);
+        }
+        createUserDTO.role &#x3D; &#x27;teacher&#x27;;
+        var user &#x3D; await this.usersService.editUser(createUserDTO._id , createUserDTO); 
+        return res.status(HttpStatus.OK).json( {
+            access_token : (await this.authService.login(user)).access_token,
+            profile: user
+          });        
     } 
-    const passwordValidation &#x3D; await bcrypt.compare(pass, user.password); 
-    if (passwordValidation) {
-      const { password, ...result } &#x3D; user;
-      return { payload: result};
-    }
-    return { message: &quot;Wrong credentials&quot;, payload: null };
-  }
 
-  /**
-   * login user
-   * @param user 
-   * @returns access_token
-   */
-  async login(user: any) {
-    const payload &#x3D; { email: user.email, sub: user._id };
-    return {
-      access_token: this.jwtService.sign(payload),
-    };
-  }
-
-  /**
-   * Update old token
-   * @param token old tocken
-   */
-  async refresh(token){
-    const user &#x3D; this.jwtService.decode(token);
-    const payload &#x3D; { email: user[&#x27;email&#x27;], sub: user.sub};
-    return {
-        access_token: this.jwtService.sign(payload),
-    };
-  }
+    
 }
 </code></pre>
     </div>
-
 </div>
+
+
 
 
 
@@ -453,8 +388,8 @@ export class AuthService {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
-            var COMPODOC_CURRENT_PAGE_URL = 'AuthService.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'controller';
+            var COMPODOC_CURRENT_PAGE_URL = 'TeachersController.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

@@ -96,7 +96,6 @@
                                 <a href="#createdUser">createdUser</a>
                             </li>
                             <li>
-                                    <span class="modifier">Readonly</span>
                                 <a href="#mentors">mentors</a>
                             </li>
                             <li>
@@ -104,11 +103,9 @@
                                 <a href="#nodeName">nodeName</a>
                             </li>
                             <li>
-                                    <span class="modifier">Readonly</span>
                                 <a href="#parentNode">parentNode</a>
                             </li>
                             <li>
-                                    <span class="modifier">Readonly</span>
                                 <a href="#teachers">teachers</a>
                             </li>
                         </ul>
@@ -254,7 +251,6 @@
                         <a name="mentors"></a>
                         <span class="name">
                             <b>
-                                <span class="modifier">Readonly</span>
                             mentors</b>
                             <a href="#mentors"><span class="icon ion-ios-link"></span></a>
                         </span>
@@ -340,7 +336,6 @@
                         <a name="parentNode"></a>
                         <span class="name">
                             <b>
-                                <span class="modifier">Readonly</span>
                             parentNode</b>
                             <a href="#parentNode"><span class="icon ion-ios-link"></span></a>
                         </span>
@@ -383,7 +378,6 @@
                         <a name="teachers"></a>
                         <span class="name">
                             <b>
-                                <span class="modifier">Readonly</span>
                             teachers</b>
                             <a href="#teachers"><span class="icon ion-ios-link"></span></a>
                         </span>
@@ -452,19 +446,19 @@ export class CreateNodeDTO {
      * Parent Node id
      */
     @ApiProperty({description: &#x27;Parent Node id&#x27; ,required: false})
-    readonly parentNode: string;
+    parentNode: string;
 
     /**
      * Array of the teachers id
      */
     @ApiProperty({description: &#x27;Array of the teachers id&#x27;,required: false})
-    readonly teachers: Array&lt;string&gt;;
+    teachers: Array&lt;string&gt;;
 
     /**
      * Array of the mentors id
      */
     @ApiProperty({description: &#x27;Array of the mentors id&#x27;,required: false})
-    readonly mentors: Array&lt;string&gt;;
+    mentors: Array&lt;string&gt;;
 
     /**
      * Node created Date

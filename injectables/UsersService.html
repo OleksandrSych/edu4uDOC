@@ -110,9 +110,6 @@
                                     <span class="modifier">Async</span>
                                 <a href="#getUsers">getUsers</a>
                             </li>
-                            <li>
-                                <a href="#getUserSinc">getUserSinc</a>
-                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -155,8 +152,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="56"
-                            class="link-to-prism">src/users/users.service.ts:56</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="53"
+                            class="link-to-prism">src/users/users.service.ts:53</a></div>
                 </td>
             </tr>
 
@@ -234,8 +231,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="87"
-                            class="link-to-prism">src/users/users.service.ts:87</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="91"
+                            class="link-to-prism">src/users/users.service.ts:91</a></div>
                 </td>
             </tr>
 
@@ -313,8 +310,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="77"
-                            class="link-to-prism">src/users/users.service.ts:77</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="81"
+                            class="link-to-prism">src/users/users.service.ts:81</a></div>
                 </td>
             </tr>
 
@@ -392,8 +389,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="67"
-                            class="link-to-prism">src/users/users.service.ts:67</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="65"
+                            class="link-to-prism">src/users/users.service.ts:65</a></div>
                 </td>
             </tr>
 
@@ -487,8 +484,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="47"
-                            class="link-to-prism">src/users/users.service.ts:47</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">src/users/users.service.ts:44</a></div>
                 </td>
             </tr>
 
@@ -566,8 +563,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">src/users/users.service.ts:29</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/users/users.service.ts:32</a></div>
                 </td>
             </tr>
 
@@ -636,8 +633,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="20"
-                            class="link-to-prism">src/users/users.service.ts:20</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="23"
+                            class="link-to-prism">src/users/users.service.ts:23</a></div>
                 </td>
             </tr>
 
@@ -655,72 +652,6 @@
             </tr>
         </tbody>
     </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getUserSinc"></a>
-                    <span class="name">
-                        <b>
-                            getUserSinc
-                        </b>
-                        <a href="#getUserSinc"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>getUserSinc(userID)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="36"
-                            class="link-to-prism">src/users/users.service.ts:36</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>userID</td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/User.html" target="_self" >Promise&lt;User&gt;</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
 </section>
 
     </div>
@@ -733,7 +664,10 @@ import { InjectModel } from &#x27;@nestjs/mongoose&#x27;;
 import { User } from &#x27;./interfaces/user.interface&#x27;;
 import { CreateUserDTO } from &#x27;./dto/create-user.dto&#x27;;
 import { ObjectId } from &#x27;mongodb&#x27;;
-
+import { Exception } from &#x27;handlebars&#x27;;
+import { use } from &#x27;passport&#x27;;
+/**@ignore */
+const bcrypt &#x3D; require(&#x27;bcrypt&#x27;);
 /**
  * Users Service
  */
@@ -742,7 +676,7 @@ export class UsersService {
   
   /** @ignore */
   constructor(@InjectModel(&#x27;User&#x27;) private readonly userModel: Model&lt;User&gt;) { }
-
+ 
   /**
    * Get all users
    */
@@ -762,13 +696,7 @@ export class UsersService {
     return user;
   }
 
-  getUserSinc(userID): Promise&lt;User&gt; { 
-    const user &#x3D;  this.userModel
-      .findOne({&quot;_id&quot;:userID})
-      .exec(); 
-    return user;
-  }
-
+  
   /**
    * Find user by email
    * @param {string} email user email
@@ -784,6 +712,7 @@ export class UsersService {
    */
   async addUser(createUserDTO: CreateUserDTO): Promise&lt;User&gt; {
     createUserDTO._id &#x3D; new ObjectId();
+    createUserDTO.password &#x3D;  await bcrypt.hash(createUserDTO.password, 10);
     const newUser &#x3D; await new this.userModel(createUserDTO);
     return newUser.save();
   }
@@ -794,6 +723,12 @@ export class UsersService {
    * @param createUserDTO new user DTO
    */
   async editUser(id: any, createUserDTO: CreateUserDTO): Promise&lt;User&gt; {
+    if(!createUserDTO.password || createUserDTO.password.length &#x3D;&#x3D; 0){
+        createUserDTO.password &#x3D;  (await this.getUser(id)).password;
+    }    
+    if(createUserDTO.password.length !&#x3D; 60){
+        createUserDTO.password &#x3D;  await bcrypt.hash(createUserDTO.password, 10);
+    }
     const editedUser &#x3D; await this.userModel
       .findByIdAndUpdate(id, createUserDTO, { new: true });
     return editedUser;

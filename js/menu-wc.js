@@ -55,13 +55,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#controllers-links-module-AppModule-0447441ee00a3fcbb73ce312389cd9f7"' : 'data-target="#xs-controllers-links-module-AppModule-0447441ee00a3fcbb73ce312389cd9f7"' }>
+                                            'data-target="#controllers-links-module-AppModule-ecbff654bf5a703815d474595f9fc456"' : 'data-target="#xs-controllers-links-module-AppModule-ecbff654bf5a703815d474595f9fc456"' }>
                                             <span class="icon ion-md-swap"></span>
                                             <span>Controllers</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="controllers-links-module-AppModule-0447441ee00a3fcbb73ce312389cd9f7"' :
-                                            'id="xs-controllers-links-module-AppModule-0447441ee00a3fcbb73ce312389cd9f7"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="controllers-links-module-AppModule-ecbff654bf5a703815d474595f9fc456"' :
+                                            'id="xs-controllers-links-module-AppModule-ecbff654bf5a703815d474595f9fc456"' }>
                                             <li class="link">
                                                 <a href="controllers/AppController.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppController</a>
@@ -128,6 +128,90 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <li class="link">
                                             <a href="injectables/CoursesService.html"
                                                 data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>CoursesService</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/InviteUserModule.html" data-type="entity-link">InviteUserModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#controllers-links-module-InviteUserModule-0bf9f67237aab0f03b9e5754f604f60b"' : 'data-target="#xs-controllers-links-module-InviteUserModule-0bf9f67237aab0f03b9e5754f604f60b"' }>
+                                            <span class="icon ion-md-swap"></span>
+                                            <span>Controllers</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="controllers-links-module-InviteUserModule-0bf9f67237aab0f03b9e5754f604f60b"' :
+                                            'id="xs-controllers-links-module-InviteUserModule-0bf9f67237aab0f03b9e5754f604f60b"' }>
+                                            <li class="link">
+                                                <a href="controllers/InviteUserController.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">InviteUserController</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                <li class="chapter inner">
+                                    <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                        'data-target="#injectables-links-module-InviteUserModule-0bf9f67237aab0f03b9e5754f604f60b"' : 'data-target="#xs-injectables-links-module-InviteUserModule-0bf9f67237aab0f03b9e5754f604f60b"' }>
+                                        <span class="icon ion-md-arrow-round-down"></span>
+                                        <span>Injectables</span>
+                                        <span class="icon ion-ios-arrow-down"></span>
+                                    </div>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-InviteUserModule-0bf9f67237aab0f03b9e5754f604f60b"' :
+                                        'id="xs-injectables-links-module-InviteUserModule-0bf9f67237aab0f03b9e5754f604f60b"' }>
+                                        <li class="link">
+                                            <a href="injectables/InviteUserService.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>InviteUserService</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/MailerEdu4uModule.html" data-type="entity-link">MailerEdu4uModule</a>
+                                <li class="chapter inner">
+                                    <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                        'data-target="#injectables-links-module-MailerEdu4uModule-41aa23817b77dbfaa494c4d68f662a46"' : 'data-target="#xs-injectables-links-module-MailerEdu4uModule-41aa23817b77dbfaa494c4d68f662a46"' }>
+                                        <span class="icon ion-md-arrow-round-down"></span>
+                                        <span>Injectables</span>
+                                        <span class="icon ion-ios-arrow-down"></span>
+                                    </div>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-MailerEdu4uModule-41aa23817b77dbfaa494c4d68f662a46"' :
+                                        'id="xs-injectables-links-module-MailerEdu4uModule-41aa23817b77dbfaa494c4d68f662a46"' }>
+                                        <li class="link">
+                                            <a href="injectables/MailerEdu4uService.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>MailerEdu4uService</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/TeachersModule.html" data-type="entity-link">TeachersModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#controllers-links-module-TeachersModule-9db1c7a1bca72cc3c8f054e111bac200"' : 'data-target="#xs-controllers-links-module-TeachersModule-9db1c7a1bca72cc3c8f054e111bac200"' }>
+                                            <span class="icon ion-md-swap"></span>
+                                            <span>Controllers</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="controllers-links-module-TeachersModule-9db1c7a1bca72cc3c8f054e111bac200"' :
+                                            'id="xs-controllers-links-module-TeachersModule-9db1c7a1bca72cc3c8f054e111bac200"' }>
+                                            <li class="link">
+                                                <a href="controllers/TeachersController.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">TeachersController</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                <li class="chapter inner">
+                                    <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                        'data-target="#injectables-links-module-TeachersModule-9db1c7a1bca72cc3c8f054e111bac200"' : 'data-target="#xs-injectables-links-module-TeachersModule-9db1c7a1bca72cc3c8f054e111bac200"' }>
+                                        <span class="icon ion-md-arrow-round-down"></span>
+                                        <span>Injectables</span>
+                                        <span class="icon ion-ios-arrow-down"></span>
+                                    </div>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-TeachersModule-9db1c7a1bca72cc3c8f054e111bac200"' :
+                                        'id="xs-injectables-links-module-TeachersModule-9db1c7a1bca72cc3c8f054e111bac200"' }>
+                                        <li class="link">
+                                            <a href="injectables/TeachersService.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>TeachersService</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -201,6 +285,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="classes/CreateUserDTO.html" data-type="entity-link">CreateUserDTO</a>
+                            </li>
+                            <li class="link">
+                                <a href="classes/InviteUserDTO.html" data-type="entity-link">InviteUserDTO</a>
                             </li>
                             <li class="link">
                                 <a href="classes/UserLoginDTO.html" data-type="entity-link">UserLoginDTO</a>

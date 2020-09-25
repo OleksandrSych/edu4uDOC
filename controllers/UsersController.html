@@ -631,7 +631,7 @@ export class UsersController{
      * Submit a user
      * @param res 
      * @param createUserDTO 
-     */
+     */    
     @Post(&#x27;/add&#x27;)
     @ApiForbiddenResponse({description:&#x27;User with this email already exists&#x27;})
     async addUser(@Res() res, @Body() createUserDTO: CreateUserDTO) {
