@@ -162,14 +162,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Post(&#x27;/add&#x27;)<br /></code>
+                    <code>@Post(&#x27;/add&#x27;)<br />@ApiOkResponse({description: &#x27;Node has been submitted successfully!&#x27;})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="107"
-                            class="link-to-prism">src/universities/universities.controller.ts:107</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="127"
+                            class="link-to-prism">src/universities/universities.controller.ts:127</a></div>
                 </td>
             </tr>
 
@@ -254,14 +254,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Delete(&#x27;/delete&#x27;)<br />@ApiQuery({name: &#x27;id&#x27;, type: String})<br /></code>
+                    <code>@Delete(&#x27;/delete&#x27;)<br />@ApiQuery({name: &#x27;id&#x27;, type: String})<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiOkResponse({description: &#x27;Node has been deleted!&#x27;})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="151"
-                            class="link-to-prism">src/universities/universities.controller.ts:151</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="178"
+                            class="link-to-prism">src/universities/universities.controller.ts:178</a></div>
                 </td>
             </tr>
 
@@ -340,14 +340,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Put(&#x27;/edit&#x27;)<br />@ApiQuery({name: &#x27;id&#x27;, type: String})<br /></code>
+                    <code>@Put(&#x27;/edit&#x27;)<br />@ApiQuery({name: &#x27;id&#x27;, type: String})<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiOkResponse({description: &#x27;Node has been successfully updated!&#x27;})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="126"
-                            class="link-to-prism">src/universities/universities.controller.ts:126</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="149"
+                            class="link-to-prism">src/universities/universities.controller.ts:149</a></div>
                 </td>
             </tr>
 
@@ -443,14 +443,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Get(&#x27;:id&#x27;)<br />@ApiOkResponse({description: &#x27;The node has been successfully returned.&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiParam({name: &#x27;id&#x27;, type: String})<br /></code>
+                    <code>@Get(&#x27;/:id&#x27;)<br />@ApiOkResponse({description: &#x27;The node has been successfully returned.&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiParam({name: &#x27;id&#x27;, type: String})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="76"
-                            class="link-to-prism">src/universities/universities.controller.ts:76</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="95"
+                            class="link-to-prism">src/universities/universities.controller.ts:95</a></div>
                 </td>
             </tr>
 
@@ -535,8 +535,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="44"
-                            class="link-to-prism">src/universities/universities.controller.ts:44</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/universities/universities.controller.ts:64</a></div>
                 </td>
             </tr>
 
@@ -612,8 +612,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="93"
-                            class="link-to-prism">src/universities/universities.controller.ts:93</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="112"
+                            class="link-to-prism">src/universities/universities.controller.ts:112</a></div>
                 </td>
             </tr>
 
@@ -698,15 +698,15 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="58"
-                            class="link-to-prism">src/universities/universities.controller.ts:58</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/universities/universities.controller.ts:78</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Fetch all universities</p>
+                    <div class="io-description"><p>Fetch all teachers</p>
 </div>
 
                     <div class="io-description">
@@ -775,8 +775,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">src/universities/universities.controller.ts:30</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">src/universities/universities.controller.ts:50</a></div>
                 </td>
             </tr>
 
@@ -825,14 +825,33 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, UseGuards, Get, Res, Param, Post, Body, Put, Query, Delete, NotFoundException, HttpStatus } from &#x27;@nestjs/common&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, 
+  UseGuards, 
+  Get, 
+  Res, 
+  Param, 
+  Post, 
+  Body, 
+  Put, 
+  Query, 
+  Delete, 
+  NotFoundException, 
+  HttpStatus } from &#x27;@nestjs/common&#x27;;
+import { ApiTags, 
+  ApiBearerAuth, 
+  ApiUnauthorizedResponse, 
+  ApiOkResponse, 
+  ApiForbiddenResponse, 
+  ApiNotFoundResponse, 
+  ApiBadRequestResponse, 
+  ApiParam, 
+  ApiQuery } from &#x27;@nestjs/swagger&#x27;;
 import { JwtAuthGuard } from &#x27;src/auth/jwt-auth.guard&#x27;;
-import { ApiTags, ApiBearerAuth, ApiUnauthorizedResponse, ApiOkResponse, ApiForbiddenResponse, ApiNotFoundResponse, ApiBadRequestResponse, ApiParam, ApiQuery } from &#x27;@nestjs/swagger&#x27;;
-import { ObjectID } from &#x27;mongodb&#x27;;
 import { ValidateObjectId } from &#x27;src/pipes/validate-object-id.pipes&#x27;;
 import { UniversitiesService } from &#x27;./universities.service&#x27;;
 import { CreateNodeDTO } from &#x27;./dto/create-node.dto&#x27;;
-import {UsersService} from &#x27;../users/users.service&#x27;; 
+import { UsersService} from &#x27;../users/users.service&#x27;; 
+import { ObjectId } from &#x27;mongodb&#x27;;
 
 /**
  * Universities Controller
@@ -841,69 +860,69 @@ import {UsersService} from &#x27;../users/users.service&#x27;;
 @Controller(&#x27;universities&#x27;)
 @ApiTags(&#x27;Universities&#x27;)
 @ApiBearerAuth()
-@ApiUnauthorizedResponse({description:&#x27;Access Token is not valid or has expired&#x27;})
-@ApiForbiddenResponse({description:&#x27;Forbidden.&#x27;})
-@ApiNotFoundResponse({description:&#x27;Node does not exist.&#x27;})
+@ApiUnauthorizedResponse({description: &#x27;Access Token is not valid or has expired&#x27;})
+@ApiForbiddenResponse({description: &#x27;Forbidden.&#x27;})
+@ApiNotFoundResponse({description: &#x27;Node doesn\&#x27;t exist.&#x27;})
 export class UniversitiesController {
-      /**@ignore */
-      constructor(private universitiesService: UniversitiesService ,private usersService:UsersService ) { }  
+  /**@ignore */
+  constructor(private universitiesService: UniversitiesService,
+                  private usersService: UsersService ) { }  
     
     /**
      * Fetch all tree of universities
      * @param res 
      */
     @Get(&#x27;/tree&#x27;)
-    @ApiOkResponse({description:&#x27;The tree of universities list has been successfully returned.&#x27;})
-    async getTree(@Res() res) {      
-      var tree &#x3D; await this.universitiesService.getTree();
-      if (!tree) {
-        throw new NotFoundException(&#x27;Universities does not exist!&#x27;);
-      }
-      return res.status(HttpStatus.OK).json(tree);
+    @ApiOkResponse({description: &#x27;The tree of universities list has been successfully returned.&#x27;})
+  async getTree(@Res() res) {      
+    const tree &#x3D; await this.universitiesService.getTree();
+    if (!tree) {
+      throw new NotFoundException(&#x27;Universities doesn\&#x27;t exist!&#x27;);
     }
+    return res.status(HttpStatus.OK).json(tree);
+  }
 
     /**
      * Fetch all universities
      * @param res 
      */
     @Get(&#x27;/universities&#x27;)
-    @ApiOkResponse({description:&#x27;The universities list has been successfully returned.&#x27;})
+    @ApiOkResponse({description: &#x27;The universities list has been successfully returned.&#x27;})
     async getNodes(@Res() res) {
-      const Universities &#x3D; await this.universitiesService.getNodes(&quot;&quot;);
+      const Universities &#x3D; await this.universitiesService.getNodes(null);
       if (!Universities) {
-        throw new NotFoundException(&#x27;Universities does not exist!&#x27;);
+        throw new NotFoundException(&#x27;Universities doesn\&#x27;t exist!&#x27;);
       }
       return res.status(HttpStatus.OK).json(Universities);
     }
 
     /**
-     * Fetch all universities
+     * Fetch all teachers
      * @param res 
      */
     @Get(&#x27;/teachers&#x27;)
-    @ApiOkResponse({description:&#x27;The teachers list has been successfully returned.&#x27;})
+    @ApiOkResponse({description: &#x27;The teachers list has been successfully returned.&#x27;})
     async getTeachersInfo(@Res() res) {
       const teachers &#x3D; await this.universitiesService.getTeachersInfo();
       if (!teachers) {
-        throw new NotFoundException(&#x27;Teachers does not exist!&#x27;);
+        throw new NotFoundException(&#x27;Teachers doesn\&#x27;t exist!&#x27;);
       }
       return res.status(HttpStatus.OK).json(teachers);
     }
        
-
     /**
      * Fetch a particular node using id
      * @param res 
      * @param id 
      */
-    @Get(&#x27;:id&#x27;)
-    @ApiOkResponse({ description:&#x27;The node has been successfully returned.&#x27;})    
-    @ApiBadRequestResponse({description:&#x27;Invalid id!&#x27;})
+    @Get(&#x27;/:id&#x27;)
+    @ApiOkResponse({description: &#x27;The node has been successfully returned.&#x27;})    
+    @ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})
     @ApiParam({ name: &#x27;id&#x27;, type: String })
     async getNode(@Res() res, @Param(&#x27;id&#x27;, new ValidateObjectId()) id) {
-      const node &#x3D; await this.universitiesService.getNode(new ObjectID(id));
+      const node &#x3D; await this.universitiesService.getNode(new ObjectId(id));
       if (!node) {
-          throw new NotFoundException(&#x27;Node does not exist!&#x27;);
+        throw new NotFoundException(&#x27;Node doesn\&#x27;t exist!&#x27;);
       }
       return res.status(HttpStatus.OK).json(node);
     }
@@ -914,13 +933,13 @@ export class UniversitiesController {
      * @param id 
      */
     @Get(&#x27;nodes/:id&#x27;)
-    @ApiOkResponse({ description:&#x27;The nodes has been successfully returned by parent id&#x27;})
-    @ApiBadRequestResponse({description:&#x27;Invalid id!&#x27;})
-    @ApiParam({ name: &#x27;id&#x27;, type: String })
+    @ApiOkResponse({description: &#x27;The nodes has been successfully returned by parent id&#x27;})
+    @ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})
+    @ApiParam({name: &#x27;id&#x27;, type: String })
     async getNodesPatentID(@Res() res, @Param(&#x27;id&#x27;, new ValidateObjectId()) id) {
-      const nodes &#x3D; await this.universitiesService.getNodes(id);
+      const nodes &#x3D; await this.universitiesService.getNodes(new ObjectId(id));
       if (!nodes) {
-        throw new NotFoundException(&#x27;nodes does not exist!&#x27;);
+        throw new NotFoundException(&#x27;nodes doesn\&#x27;t exist!&#x27;);
       }
       return res.status(HttpStatus.OK).json(nodes);
     }
@@ -931,10 +950,12 @@ export class UniversitiesController {
      * @param createNodeDTO 
      */
     @Post(&#x27;/add&#x27;) 
+    @ApiOkResponse({description: &#x27;Node has been submitted successfully!&#x27;})
     async addNode(@Res() res, @Body() createNodeDTO: CreateNodeDTO) { 
+      createNodeDTO.createdDate &#x3D; new Date;
       const newNode &#x3D; await this.universitiesService.addNode(createNodeDTO);
       if (!newNode) {
-        throw new NotFoundException(&#x27;newNode does not exist!&#x27;);
+        throw new NotFoundException(&#x27;newNode doesn\&#x27;t exist!&#x27;);
       }
       return res.status(HttpStatus.OK).json({
         message: &#x27;Node has been submitted successfully!&#x27;,
@@ -949,7 +970,9 @@ export class UniversitiesController {
      * @param createNodeDTO 
      */
     @Put(&#x27;/edit&#x27;)
-    @ApiQuery({ name: &#x27;id&#x27;, type: String }) 
+    @ApiQuery({name: &#x27;id&#x27;, type: String}) 
+    @ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})
+    @ApiOkResponse({description: &#x27;Node has been successfully updated!&#x27;})
     async editNode(
       @Res() res,
       @Query(&#x27;id&#x27;, new ValidateObjectId()) id,
@@ -958,12 +981,14 @@ export class UniversitiesController {
       if (id !&#x3D; createNodeDTO._id) {
         throw new NotFoundException(&#x27;Incorrect node id&#x27;);
       }
-      const editedNode&#x3D; await this.universitiesService.editNode(id, createNodeDTO);
+      const editedNode&#x3D; 
+        await this.universitiesService.editNode(
+          new ObjectId(id), createNodeDTO);
       if (!editedNode) {
-          throw new NotFoundException(&#x27;Node does not exist!&#x27;);
+        throw new NotFoundException(&#x27;Node doesn\&#x27;t exist!&#x27;);
       }
       return res.status(HttpStatus.OK).json({
-        message: &#x27;Node has been successfully updated&#x27;,
+        message: &#x27;Node has been successfully updated!&#x27;,
         node: editedNode,
       });
     }
@@ -974,18 +999,21 @@ export class UniversitiesController {
      * @param id 
      */
     @Delete(&#x27;/delete&#x27;)
-    @ApiQuery({ name: &#x27;id&#x27;, type: String })
+    @ApiQuery({name: &#x27;id&#x27;, type: String})
+    @ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})
+    @ApiOkResponse({description: &#x27;Node has been deleted!&#x27;})
     async deleteNode(@Res() res, @Query(&#x27;id&#x27;, new ValidateObjectId()) id) {
-      const deletedNode &#x3D; await this.universitiesService.deleteNode(id);
+      const deletedNode &#x3D; 
+        await this.universitiesService.deleteNode(new ObjectId(id));
       if (!deletedNode) {
-          throw new NotFoundException(&#x27;Node does not exist!&#x27;);
+        throw new NotFoundException(&#x27;Node doesn\&#x27;t exist!&#x27;);
       }
       return res.status(HttpStatus.OK).json({
         message: &#x27;Node has been deleted!&#x27;,
         node: deletedNode,
       });
     }
-  }</code></pre>
+}</code></pre>
     </div>
 </div>
 

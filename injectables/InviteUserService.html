@@ -83,11 +83,16 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#getMailText">getMailText</a>
+                                    <span class="modifier">Async</span>
+                                <a href="#checkInviteKey">checkInviteKey</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#inviteTecher">inviteTecher</a>
+                                <a href="#inviteTeacher">inviteTeacher</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#inviteUser">inviteUser</a>
                             </li>
                         </ul>
                     </td>
@@ -111,33 +116,35 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getMailText"></a>
+                    <a name="checkInviteKey"></a>
                     <span class="name">
                         <b>
-                            getMailText
+                            <span class="modifier">Async</span>
+                            checkInviteKey
                         </b>
-                        <a href="#getMailText"><span class="icon ion-ios-link"></span></a>
+                        <a href="#checkInviteKey"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getMailText(departmentName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, instititeName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, univerName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, iviteUser: <a href="../interfaces/User.html">InviteUserDTO</a>, user: <a href="../interfaces/User.html">User</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>checkInviteKey(inviteKey: ObjectId)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="70"
-                            class="link-to-prism">src/invite-user/invite-user.service.ts:70</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="111"
+                            class="link-to-prism">src/invite-user/invite-user.service.ts:111</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Get Mail Text</p>
+                    <div class="io-description"><p>Check Invite Key</p>
 </div>
 
                     <div class="io-description">
@@ -148,13 +155,14 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>departmentName</td>
+                                    <td>inviteKey</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            <code>ObjectId</code>
                                     </td>
 
                                     <td>
@@ -162,54 +170,10 @@
                                     </td>
 
 
-                                </tr>
-                                <tr>
-                                    <td>instititeName</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <p>invite Key</p>
+
                                     </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>univerName</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>iviteUser</td>
-                                    <td>
-                                                <code><a href="../interfaces/User.html" target="_self" >InviteUserDTO</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>user</td>
-                                    <td>
-                                                <code><a href="../interfaces/User.html" target="_self" >User</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
                                 </tr>
                             </tbody>
                         </table>
@@ -217,7 +181,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                        <b>Returns : </b>        <code><a href="../interfaces/Course.html" target="_self" >Promise&lt;Course&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -231,35 +195,35 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="inviteTecher"></a>
+                    <a name="inviteTeacher"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Async</span>
-                            inviteTecher
+                            inviteTeacher
                         </b>
-                        <a href="#inviteTecher"><span class="icon ion-ios-link"></span></a>
+                        <a href="#inviteTeacher"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>inviteTecher(inviteUserDTO: <a href="../interfaces/User.html">InviteUserDTO</a>)</code>
+                    <code>inviteTeacher(inviteUserDTO: <a href="../interfaces/User.html">InviteUserDTO</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="24"
-                            class="link-to-prism">src/invite-user/invite-user.service.ts:24</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="25"
+                            class="link-to-prism">src/invite-user/invite-user.service.ts:25</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Invite Techer</p>
+                    <div class="io-description"><p>Invite Teacher</p>
 </div>
 
                     <div class="io-description">
@@ -306,297 +270,229 @@
             </tr>
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="inviteUser"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            inviteUser
+                        </b>
+                        <a href="#inviteUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>inviteUser(inviteKey: ObjectId, createUserDTO: <a href="../interfaces/User.html">CreateUserDTO</a>, newRole: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">src/invite-user/invite-user.service.ts:71</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Invite User(Mentor or Student)</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>inviteKey</td>
+                                    <td>
+                                            <code>ObjectId</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>createUserDTO</td>
+                                    <td>
+                                                <code><a href="../interfaces/User.html" target="_self" >CreateUserDTO</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>newRole</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>
 
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable, NotFoundException } from &#x27;@nestjs/common&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ForbiddenException, Injectable, NotFoundException } from &#x27;@nestjs/common&#x27;;
 import { InviteUserDTO } from &#x27;./dto/invite-user.dto&#x27;;
 import { UsersService } from &#x27;../users/users.service&#x27;;
+import { CoursesService} from &#x27;../courses/courses.service&#x27;
 import { UniversitiesService } from &#x27;../universities/universities.service&#x27;;
 import { MailerEdu4uService } from &#x27;../mailer-edu4u/mailer-edu4u.service&#x27;;
-import { AuthService } from &#x27;../auth/auth.service&#x27;;
 import { CreateUserDTO } from &#x27;src/users/dto/create-user.dto&#x27;;
-import { User } from &#x27;src/users/interfaces/user.interface&#x27;;
+import { ObjectId } from &#x27;mongodb&#x27;; 
+import { Course } from &#x27;src/courses/interfaces/course.interface&#x27;; 
 
 /**
  * Invite User Service
  */
 @Injectable()
 export class InviteUserService {
-    /**@ignore */
-    constructor(private usersService: UsersService, 
+  /**@ignore */
+  constructor(private usersService: UsersService, 
                 private universitiesService: UniversitiesService,
-                private mailerEdu4uService: MailerEdu4uService,
-                private authService: AuthService) { }
-    /**
-     * Invite Techer
-     * @param inviteUserDTO invite User DTO
-     */
-    async inviteTecher(inviteUserDTO: InviteUserDTO) {
-        if(!inviteUserDTO){
-            throw new NotFoundException(&#x27;Invalid inviteUserDTO&#x27;);
-        }  
-        var node &#x3D; await  this.universitiesService.getNode(inviteUserDTO.nodeId);
-        if(!node){
-            throw new NotFoundException(&#x27;Node not found&#x27;);
-        }
-        var user &#x3D; await this.usersService.findUserByEmail(inviteUserDTO.email);
-        if(!user){
-            var newUser &#x3D; new CreateUserDTO;
-            newUser.email &#x3D; inviteUserDTO.email;
-            newUser.role &#x3D; &#x27;teacher&#x27;;
-            newUser.password &#x3D; &#x27;newUserPassword&#x27;;
-            newUser.contactPhone &#x3D; &#x27;&#x27;;
-            newUser.firstName &#x3D; &#x27;&#x27;;
-            newUser.lastName &#x3D; &#x27;&#x27;;
-            newUser.title &#x3D; &#x27;&#x27;;
-            newUser.interests &#x3D; &#x27;&#x27;;
-            user &#x3D; await this.usersService.addUser(newUser);
-        }
-        if(user.role !&#x3D; &#x27;teacher&#x27;){ 
-          user &#x3D; await this.usersService.editUser(user._id, user);
-        }          
-        if(!node.teachers.includes(user._id))
-            node.teachers.push(user._id);
-        this.universitiesService.editNode(node._id, node);
-        var institite &#x3D; await this.universitiesService.getNode(node.parentNode);
-        var univer &#x3D; await this.universitiesService.getNode(institite.parentNode); 
-        if(!inviteUserDTO.homePage){
-          inviteUserDTO.homePage &#x3D; &#x27;https://edu4u.gitlab.io/edu4u/#&#x27;
-        }
-        this.mailerEdu4uService.sendMail(
-          user.email, 
-          &#x27;Реєстрація викладача EDU4U&#x27;, 
-          this.getMailText(node.nodeName, institite.nodeName, univer.nodeName, inviteUserDTO, user ));
-        return user;
+                private mailerEdu4uService: MailerEdu4uService, 
+                private coursesService: CoursesService) { }
+  /**
+  * Invite Teacher
+  * @param inviteUserDTO invite User DTO
+  */
+  async inviteTeacher(inviteUserDTO: InviteUserDTO) {
+    if(!inviteUserDTO){
+      throw new NotFoundException(&#x27;Invalid inviteUserDTO&#x27;);
     }
-    /**
-     * Get Mail Text
-     * @param departmentName 
-     * @param instititeName 
-     * @param univerName 
-     * @param iviteUser 
-     * @param user 
-     */
-    getMailText(departmentName: string, instititeName: string, univerName: string, iviteUser: InviteUserDTO, user: User ):string {
-        const htmlOutput &#x3D; &#x60;
-        &lt;!doctype html&gt;
-        &lt;html xmlns&#x3D;&quot;http://www.w3.org/1999/xhtml&quot; xmlns:v&#x3D;&quot;urn:schemas-microsoft-com:vml&quot; xmlns:o&#x3D;&quot;urn:schemas-microsoft-com:office:office&quot;&gt;
-        
-        &lt;head&gt;
-          &lt;title&gt; &lt;/title&gt;
-          &lt;!--[if !mso]&gt;&lt;!-- --&gt;
-          &lt;meta http-equiv&#x3D;&quot;X-UA-Compatible&quot; content&#x3D;&quot;IE&#x3D;edge&quot;&gt;
-          &lt;!--&lt;![endif]--&gt;
-          &lt;meta http-equiv&#x3D;&quot;Content-Type&quot; content&#x3D;&quot;text/html; charset&#x3D;UTF-8&quot;&gt;
-          &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1&quot;&gt;
-          &lt;style type&#x3D;&quot;text/css&quot;&gt;
-            #outlook a {
-              padding: 0;
-            }
-        
-            body {
-              margin: 0;
-              padding: 0;
-              -webkit-text-size-adjust: 100%;
-              -ms-text-size-adjust: 100%;
-            }
-        
-            table,
-            td {
-              border-collapse: collapse;
-              mso-table-lspace: 0pt;
-              mso-table-rspace: 0pt;
-            }
-        
-            img {
-              border: 0;
-              height: auto;
-              line-height: 100%;
-              outline: none;
-              text-decoration: none;
-              -ms-interpolation-mode: bicubic;
-            }
-        
-            p {
-              display: block;
-              margin: 13px 0;
-            }
-          &lt;/style&gt;
-          &lt;!--[if mso]&gt;
-                &lt;xml&gt;
-                &lt;o:OfficeDocumentSettings&gt;
-                  &lt;o:AllowPNG/&gt;
-                  &lt;o:PixelsPerInch&gt;96&lt;/o:PixelsPerInch&gt;
-                &lt;/o:OfficeDocumentSettings&gt;
-                &lt;/xml&gt;
-                &lt;![endif]--&gt;
-          &lt;!--[if lte mso 11]&gt;
-                &lt;style type&#x3D;&quot;text/css&quot;&gt;
-                  .mj-outlook-group-fix { width:100% !important; }
-                &lt;/style&gt;
-                &lt;![endif]--&gt;
-          &lt;style type&#x3D;&quot;text/css&quot;&gt;
-            @media only screen and (min-width:480px) {
-              .mj-column-per-100 {
-                width: 100% !important;
-                max-width: 100%;
-              }
-            }
-          &lt;/style&gt;
-          &lt;style type&#x3D;&quot;text/css&quot;&gt;
-            @media only screen and (max-width:480px) {
-              table.mj-full-width-mobile {
-                width: 100% !important;
-              }
-              td.mj-full-width-mobile {
-                width: auto !important;
-              }
-            }
-          &lt;/style&gt;
-        &lt;/head&gt;
-        
-        &lt;body&gt;
-          &lt;div style&#x3D;&quot;&quot;&gt;
-            &lt;!--[if mso | IE]&gt;
-              &lt;table
-                 align&#x3D;&quot;center&quot; border&#x3D;&quot;0&quot; cellpadding&#x3D;&quot;0&quot; cellspacing&#x3D;&quot;0&quot; class&#x3D;&quot;&quot; style&#x3D;&quot;width:600px;&quot; width&#x3D;&quot;600&quot;
-              &gt;
-                &lt;tr&gt;
-                  &lt;td style&#x3D;&quot;line-height:0px;font-size:0px;mso-line-height-rule:exactly;&quot;&gt;
-              &lt;![endif]--&gt;
-            &lt;div style&#x3D;&quot;margin:0px auto;max-width:600px;&quot;&gt;
-              &lt;table align&#x3D;&quot;center&quot; border&#x3D;&quot;0&quot; cellpadding&#x3D;&quot;0&quot; cellspacing&#x3D;&quot;0&quot; role&#x3D;&quot;presentation&quot; style&#x3D;&quot;width:100%;&quot;&gt;
-                &lt;tbody&gt;
-                  &lt;tr&gt;
-                    &lt;td style&#x3D;&quot;direction:ltr;font-size:0px;padding:20px 0;text-align:center;&quot;&gt;
-                      &lt;!--[if mso | IE]&gt;
-                          &lt;table role&#x3D;&quot;presentation&quot; border&#x3D;&quot;0&quot; cellpadding&#x3D;&quot;0&quot; cellspacing&#x3D;&quot;0&quot;&gt;
-                        
-                &lt;tr&gt;
-              
-                    &lt;td
-                       class&#x3D;&quot;&quot; style&#x3D;&quot;vertical-align:top;width:600px;&quot;
-                    &gt;
-                  &lt;![endif]--&gt;
-                      &lt;div class&#x3D;&quot;mj-column-per-100 mj-outlook-group-fix&quot; style&#x3D;&quot;font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;&quot;&gt;
-                        &lt;table border&#x3D;&quot;0&quot; cellpadding&#x3D;&quot;0&quot; cellspacing&#x3D;&quot;0&quot; role&#x3D;&quot;presentation&quot; style&#x3D;&quot;vertical-align:top;&quot; width&#x3D;&quot;100%&quot;&gt;
-                          &lt;tr&gt;
-                            &lt;td align&#x3D;&quot;left&quot; style&#x3D;&quot;font-size:0px;padding:10px 25px;word-break:break-word;&quot;&gt;
-                              &lt;table border&#x3D;&quot;0&quot; cellpadding&#x3D;&quot;0&quot; cellspacing&#x3D;&quot;0&quot; role&#x3D;&quot;presentation&quot; style&#x3D;&quot;border-collapse:collapse;border-spacing:0px;&quot;&gt;
-                                &lt;tbody&gt;
-                                  &lt;tr&gt;
-                                    &lt;td style&#x3D;&quot;width:36px;&quot;&gt; &lt;img height&#x3D;&quot;auto&quot; src&#x3D;&quot;https://picua.org/images/2020/09/08/67e8a6431881f8c68035db582dacfd82.png&quot; style&#x3D;&quot;border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;&quot; width&#x3D;&quot;36&quot;&gt; &lt;/td&gt;
-                                  &lt;/tr&gt;
-                                &lt;/tbody&gt;
-                              &lt;/table&gt;
-                            &lt;/td&gt;
-                          &lt;/tr&gt;
-                          &lt;tr&gt;
-                            &lt;td align&#x3D;&quot;center&quot; style&#x3D;&quot;font-size:0px;padding:10px 25px;word-break:break-word;&quot;&gt;
-                              &lt;div style&#x3D;&quot;font-family:Helvetica, Arial, sans-serif;font-size:30px;line-height:1;text-align:center;color:#000000;&quot;&gt;&lt;strong&gt;Доброго дня&lt;/strong&gt;&lt;/div&gt;
-                            &lt;/td&gt;
-                          &lt;/tr&gt;
-                          &lt;tr&gt;
-                            &lt;td align&#x3D;&quot;center&quot; style&#x3D;&quot;font-size:0px;padding:30px 25px;word-break:break-word;&quot;&gt;
-                              &lt;div style&#x3D;&quot;font-family:Helvetica, Arial, sans-serif;font-size:14px;line-height:1;text-align:center;color:#000000;&quot;&gt;Вас було зареєстровано в системі &lt;a href&#x3D;&quot;${iviteUser.homePage}&quot; style&#x3D;&quot;text-decoration: none; color: #0052F2;&quot;&gt;EDU4U&lt;/a&gt; як &lt;br&gt;викладача &lt;br&gt;&lt;b&gt;
-                  ${departmentName} 
-                  &lt;br&gt;            
-                  ${instititeName}
-                  &lt;br&gt;
-                  ${univerName}
-                  &lt;br&gt;&lt;/b&gt; Перейдіть за посиланням для продовження&lt;br&gt; реєстрації.&lt;/div&gt;
-                            &lt;/td&gt;
-                          &lt;/tr&gt;
-                          &lt;tr&gt;
-                            &lt;td align&#x3D;&quot;center&quot; vertical-align&#x3D;&quot;middle&quot; style&#x3D;&quot;font-size:0px;padding:10px 25px;padding-bottom:30px;word-break:break-word;&quot;&gt;
-                              &lt;table border&#x3D;&quot;0&quot; cellpadding&#x3D;&quot;0&quot; cellspacing&#x3D;&quot;0&quot; role&#x3D;&quot;presentation&quot; style&#x3D;&quot;border-collapse:separate;line-height:100%;&quot;&gt;
-                                &lt;tr&gt;
-                                  &lt;td align&#x3D;&quot;center&quot; bgcolor&#x3D;&quot;#0052F2&quot; role&#x3D;&quot;presentation&quot; style&#x3D;&quot;border:none;border-radius:3px;cursor:auto;mso-padding-alt:10px 25px;background:#0052F2;&quot; valign&#x3D;&quot;middle&quot;&gt;
-                                    &lt;p style&#x3D;&quot;display:inline-block;background:#0052F2;color:white;font-family:Helvetica;font-size:12px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:3px;&quot;&gt;
-                                    &lt;a href&#x3D;&quot;${iviteUser.homePage}/registration/${user._id}&quot; style&#x3D;&quot;text-decoration: none; color: white;&quot;&gt;Перейти за посиланням &lt;/a&gt; &lt;/p&gt;
-                                  &lt;/td&gt;
-                                &lt;/tr&gt;
-                              &lt;/table&gt;
-                            &lt;/td&gt;
-                          &lt;/tr&gt;
-                        &lt;/table&gt;
-                      &lt;/div&gt;
-                      &lt;!--[if mso | IE]&gt;
-                    &lt;/td&gt;
-                  
-                &lt;/tr&gt;
-              
-                          &lt;/table&gt;
-                        &lt;![endif]--&gt;
-                    &lt;/td&gt;
-                  &lt;/tr&gt;
-                &lt;/tbody&gt;
-              &lt;/table&gt;
-            &lt;/div&gt;
-            &lt;!--[if mso | IE]&gt;
-                  &lt;/td&gt;
-                &lt;/tr&gt;
-              &lt;/table&gt;
-              
-              &lt;table
-                 align&#x3D;&quot;center&quot; border&#x3D;&quot;0&quot; cellpadding&#x3D;&quot;0&quot; cellspacing&#x3D;&quot;0&quot; class&#x3D;&quot;&quot; style&#x3D;&quot;width:600px;&quot; width&#x3D;&quot;600&quot;
-              &gt;
-                &lt;tr&gt;
-                  &lt;td style&#x3D;&quot;line-height:0px;font-size:0px;mso-line-height-rule:exactly;&quot;&gt;
-              &lt;![endif]--&gt;
-            &lt;div style&#x3D;&quot;background:#000000;background-color:#000000;margin:0px auto;max-width:600px;&quot;&gt;
-              &lt;table align&#x3D;&quot;center&quot; border&#x3D;&quot;0&quot; cellpadding&#x3D;&quot;0&quot; cellspacing&#x3D;&quot;0&quot; role&#x3D;&quot;presentation&quot; style&#x3D;&quot;background:#000000;background-color:#000000;width:100%;&quot;&gt;
-                &lt;tbody&gt;
-                  &lt;tr&gt;
-                    &lt;td style&#x3D;&quot;direction:ltr;font-size:0px;padding:10px;text-align:center;&quot;&gt;
-                      &lt;!--[if mso | IE]&gt;
-                          &lt;table role&#x3D;&quot;presentation&quot; border&#x3D;&quot;0&quot; cellpadding&#x3D;&quot;0&quot; cellspacing&#x3D;&quot;0&quot;&gt;
-                        
-                &lt;tr&gt;
-              
-                    &lt;td
-                       class&#x3D;&quot;&quot; style&#x3D;&quot;vertical-align:top;width:580px;&quot;
-                    &gt;
-                  &lt;![endif]--&gt;
-                      &lt;div class&#x3D;&quot;mj-column-per-100 mj-outlook-group-fix&quot; style&#x3D;&quot;font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;&quot;&gt;
-                        &lt;table border&#x3D;&quot;0&quot; cellpadding&#x3D;&quot;0&quot; cellspacing&#x3D;&quot;0&quot; role&#x3D;&quot;presentation&quot; style&#x3D;&quot;vertical-align:top;&quot; width&#x3D;&quot;100%&quot;&gt;
-                          &lt;tr&gt;
-                            &lt;td align&#x3D;&quot;center&quot; style&#x3D;&quot;font-size:0px;padding:20px 25px;word-break:break-word;&quot;&gt;
-                              &lt;div style&#x3D;&quot;font-family:Helvetica, Arial, sans-serif;font-size:10px;line-height:1;text-align:center;color:#cccccc;&quot;&gt;З повагою адміністрація EDU4U&lt;/div&gt;
-                            &lt;/td&gt;
-                          &lt;/tr&gt;
-                        &lt;/table&gt;
-                      &lt;/div&gt;
-                      &lt;!--[if mso | IE]&gt;
-                    &lt;/td&gt;
-                  
-                &lt;/tr&gt;
-              
-                          &lt;/table&gt;
-                        &lt;![endif]--&gt;
-                    &lt;/td&gt;
-                  &lt;/tr&gt;
-                &lt;/tbody&gt;
-              &lt;/table&gt;
-            &lt;/div&gt;
-            &lt;!--[if mso | IE]&gt;
-                  &lt;/td&gt;
-                &lt;/tr&gt;
-              &lt;/table&gt;
-              &lt;![endif]--&gt;
-          &lt;/div&gt;
-        &lt;/body&gt;
-        
-        &lt;/html&gt;
-                
-        &#x60;;
-return htmlOutput;
+    const id &#x3D; new ObjectId(inviteUserDTO.nodeId);
+    const node &#x3D; await this.universitiesService.getNode(id);
+    if(!node){
+      throw new NotFoundException(&#x27;Node not found&#x27;);
     }
+    let user &#x3D; await this.usersService.findUserByEmail(inviteUserDTO.email);
+    if(!user){
+      const newUser &#x3D; new CreateUserDTO;
+      newUser.email &#x3D; inviteUserDTO.email;
+      newUser.role &#x3D; &#x27;teacher&#x27;;
+      newUser.password &#x3D; &#x27;newUserPassword&#x27;;
+      newUser.contactPhone &#x3D; &#x27;&#x27;;
+      newUser.firstName &#x3D; &#x27;&#x27;;
+      newUser.lastName &#x3D; &#x27;&#x27;;
+      newUser.title &#x3D; &#x27;&#x27;;
+      newUser.interests &#x3D; &#x27;&#x27;;
+      user &#x3D; await this.usersService.addUser(newUser);
+    }
+    if(user.role !&#x3D; &#x27;teacher&#x27;){ 
+      user &#x3D; await this.usersService.editUser(user._id, user);
+    }          
+    if(!node.teachers.includes(user._id))
+      node.teachers.push(user._id);
+    this.universitiesService.editNode(node._id, node);
+    const institite &#x3D; 
+      await this.universitiesService.getNode(node.parentNode);
+    const univer &#x3D; 
+      await this.universitiesService.getNode(institite.parentNode); 
+    this.mailerEdu4uService.sendMail(
+      user.email, 
+      &#x27;Реєстрація викладача EDU4U&#x27;, 
+      this.mailerEdu4uService.inviteTeacher(node.nodeName, 
+        institite.nodeName, 
+        univer.nodeName, 
+        user ));
+    return user;
+  }
 
+  /**
+  * Invite User(Mentor or Student)
+  * @param inviteUserDTO invite User DTO
+  */
+  async inviteUser(inviteKey: ObjectId, 
+    createUserDTO: CreateUserDTO, 
+    newRole: string) {
+    if(!createUserDTO){
+      throw new NotFoundException(&#x27;Invalid createUserDTO&#x27;);
+    }
+    const course &#x3D; await this.checkInviteKey(inviteKey); 
+    let isOldUser &#x3D; true;
+    let user &#x3D; await this.usersService.findUserByEmail(createUserDTO.email);
+    if(!user){
+      createUserDTO.role &#x3D; newRole;
+      user &#x3D; await this.usersService.addUser(createUserDTO);
+      isOldUser &#x3D; false;
+    } 
+    if(newRole &#x3D;&#x3D; &#x27;mentor&#x27;){
+      //push new mentor if not exists
+      (!course.mentors.includes(user._id)) &amp;&amp; course.mentors.push(user._id);
+      await this.coursesService.editCourse(course); 
+      this.mailerEdu4uService.sendMail(
+        user.email, 
+        &#x27;Реєстрація ментора EDU4U&#x27;, 
+        this.mailerEdu4uService.inviteMentor(course.courseName, user));
+    }
+    else if (!course.students.includes(user._id)) {
+      //push new student if not exists
+      (!course.students.includes(user._id)) &amp;&amp; course.students.push(user._id);
+      await this.coursesService.editCourse(course);      
+      this.mailerEdu4uService.sendMail(
+        user.email, 
+        &#x27;Реєстрація студента EDU4U&#x27;, 
+        this.mailerEdu4uService.inviteStudent(course.courseName, user));
+    }
+    if(isOldUser)
+      throw new ForbiddenException(&#x27;User with this email already exists&#x27;);
+  }
+
+  /**
+   * Check Invite Key
+   * @param inviteKey invite Key
+   */
+  async checkInviteKey(inviteKey: ObjectId):Promise&lt;Course&gt; {
+    const courses &#x3D; await this.coursesService.getCoursesInviteKey(inviteKey); 
+    if(courses.length &#x3D;&#x3D; 0 ){
+      throw new NotFoundException(&#x27;Not found course with this inviteKey&#x27;);
+    }
+    return courses[0];      
+  }
+
+  
      
 }
 </code></pre>

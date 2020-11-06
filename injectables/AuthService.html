@@ -136,8 +136,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="40"
-                            class="link-to-prism">src/auth/auth.service.ts:40</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/auth/auth.service.ts:39</a></div>
                 </td>
             </tr>
 
@@ -211,8 +211,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="51"
-                            class="link-to-prism">src/auth/auth.service.ts:51</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">src/auth/auth.service.ts:50</a></div>
                 </td>
             </tr>
 
@@ -286,8 +286,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="22"
-                            class="link-to-prism">src/auth/auth.service.ts:22</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">src/auth/auth.service.ts:20</a></div>
                 </td>
             </tr>
 
@@ -365,11 +365,8 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
 import { JwtService } from &#x27;@nestjs/jwt&#x27;;
-
 import { UsersService } from &#x27;../users/users.service&#x27;;
-/**@ignore */
-const bcrypt &#x3D; require(&#x27;bcrypt&#x27;);
-
+ 
 
 /**
  * Auth Service
@@ -377,7 +374,8 @@ const bcrypt &#x3D; require(&#x27;bcrypt&#x27;);
 @Injectable()
 export class AuthService {
   /**@ignore */
-  constructor(private usersService: UsersService, private jwtService: JwtService) {}
+  constructor(private usersService: UsersService,
+    private jwtService: JwtService) {}
 
   /**
    * Validate User 
@@ -389,9 +387,10 @@ export class AuthService {
     if (!user) {
       return { message: &quot;User doesn&#x27;t exist&quot;, payload: null };
     } 
-    const passwordValidation &#x3D; await bcrypt.compare(pass, user.password); 
+    // eslint-disable-next-line
+    const passwordValidation &#x3D; await require(&#x27;bcrypt&#x27;).compare(pass, user.password); 
     if (passwordValidation) {
-      const { password, ...result } &#x3D; user;
+      const {...result } &#x3D; user;
       return { payload: result};
     }
     return { message: &quot;Wrong credentials&quot;, payload: null };
@@ -417,7 +416,7 @@ export class AuthService {
     const user &#x3D; this.jwtService.decode(token);
     const payload &#x3D; { email: user[&#x27;email&#x27;], sub: user.sub};
     return {
-        access_token: this.jwtService.sign(payload),
+      access_token: this.jwtService.sign(payload),
     };
   }
 }

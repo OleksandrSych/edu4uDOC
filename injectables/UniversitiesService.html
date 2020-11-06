@@ -109,6 +109,10 @@
                                 <a href="#getNodes">getNodes</a>
                             </li>
                             <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getTeacherNode">getTeacherNode</a>
+                            </li>
+                            <li>
                                 <a href="#getTeachers">getTeachers</a>
                             </li>
                             <li>
@@ -161,8 +165,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="153"
-                            class="link-to-prism">src/universities/universities.service.ts:153</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="168"
+                            class="link-to-prism">src/universities/universities.service.ts:168</a></div>
                 </td>
             </tr>
 
@@ -228,15 +232,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>deleteNode(id)</code>
+                    <code>deleteNode(id: ObjectId)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="187"
-                            class="link-to-prism">src/universities/universities.service.ts:187</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="202"
+                            class="link-to-prism">src/universities/universities.service.ts:202</a></div>
                 </td>
             </tr>
 
@@ -252,12 +256,16 @@
                             <thead>
                                 <tr>
                                     <td>Name</td>
+                                    <td>Type</td>
                                     <td>Optional</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>id</td>
+                                    <td>
+                                            <code>ObjectId</code>
+                                    </td>
 
                                     <td>
                                         No
@@ -271,7 +279,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+                        <b>Returns : </b>        <code><a href="../interfaces/Node.html" target="_self" >Promise&lt;Node&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -298,15 +306,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>editNode(id: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, createNodeDTO: <a href="../interfaces/Node.html">CreateNodeDTO</a>)</code>
+                    <code>editNode(id: ObjectId, createNodeDTO: <a href="../interfaces/Node.html">CreateNodeDTO</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="167"
-                            class="link-to-prism">src/universities/universities.service.ts:167</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="182"
+                            class="link-to-prism">src/universities/universities.service.ts:182</a></div>
                 </td>
             </tr>
 
@@ -330,7 +338,7 @@
                                 <tr>
                                     <td>id</td>
                                     <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            <code>ObjectId</code>
                                     </td>
 
                                     <td>
@@ -382,15 +390,15 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getDepartments(id, allNodes, allUsers)</code>
+<code>getDepartments(id: ObjectId, allNodes: <a href="../interfaces/Node.html">Node[]</a>, allUsers: <a href="../interfaces/User.html">User[]</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="115"
-                            class="link-to-prism">src/universities/universities.service.ts:115</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="130"
+                            class="link-to-prism">src/universities/universities.service.ts:130</a></div>
                 </td>
             </tr>
 
@@ -406,6 +414,7 @@
                             <thead>
                                 <tr>
                                     <td>Name</td>
+                                    <td>Type</td>
                                     <td>Optional</td>
                                     <td>Description</td>
                                 </tr>
@@ -413,6 +422,9 @@
                             <tbody>
                                 <tr>
                                     <td>id</td>
+                                    <td>
+                                            <code>ObjectId</code>
+                                    </td>
 
                                     <td>
                                         No
@@ -426,6 +438,9 @@
                                 </tr>
                                 <tr>
                                     <td>allNodes</td>
+                                    <td>
+                                                <code><a href="../interfaces/Node.html" target="_self" >Node[]</a></code>
+                                    </td>
 
                                     <td>
                                         No
@@ -439,6 +454,9 @@
                                 </tr>
                                 <tr>
                                     <td>allUsers</td>
+                                    <td>
+                                                <code><a href="../interfaces/User.html" target="_self" >User[]</a></code>
+                                    </td>
 
                                     <td>
                                         No
@@ -481,15 +499,15 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getInstitutions(id, allNodes, allUsers)</code>
+<code>getInstitutions(id: ObjectId, allNodes: <a href="../interfaces/Node.html">Node[]</a>, allUsers: <a href="../interfaces/User.html">User[]</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="97"
-                            class="link-to-prism">src/universities/universities.service.ts:97</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="112"
+                            class="link-to-prism">src/universities/universities.service.ts:112</a></div>
                 </td>
             </tr>
 
@@ -505,6 +523,7 @@
                             <thead>
                                 <tr>
                                     <td>Name</td>
+                                    <td>Type</td>
                                     <td>Optional</td>
                                     <td>Description</td>
                                 </tr>
@@ -512,6 +531,9 @@
                             <tbody>
                                 <tr>
                                     <td>id</td>
+                                    <td>
+                                            <code>ObjectId</code>
+                                    </td>
 
                                     <td>
                                         No
@@ -525,6 +547,9 @@
                                 </tr>
                                 <tr>
                                     <td>allNodes</td>
+                                    <td>
+                                                <code><a href="../interfaces/Node.html" target="_self" >Node[]</a></code>
+                                    </td>
 
                                     <td>
                                         No
@@ -538,6 +563,9 @@
                                 </tr>
                                 <tr>
                                     <td>allUsers</td>
+                                    <td>
+                                                <code><a href="../interfaces/User.html" target="_self" >User[]</a></code>
+                                    </td>
 
                                     <td>
                                         No
@@ -582,15 +610,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getNode(id)</code>
+                    <code>getNode(id: ObjectId)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="36"
-                            class="link-to-prism">src/universities/universities.service.ts:36</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">src/universities/universities.service.ts:37</a></div>
                 </td>
             </tr>
 
@@ -606,12 +634,16 @@
                             <thead>
                                 <tr>
                                     <td>Name</td>
+                                    <td>Type</td>
                                     <td>Optional</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>id</td>
+                                    <td>
+                                            <code>ObjectId</code>
+                                    </td>
 
                                     <td>
                                         No
@@ -652,15 +684,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getNodes(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <code>getNodes(id: ObjectId)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="25"
-                            class="link-to-prism">src/universities/universities.service.ts:25</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/universities/universities.service.ts:26</a></div>
                 </td>
             </tr>
 
@@ -684,7 +716,81 @@
                                 <tr>
                                     <td>id</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            <code>ObjectId</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/Node.html" target="_self" >Promise&lt;Node[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTeacherNode"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            getTeacherNode
+                        </b>
+                        <a href="#getTeacherNode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getTeacherNode(id: ObjectId)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="80"
+                            class="link-to-prism">src/universities/universities.service.ts:80</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get nodes by teacher Id</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                            <code>ObjectId</code>
                                     </td>
 
                                     <td>
@@ -724,15 +830,15 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getTeachers(teachers, allUsers)</code>
+<code>getTeachers(teachers: ObjectId[], allUsers: <a href="../interfaces/User.html">User[]</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="132"
-                            class="link-to-prism">src/universities/universities.service.ts:132</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="147"
+                            class="link-to-prism">src/universities/universities.service.ts:147</a></div>
                 </td>
             </tr>
 
@@ -748,12 +854,16 @@
                             <thead>
                                 <tr>
                                     <td>Name</td>
+                                    <td>Type</td>
                                     <td>Optional</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>teachers</td>
+                                    <td>
+                                            <code>ObjectId[]</code>
+                                    </td>
 
                                     <td>
                                         No
@@ -763,6 +873,9 @@
                                 </tr>
                                 <tr>
                                     <td>allUsers</td>
+                                    <td>
+                                                <code><a href="../interfaces/User.html" target="_self" >User[]</a></code>
+                                    </td>
 
                                     <td>
                                         No
@@ -810,8 +923,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="46"
-                            class="link-to-prism">src/universities/universities.service.ts:46</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/universities/universities.service.ts:47</a></div>
                 </td>
             </tr>
 
@@ -853,8 +966,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="75"
-                            class="link-to-prism">src/universities/universities.service.ts:75</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="90"
+                            class="link-to-prism">src/universities/universities.service.ts:90</a></div>
                 </td>
             </tr>
 
@@ -882,6 +995,7 @@
 import { InjectModel } from &#x27;@nestjs/mongoose&#x27;;
 import { Model } from &#x27;mongoose&#x27;;
 import { Node } from &#x27;./interfaces/node.interface&#x27;;
+import { User } from &#x27;../users/interfaces/user.interface&#x27;;
 import { ObjectId } from &#x27;mongodb&#x27;;
 import { CreateNodeDTO } from &#x27;./dto/create-node.dto&#x27;;
 import { UsersService } from &#x27;src/users/users.service&#x27;;
@@ -892,183 +1006,197 @@ import { UsersService } from &#x27;src/users/users.service&#x27;;
 @Injectable()
 export class UniversitiesService {
  
-    /**
+  /**
      * @ignore
      * @param nodeModel 
      */
-    constructor( @InjectModel(&#x27;Node&#x27;) private readonly nodeModel: Model&lt;Node&gt;, private usersService: UsersService ) { }
+  constructor( @InjectModel(&#x27;Node&#x27;) private readonly nodeModel: Model&lt;Node&gt;, private usersService: UsersService ) { }
     
-    /**
+  /**
      * Get Nodes by parentNode id
      * @param id 
      */
-    async getNodes(id: string) : Promise&lt;Node[]&gt; {
-        const nodes &#x3D; await this.nodeModel
-            .find({&quot;parentNode&quot; : id})
-            .exec();
-        return nodes;
-    }
+  async getNodes(id: ObjectId) : Promise&lt;Node[]&gt; {
+    const nodes &#x3D; await this.nodeModel
+      .find({&quot;parentNode&quot; : id})
+      .exec();
+    return nodes;
+  }
 
-    /**
+  /**
      * Get Node by id
      * @param id 
      */
-    async getNode(id): Promise&lt;Node&gt; { 
-        const node &#x3D; await this.nodeModel
-            .findOne({&quot;_id&quot;: id})
-            .exec(); 
-        return node;
-    }
+  async getNode(id: ObjectId): Promise&lt;Node&gt; { 
+    const node &#x3D; await this.nodeModel
+      .findOne(id)
+      .exec(); 
+    return node;
+  }
 
-    /**
+  /**
      * Get informations about all teachers
      */
-    async getTeachersInfo(): Promise&lt;string[]&gt; {
-        var allUsers &#x3D; await this.usersService.getUsers();
-        var allNodes &#x3D; await this.nodeModel
-            .find({}) 
-            .exec();
-        var nodes &#x3D; allNodes.filter(x&#x3D;&gt;x.teachers.length &gt; 0);
-        var teachersInfo &#x3D;[];
-        nodes.map(department &#x3D;&gt; {
-            var institute &#x3D;  allNodes.filter(x&#x3D;&gt;x._id &#x3D;&#x3D; department.parentNode)[0];
-            if(institute){    
-                var university &#x3D; allNodes.filter(x&#x3D;&gt;x._id &#x3D;&#x3D; institute.parentNode)[0];
-                if(university){
-                    department.teachers.map(async teacher &#x3D;&gt;{
-                        var user &#x3D; await allUsers.filter(x&#x3D;&gt;x._id &#x3D;&#x3D; teacher)[0];
-                        if(user){ 
-                        teachersInfo.push( {
-                            &quot;teacher&quot; : { &quot;id&quot; : teacher, &quot;firstName&quot;: user.firstName, &quot;lastName&quot;: user.lastName},
-                            &quot;university&quot; : {&quot;id&quot;: university._id , &quot;name&quot;:university.nodeName},  
-                            &quot;institute&quot; : {&quot;id&quot;: institute._id , &quot;name&quot;:institute.nodeName},
-                            &quot;department&quot; : {&quot;id&quot;: department._id , &quot;name&quot;:department.nodeName},
-                            &quot;courses&quot; : 0
-                    }
-            )}})}}});
-        return teachersInfo;
-    }
+  async getTeachersInfo(): Promise&lt;string[]&gt; {
+    const allUsers &#x3D; await this.usersService.getUsers();
+    const allNodes &#x3D; await this.nodeModel
+      .find({}) 
+      .exec();
+    const nodes &#x3D; allNodes.filter(x&#x3D;&gt;x.teachers.length &gt; 0);
+    const teachersInfo &#x3D;[];
+    nodes.map(department &#x3D;&gt; {
+      const institute &#x3D; 
+            allNodes.filter(x&#x3D;&gt;
+              department.parentNode &amp;&amp; x._id.equals(department.parentNode))[0];
+      if(institute){    
+        const university &#x3D; 
+            allNodes.filter(x&#x3D;&gt;
+              institute.parentNode &amp;&amp; x._id.equals(institute.parentNode))[0];
+        if(university){
+          department.teachers.map(async teacher &#x3D;&gt;{
+            const user &#x3D; await allUsers.filter(x&#x3D;&gt;x._id.equals(teacher))[0];
+            if(user){ 
+              teachersInfo.push( {
+                &quot;teacher&quot; : { &quot;id&quot; : teacher, &quot;firstName&quot;: user.firstName, &quot;lastName&quot;: user.lastName},
+                &quot;university&quot; : {&quot;id&quot;: university._id , &quot;name&quot;:university.nodeName},  
+                &quot;institute&quot; : {&quot;id&quot;: institute._id , &quot;name&quot;:institute.nodeName},
+                &quot;department&quot; : {&quot;id&quot;: department._id , &quot;name&quot;:department.nodeName},
+                &quot;courses&quot; : 0
+              }
+              )}})}}});
+    return teachersInfo;
+  }
 
-    /**
+  /**
+     * Get nodes by teacher Id
+     */
+  async getTeacherNode(id: ObjectId): Promise&lt;Node[]&gt; {
+    const allNodes &#x3D; await this.nodeModel
+      .find({}) 
+      .exec();
+    return allNodes.filter(x&#x3D;&gt;x.teachers.includes(id));      
+  }
+
+  /**
      * Get all tree of all nodes
      */
-    async getTree() : Promise&lt;string[]&gt; {
-        var allUsers &#x3D; await this.usersService.getUsers();
-        var allNodes &#x3D; await this.nodeModel
-            .find({}) 
-            .exec();
-        var nodes &#x3D; allNodes.filter(x&#x3D;&gt;x.parentNode &#x3D;&#x3D;&quot;&quot;);
-        var tree &#x3D;[];
-        nodes.map(element &#x3D;&gt; 
-               tree.push( {
-                &quot;id&quot; : element._id,
-                &quot;name&quot; : element.nodeName,  
-                &quot;institutions&quot; : this.getInstitutions(element._id,allNodes,allUsers)                    
-            }));
-        return tree
-    }
+  async getTree() : Promise&lt;string[]&gt; {
+    const allUsers &#x3D; await this.usersService.getUsers();
+    const allNodes &#x3D; await this.nodeModel
+      .find({}) 
+      .exec();
+    const nodes &#x3D; allNodes.filter(x&#x3D;&gt;x.parentNode &#x3D;&#x3D;&#x3D; null);
+    const tree &#x3D;[];
+    nodes.map(element &#x3D;&gt; 
+      tree.push( {
+        &quot;id&quot; : element._id,
+        &quot;name&quot; : element.nodeName,  
+        &quot;institutions&quot; : this.getInstitutions(element._id,allNodes,allUsers)                    
+      }));
+    return tree
+  }
 
-    /**
+  /**
      * get Institutions
      * @param id universiry id
      * @param allNodes all nodes
      * @param allUsers all users
      */
-    getInstitutions(id, allNodes,allUsers) {
-        var nodes &#x3D; allNodes.filter(x&#x3D;&gt;x.parentNode &#x3D;&#x3D; id);
-        var tree &#x3D;[];
-        (nodes).map(node&#x3D;&gt;{
-            tree.push( {
-                &quot;id&quot; : node._id,
-                &quot;name&quot; : node.nodeName,
-                &quot;departments&quot;: this.getDepartments(node[&quot;id&quot;], allNodes, allUsers)                              
-            })});      
-        return tree;
-    }
+  getInstitutions(id: ObjectId, allNodes: Node[],allUsers: User[]) {
+    const nodes &#x3D; allNodes.filter(x&#x3D;&gt;x.parentNode &amp;&amp; x.parentNode.equals(id));
+    const tree &#x3D;[];
+    (nodes).map(node&#x3D;&gt;{
+      tree.push( {
+        &quot;id&quot; : node._id,
+        &quot;name&quot; : node.nodeName,
+        &quot;departments&quot;: this.getDepartments(node[&quot;id&quot;], allNodes, allUsers)                              
+      })});      
+    return tree;
+  }
   
-    /**
+  /**
      * get Departments
      * @param id Institute id
      * @param allNodes all nodes
      * @param allUsers all nodes
      */
-    getDepartments(id, allNodes, allUsers) {
-        var nodes &#x3D; allNodes.filter(x&#x3D;&gt;x.parentNode &#x3D;&#x3D; id);
-        var tree &#x3D;[];
-        (nodes).map(node&#x3D;&gt;{
-            tree.push( {
-                &quot;id&quot; : node._id,
-                &quot;name&quot; : node.nodeName ,
-                &quot;teachers&quot; : this.getTeachers(node.teachers, allUsers)                     
-            })});  
-        return tree;
-    }
+  getDepartments(id: ObjectId, allNodes: Node[], allUsers: User[]) {
+    const nodes &#x3D; allNodes.filter(x&#x3D;&gt;x.parentNode &amp;&amp; x.parentNode.equals(id));
+    const tree &#x3D;[];
+    (nodes).map(node&#x3D;&gt;{
+      tree.push( {
+        &quot;id&quot; : node._id,
+        &quot;name&quot; : node.nodeName ,
+        &quot;teachers&quot; : this.getTeachers(node.teachers, allUsers)                     
+      })});  
+    return tree;
+  }
   
-    /**
+  /**
      * get Teachers
      * @param teachers 
      * @param allUsers 
      */
-    getTeachers(teachers, allUsers) {
-        if(teachers.length &#x3D;&#x3D; 0 )
-            return [];
-        var tree &#x3D;[];
-        (teachers).map(teacher&#x3D;&gt;{      
-            var user &#x3D; allUsers.filter(x&#x3D;&gt;x._id &#x3D;&#x3D; teacher)[0];
-            if(user){
-              tree.push( {
-                  &quot;id&quot; : teacher,
-                  &quot;name&quot; : user.lastName + &quot; &quot; + user.firstName,
-                  &quot;email&quot; : user.email
-              })}          
-          }); 
-        return tree;
-    }
+  getTeachers(teachers: ObjectId[], allUsers: User[]) {
+    if(teachers.length &#x3D;&#x3D; 0 )
+      return [];
+    const tree &#x3D;[];
+    (teachers).map(teacher&#x3D;&gt;{      
+      const user &#x3D; allUsers.filter(x&#x3D;&gt;x._id.equals(teacher))[0];
+      if(user){
+        tree.push( {
+          &quot;id&quot; : teacher,
+          &quot;name&quot; : user.lastName + &quot; &quot; + user.firstName,
+          &quot;email&quot; : user.email
+        })}          
+    }); 
+    return tree;
+  }
 
 
-    /**
+  /**
      * Add new Node
      * @param createNodeDTO 
      */
-    async addNode(createNodeDTO: CreateNodeDTO): Promise&lt;Node&gt; {
-        createNodeDTO._id &#x3D; new ObjectId();
-        if(!createNodeDTO.parentNode){
-            createNodeDTO.parentNode &#x3D;&#x27;&#x27;;
-        }
-        const newNode &#x3D; await new this.nodeModel(createNodeDTO);
-        return newNode.save();
+  async addNode(createNodeDTO: CreateNodeDTO): Promise&lt;Node&gt; {
+    createNodeDTO._id &#x3D; new ObjectId(); 
+    if(!createNodeDTO.parentNode){
+      createNodeDTO.parentNode &#x3D; null;
     }
+    const newNode &#x3D; await new this.nodeModel(createNodeDTO);
+    return newNode.save();
+  }
 
-    /**
+  /**
      * Edit Node by id
      * @param id 
      * @param createNodeDTO 
      */
-    async editNode(id: any, createNodeDTO: CreateNodeDTO) : Promise&lt;Node&gt; {
-        const oldNode &#x3D; await this.getNode(id);
-        if(!createNodeDTO.parentNode){
-            createNodeDTO.parentNode &#x3D; oldNode.parentNode;
-        }
-        if(!createNodeDTO.teachers){
-            createNodeDTO.teachers &#x3D; oldNode.teachers;
-        }
-        if(!createNodeDTO.mentors){
-            createNodeDTO.mentors &#x3D; oldNode.mentors;
-        }
-        const editedNode &#x3D; await this.nodeModel
-            .findByIdAndUpdate(id, createNodeDTO, { new: true });
-        return editedNode;
+  async editNode(id: ObjectId, createNodeDTO: CreateNodeDTO) : Promise&lt;Node&gt; {
+    const oldNode &#x3D; await this.getNode(id);
+    if(!createNodeDTO.parentNode){
+      createNodeDTO.parentNode &#x3D; oldNode.parentNode;
     }
+    if(!createNodeDTO.teachers){
+      createNodeDTO.teachers &#x3D; oldNode.teachers;
+    }
+    if(!createNodeDTO.mentors){
+      createNodeDTO.mentors &#x3D; oldNode.mentors;
+    }
+    const editedNode &#x3D; await this.nodeModel
+      .findByIdAndUpdate(id, createNodeDTO, { new: true });
+    return editedNode;
+  }
 
-    /**
+  /**
      * Delete Node by id
      * @param id 
      */
-    async deleteNode(id): Promise&lt;any&gt; {
-        const deletedNode &#x3D; await this.nodeModel
-            .findByIdAndRemove(id);
-        return deletedNode;
-    }
+  async deleteNode(id: ObjectId): Promise&lt;Node&gt; {
+    const deletedNode &#x3D; await this.nodeModel
+      .findByIdAndRemove(id);
+    return deletedNode;
+  }
 }
 </code></pre>
     </div>

@@ -84,7 +84,15 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Async</span>
+                                <a href="#changePassword">changePassword</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
                                 <a href="#getProfile">getProfile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getProfileById">getProfileById</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
@@ -119,6 +127,87 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="changePassword"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            changePassword
+                        </b>
+                        <a href="#changePassword"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>changePassword(userLoginDto: <a href="../interfaces/User.html">UserLoginDTO</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@ApiOperation({description: &#x27;Send message to user email with reference how to change password&#x27;})<br />@ApiNotFoundResponse({description: &#x27;User with this email doesn&#x27;t exist!&#x27;})<br />@ApiOkResponse({description: &#x27;Message has been sent to user email&#x27;})<br />@Post(&#x27;/auth/password&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="95"
+                            class="link-to-prism">src/app.controler.ts:95</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Send message to user email with reference how to change password</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>userLoginDto</td>
+                                    <td>
+                                                <code><a href="../interfaces/User.html" target="_self" >UserLoginDTO</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="getProfile"></a>
                     <span class="name">
                         <b>
@@ -140,14 +229,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@UseGuards(JwtAuthGuard)<br />@Get(&#x27;profile&#x27;)<br />@ApiBearerAuth()<br />@ApiOkResponse({description: &#x27;Return user profile&#x27;})<br />@ApiUnauthorizedResponse({description: &#x27;User Unauthorized&#x27;})<br /></code>
+                    <code>@UseGuards(JwtAuthGuard)<br />@Get(&#x27;/profile&#x27;)<br />@ApiBearerAuth()<br />@ApiOkResponse({description: &#x27;Return user profile&#x27;})<br />@ApiUnauthorizedResponse({description: &#x27;User Unauthorized&#x27;})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="70"
-                            class="link-to-prism">src/app.controler.ts:70</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="138"
+                            class="link-to-prism">src/app.controler.ts:138</a></div>
                 </td>
             </tr>
 
@@ -196,6 +285,99 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="getProfileById"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            getProfileById
+                        </b>
+                        <a href="#getProfileById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getProfileById(req, id)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;/profile/:id&#x27;)<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiParam({name: &#x27;id&#x27;, type: String})<br />@ApiOkResponse({description: &#x27;Return user profile and access_token&#x27;})<br />@ApiUnauthorizedResponse({description: &#x27;User Unauthorized&#x27;})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="118"
+                            class="link-to-prism">src/app.controler.ts:118</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get User profile by id</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>req</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>user id </p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="login"></a>
                     <span class="name">
                         <b>
@@ -217,14 +399,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@UseGuards(undefined)<br />@Post(&#x27;auth/login&#x27;)<br />@ApiOkResponse({description: &#x27;result Token and user profile&#x27;})<br />@ApiForbiddenResponse({description: &#x27;Forbidden.&#x27;})<br />@ApiUnauthorizedResponse({description: &#x27;User doesn&#x27;t exist or Wrong credentials.&#x27;})<br /></code>
+                    <code>@UseGuards(undefined)<br />@Post(&#x27;/auth/login&#x27;)<br />@ApiOkResponse({description: &#x27;Token and user profile&#x27;})<br />@ApiForbiddenResponse({description: &#x27;Email doesn&#x27;t confirmed&#x27;})<br />@ApiUnauthorizedResponse({description: &#x27;User doesn&#x27;t exist or Wrong credentials.&#x27;})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="31"
-                            class="link-to-prism">src/app.controler.ts:31</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/app.controler.ts:52</a></div>
                 </td>
             </tr>
 
@@ -301,7 +483,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>logout(req)</code>
+                    <code>logout()</code>
                 </td>
             </tr>
 
@@ -309,14 +491,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Post(&#x27;auth/logout&#x27;)<br />@ApiOkResponse({description: &#x27;Always return statusCode: 201&#x27;})<br /></code>
+                    <code>@Post(&#x27;/auth/logout&#x27;)<br />@ApiOkResponse({description: &#x27;Always return statusCode: 200&#x27;})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="44"
-                            class="link-to-prism">src/app.controler.ts:44</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">src/app.controler.ts:71</a></div>
                 </td>
             </tr>
 
@@ -327,35 +509,8 @@
 </div>
 
                     <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>req</td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
                         <b>Returns : </b>    <code>{}</code>
 
-                    </div>
-                    <div class="io-description">
-                        
                     </div>
                 </td>
             </tr>
@@ -386,14 +541,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Post(&#x27;auth/refresh&#x27;)<br /></code>
+                    <code>@Post(&#x27;/auth/refresh&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="55"
-                            class="link-to-prism">src/app.controler.ts:55</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="82"
+                            class="link-to-prism">src/app.controler.ts:82</a></div>
                 </td>
             </tr>
 
@@ -442,16 +597,34 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Request, Post, UseGuards, Get, Body, Headers, NotFoundException, Res, Param, ForbiddenException, HttpStatus } from &#x27;@nestjs/common&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, 
+  Request, 
+  Post, 
+  UseGuards, 
+  Get, 
+  Headers, 
+  Body, 
+  ForbiddenException,
+  NotFoundException,
+  Param } from &#x27;@nestjs/common&#x27;;
+import { ApiTags,
+  ApiUnauthorizedResponse, 
+  ApiOkResponse, 
+  ApiForbiddenResponse, 
+  ApiBearerAuth, 
+  ApiNotFoundResponse,
+  ApiOperation,
+  ApiParam,
+  ApiBadRequestResponse} from &#x27;@nestjs/swagger&#x27;; 
 import { AuthGuard } from &#x27;@nestjs/passport&#x27;;
 import { AuthService } from &#x27;./auth/auth.service&#x27;;
 import { JwtAuthGuard } from &#x27;./auth/jwt-auth.guard&#x27;;
-import { ApiTags,ApiUnauthorizedResponse, ApiOkResponse, ApiForbiddenResponse, ApiBearerAuth, ApiParam, ApiNotFoundResponse} from &#x27;@nestjs/swagger&#x27;;
-import { UserLoginDTO } from &#x27;./users/dto/userilogin.dto&#x27;; 
 import { UsersService } from &#x27;./users/users.service&#x27;;
-import { ObjectID } from &#x27;mongodb&#x27;; 
-import  {} from &#x27;jwt-decode&#x27;;
-
+import { MailerEdu4uService } from &#x27;./mailer-edu4u/mailer-edu4u.service&#x27;;
+import { ObjectId } from &#x27;mongodb&#x27;; 
+import {} from &#x27;jwt-decode&#x27;;
+import { UserLoginDTO } from &#x27;./users/dto/userilogin.dto&#x27;;
+import { ValidateObjectId } from &#x27;./pipes/validate-object-id.pipes&#x27;;
 
 /**
  * App Controller
@@ -460,7 +633,9 @@ import  {} from &#x27;jwt-decode&#x27;;
 @Controller()
 export class AppController {
   /**@ignore */
-  constructor(private authService: AuthService,private usersService: UsersService) {}
+  constructor(private authService: AuthService,
+              private usersService: UsersService,
+              private mailerService: MailerEdu4uService,) {}
   
   /**
    * login User
@@ -468,11 +643,18 @@ export class AppController {
    * @param userLoginDto 
    */
   @UseGuards(AuthGuard(&#x27;local&#x27;))
-  @Post(&#x27;auth/login&#x27;)
-  @ApiOkResponse({description: &#x27;result Token and user profile&#x27;})
-  @ApiForbiddenResponse({description: &#x27;Forbidden.&#x27;})
+  @Post(&#x27;/auth/login&#x27;)
+  @ApiOkResponse({description: &#x27;Token and user profile&#x27;})
+  @ApiForbiddenResponse({description: &#x27;Email doesn\&#x27;t confirmed&#x27;})
   @ApiUnauthorizedResponse({description: &#x27;User doesn\&#x27;t exist or Wrong credentials.&#x27;})
+  // eslint-disable-next-line
   async login(@Request() req, @Body() userLoginDto: UserLoginDTO) {
+    if(req.user[&#x27;_doc&#x27;].role){
+      const role &#x3D; req.user[&#x27;_doc&#x27;].role;
+      if((role &#x3D;&#x3D; &#x27;student&#x27; || role &#x3D;&#x3D; &#x27;mentor&#x27;) &amp;&amp; !req.user[&#x27;_doc&#x27;].confirmedEmail ){
+        throw new ForbiddenException(&#x27;Email doesn\&#x27;t confirmed&#x27;);
+      }
+    }
     return {
       access_token : (await this.authService.login(req.user[&#x27;_doc&#x27;])).access_token,
       profile: req.user[&#x27;_doc&#x27;]
@@ -483,11 +665,11 @@ export class AppController {
    * logout User
    * @param req 
    */
-  @Post(&#x27;auth/logout&#x27;)
-  @ApiOkResponse({description: &#x27;Always return statusCode: 201&#x27;})  
-  async logout(@Request() req) {
+  @Post(&#x27;/auth/logout&#x27;)
+  @ApiOkResponse({description: &#x27;Always return statusCode: 200&#x27;})  
+  async logout() {
     return {
-      statusCode: 201
+      statusCode: 200
     }
   }
 
@@ -495,24 +677,65 @@ export class AppController {
    * Refresh token
    * @param headers 
    */
-  @Post(&#x27;auth/refresh&#x27;) 
+  @Post(&#x27;/auth/refresh&#x27;) 
   async refresh( @Headers() headers) { 
-      var token &#x3D; headers.authorization.replace(&#x27;Bearer &#x27;,&#x27;&#x27;);
-      return this.authService.refresh(token);
+    const token &#x3D; headers.authorization.replace(&#x27;Bearer &#x27;,&#x27;&#x27;);
+    return this.authService.refresh(token);
   }
 
+  /**
+   * Send message to user email with reference how to change password
+   * @param userLoginDto 
+   */
+  @ApiOperation({description: &#x27;Send message to user email with reference how to change password&#x27;})
+  @ApiNotFoundResponse({description: &#x27;User with this email doesn\&#x27;t exist!&#x27;})
+  @ApiOkResponse({description: &#x27;Message has been sent to user email&#x27;})  
+  @Post(&#x27;/auth/password&#x27;) 
+  async changePassword(@Body() userLoginDto: UserLoginDTO) { 
+    const user &#x3D; await this.usersService.findUserByEmail(userLoginDto.username);
+    if(!user){
+      throw new NotFoundException(&#x27;User with this email doesn\&#x27;t exist!&#x27;);
+    }
+    this.mailerService.sendMail(
+      user.email, 
+      &#x27;Запит на зміну паролю EDU4U&#x27;, 
+      this.mailerService.changePassword(user)); 
+    return {
+      message: &#x60;Message has been sent to ${user.email}&#x60;
+    }
+  }
+
+  /**
+   * Get User profile by id
+   * @param id user id 
+   */ 
+  @Get(&#x27;/profile/:id&#x27;)
+  @ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})
+  @ApiParam({name: &#x27;id&#x27;, type: String }) 
+  @ApiOkResponse({description: &#x27;Return user profile and access_token&#x27;})
+  @ApiUnauthorizedResponse({description: &#x27;User Unauthorized&#x27;})
+  async getProfileById(@Request() req, @Param(&#x27;id&#x27;, new ValidateObjectId()) id) {
+    const user &#x3D; await this.usersService.getUser(new ObjectId(id));
+    if(!user){
+      throw new NotFoundException(&#x27;User doesn\&#x27;t exist!&#x27;);
+    } 
+    return {
+      access_token: (await this.authService.login(user)).access_token,
+      profile: user
+    }
+  }
    
   /**
    * Get User profile
    * @param req 
    */
   @UseGuards(JwtAuthGuard)
-  @Get(&#x27;profile&#x27;)
+  @Get(&#x27;/profile&#x27;)
   @ApiBearerAuth()  
   @ApiOkResponse({description: &#x27;Return user profile&#x27;})
   @ApiUnauthorizedResponse({description: &#x27;User Unauthorized&#x27;})
   async getProfile(@Request() req) {
-    return await this.usersService.getUser(new ObjectID(req.user._id));
+    return await this.usersService.getUser(new ObjectId(req.user._id));
   }
 }</code></pre>
     </div>

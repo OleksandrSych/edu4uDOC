@@ -90,7 +90,23 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#inviteTecher">inviteTecher</a>
+                                <a href="#checkInviteKey">checkInviteKey</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#confirmEmail">confirmEmail</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#inviteMentor">inviteMentor</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#inviteStudent">inviteStudent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#inviteTeacher">inviteTeacher</a>
                             </li>
                         </ul>
                     </td>
@@ -113,20 +129,20 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="inviteTecher"></a>
+                    <a name="checkInviteKey"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Async</span>
-                            inviteTecher
+                            checkInviteKey
                         </b>
-                        <a href="#inviteTecher"><span class="icon ion-ios-link"></span></a>
+                        <a href="#checkInviteKey"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>inviteTecher(res, inviteUserDTO: <a href="../interfaces/User.html">InviteUserDTO</a>)</code>
+                    <code>checkInviteKey(res, inviteKey)</code>
                 </td>
             </tr>
 
@@ -134,21 +150,423 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Post(&#x27;/teacher&#x27;)<br /></code>
+                    <code>@Get(&#x27;/check/:inviteKey&#x27;)<br />@ApiNotFoundResponse({description: &#x27;Not found course with this inviteKey&#x27;})<br />@ApiOkResponse({description: &#x27;Course id and course name&#x27;})<br />@ApiOperation({description: Check invite key 
+        
+Return course id and course name
+       })<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiParam({name: &#x27;inviteKey&#x27;, type: String})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="25"
-                            class="link-to-prism">src/invite-user/invite-user.controller.ts:25</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="139"
+                            class="link-to-prism">src/invite-user/invite-user.controller.ts:139</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Invite Techer</p>
+                    <div class="io-description"><p>Check cpurse invite key</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>inviteKey</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="confirmEmail"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            confirmEmail
+                        </b>
+                        <a href="#confirmEmail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>confirmEmail(res, id)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Post(&#x27;/confirm/:id&#x27;)<br />@ApiForbiddenResponse({description: &#x27;User with this key is not exists&#x27;})<br />@ApiOkResponse({description: &#x27;Email confirmed&#x27;})<br />@ApiOperation({description: &#x27;Confirm user or mentor Email&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiParam({name: &#x27;id&#x27;, type: String})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="114"
+                            class="link-to-prism">src/invite-user/invite-user.controller.ts:114</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Confirm Email</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>user Id</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="inviteMentor"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            inviteMentor
+                        </b>
+                        <a href="#inviteMentor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>inviteMentor(res, createUserDTO: <a href="../interfaces/User.html">CreateUserDTO</a>, inviteKey)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Post(&#x27;/mentor/:inviteKey&#x27;)<br />@ApiForbiddenResponse({description: &#x27; User with this email already exists&#x27;})<br />@ApiOkResponse({description: &#x27;New mentore profile&#x27;})<br />@ApiOperation({description: Invite mentor
+        
+Registry new mentor to the course
+        
+Waiting for the invite key and new user profile
+       })<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiParam({name: &#x27;inviteKey&#x27;, type: String})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="73"
+                            class="link-to-prism">src/invite-user/invite-user.controller.ts:73</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Invite Mentor</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>createUserDTO</td>
+                                    <td>
+                                                <code><a href="../interfaces/User.html" target="_self" >CreateUserDTO</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>inviteKey</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="inviteStudent"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            inviteStudent
+                        </b>
+                        <a href="#inviteStudent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>inviteStudent(res, createUserDTO: <a href="../interfaces/User.html">CreateUserDTO</a>, inviteKey)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Post(&#x27;/student/:inviteKey&#x27;)<br />@ApiForbiddenResponse({description: &#x27;User with this email already exists&#x27;})<br />@ApiOkResponse({description: &#x27;New student profile&#x27;})<br />@ApiOperation({description: Invite student
+        
+Registry new student to the course
+        
+Waiting for the invite key and new user profile
+       })<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiParam({name: &#x27;inviteKey&#x27;, type: String})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="95"
+                            class="link-to-prism">src/invite-user/invite-user.controller.ts:95</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Invite Student</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>createUserDTO</td>
+                                    <td>
+                                                <code><a href="../interfaces/User.html" target="_self" >CreateUserDTO</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>inviteKey</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="inviteTeacher"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            inviteTeacher
+                        </b>
+                        <a href="#inviteTeacher"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>inviteTeacher(res, inviteUserDTO: <a href="../interfaces/User.html">InviteUserDTO</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Post(&#x27;/teacher&#x27;)<br />@UseGuards(JwtAuthGuard)<br />@ApiBearerAuth()<br />@ApiUnauthorizedResponse({description: &#x27;Access Token is not valid or has expired&#x27;})<br />@ApiOkResponse({description: &#x27;New teacher profile&#x27;})<br />@ApiOperation({description: Invite teacher
+        
+Send invitation to new teacher
+        
+Waiting for the department id and the teacher&#x27;s email})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">src/invite-user/invite-user.controller.ts:50</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Invite Teacher</p>
 </div>
 
                     <div class="io-description">
@@ -205,38 +623,152 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Body, Controller, HttpStatus, Post, Res, UseGuards } from &#x27;@nestjs/common&#x27;;
-import { ApiBearerAuth, ApiTags, ApiUnauthorizedResponse } from &#x27;@nestjs/swagger&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Body, 
+  Controller, 
+  ForbiddenException, 
+  Get, 
+  HttpStatus, 
+  Param, 
+  Post, 
+  Res, 
+  UseGuards } from &#x27;@nestjs/common&#x27;;
+import { ApiBadRequestResponse, ApiBearerAuth, 
+  ApiForbiddenResponse, 
+  ApiNotFoundResponse, 
+  ApiOkResponse, 
+  ApiOperation, 
+  ApiParam, 
+  ApiTags, 
+  ApiUnauthorizedResponse } from &#x27;@nestjs/swagger&#x27;;
+import { ObjectId } from &#x27;mongodb&#x27;;
 import { JwtAuthGuard } from &#x27;src/auth/jwt-auth.guard&#x27;;
+import { ValidateObjectId } from &#x27;src/pipes/validate-object-id.pipes&#x27;;
+import { CreateUserDTO } from &#x27;src/users/dto/create-user.dto&#x27;;
 import { InviteUserDTO } from &#x27;./dto/invite-user.dto&#x27;;
 import { InviteUserService} from &#x27;./invite-user.service&#x27;;
+import { UsersService } from &#x27;../users/users.service&#x27;;
 
 /**
  * Invite Users
  */
-@UseGuards(JwtAuthGuard)
+
 @Controller(&#x27;invite&#x27;)
 @ApiTags(&#x27;Invite Users&#x27;)
-@ApiBearerAuth()
-@ApiUnauthorizedResponse({description:&#x27;Access Token is not valid or has expired&#x27;})
 export class InviteUserController {
-    /**@ignore */
-    constructor(private inviteUserService: InviteUserService) { } 
+  /**@ignore */
+  constructor(private inviteUserService: InviteUserService,
+              private usersService: UsersService) { } 
 
     /**
-     * Invite Techer
+     * Invite Teacher
      * @param res 
      * @param inviteUserDTO 
      */
     @Post(&#x27;/teacher&#x27;)
-    async inviteTecher(@Res() res, @Body() inviteUserDTO: InviteUserDTO) {
-        const newTeacher &#x3D; await this.inviteUserService.inviteTecher(inviteUserDTO);
-        return res.status(HttpStatus.OK).json({
-          message: &#x27;Teacher has been invited successfully!&#x27;,
-          user: newTeacher,
-        });
-    }
+    @UseGuards(JwtAuthGuard)
+    @ApiBearerAuth()
+    @ApiUnauthorizedResponse({description: &#x27;Access Token is not valid or has expired&#x27;})
+    @ApiOkResponse({description: &#x27;New teacher profile&#x27;})
+    @ApiOperation({description: &#x60;Invite teacher
+        \nSend invitation to new teacher
+        \nWaiting for the department id and the teacher&#x27;s email&#x60;})
+  async inviteTeacher(@Res() res, @Body() inviteUserDTO: InviteUserDTO) {
+    const newTeacher &#x3D; 
+      await this.inviteUserService.inviteTeacher(inviteUserDTO);
+    return res.status(HttpStatus.OK).json({
+      message: &#x27;Teacher has been invited successfully!&#x27;,
+      user: newTeacher,
+    });
+  }
     
+    /**
+     * Invite Mentor
+     * @param res 
+     * @param createUserDTO 
+     */
+    @Post(&#x27;/mentor/:inviteKey&#x27;)
+    @ApiForbiddenResponse({description:&#x27; User with this email already exists&#x27;})
+    @ApiOkResponse({description: &#x27;New mentore profile&#x27;})
+    @ApiOperation({description: &#x60;Invite mentor
+        \nRegistry new mentor to the course
+        \nWaiting for the invite key and new user profile
+       &#x60;})
+    @ApiBadRequestResponse({description:&#x27;Invalid id!&#x27;})
+    @ApiParam({name: &#x27;inviteKey&#x27;, type: String})
+    async inviteMentor(@Res() res, @Body() createUserDTO: CreateUserDTO, @Param(&#x27;inviteKey&#x27;, new ValidateObjectId()) inviteKey) {
+      const newMentor &#x3D; await this.inviteUserService.inviteUser( new ObjectId(inviteKey), createUserDTO, &#x27;mentor&#x27;);
+      return res.status(HttpStatus.OK).json({
+        message: &#x27;Mentor has been invited successfully!&#x27;,
+        user: newMentor,
+      });
+    }
+
+    /**
+     * Invite Student
+     * @param res 
+     * @param createUserDTO 
+     */
+    @Post(&#x27;/student/:inviteKey&#x27;)    
+    @ApiForbiddenResponse({description: &#x27;User with this email already exists&#x27;})
+    @ApiOkResponse({description: &#x27;New student profile&#x27;})
+    @ApiOperation({description: &#x60;Invite student
+        \nRegistry new student to the course
+        \nWaiting for the invite key and new user profile
+       &#x60;})
+    @ApiBadRequestResponse({description:&#x27;Invalid id!&#x27;})
+    @ApiParam({name: &#x27;inviteKey&#x27;, type: String})
+    async inviteStudent(@Res() res, @Body() createUserDTO: CreateUserDTO, @Param(&#x27;inviteKey&#x27;, new ValidateObjectId()) inviteKey) {
+      const newStudent&#x3D; await this.inviteUserService.inviteUser(new ObjectId(inviteKey), createUserDTO, &#x27;student&#x27;);
+      return res.status(HttpStatus.OK).json({
+        message: &#x27;Student has been invited successfully!&#x27;,
+        user: newStudent,
+      });
+    }
+
+    /**
+     * Confirm Email
+     * @param res 
+     * @param id user Id
+     */
+    @Post(&#x27;/confirm/:id&#x27;)    
+    @ApiForbiddenResponse({description: &#x27;User with this key is not exists&#x27;})
+    @ApiOkResponse({description: &#x27;Email confirmed&#x27;})
+    @ApiOperation({description: &#x27;Confirm user or mentor Email&#x27;})
+    @ApiBadRequestResponse({description:&#x27;Invalid id!&#x27;})
+    @ApiParam({name: &#x27;id&#x27;, type: String})
+    async confirmEmail(@Res() res, @Param(&#x27;id&#x27;, new ValidateObjectId()) id) {
+      const user &#x3D; await this.usersService.getUser(new ObjectId(id));
+      if(!user){
+        throw new ForbiddenException(&#x27;User with this key is not exists&#x27;);
+      }
+      user.confirmedEmail &#x3D; true;
+      await this.usersService.editUser(new ObjectId(id), user);
+      return res.status(HttpStatus.OK).json({
+        message: &#x27;Email has been confirmed successfully!&#x27;
+      });
+    }
+
+    /**
+     * Check cpurse invite key
+     * @param res 
+     * @param inviteKey 
+     */
+    @Get(&#x27;/check/:inviteKey&#x27;)    
+    @ApiNotFoundResponse({description: &#x27;Not found course with this inviteKey&#x27;})
+    @ApiOkResponse({description: &#x27;Course id and course name&#x27;})
+    @ApiOperation({description: &#x60;Check invite key 
+        \nReturn course id and course name
+       &#x60;})
+    @ApiBadRequestResponse({description:&#x27;Invalid id!&#x27;})
+    @ApiParam({name: &#x27;inviteKey&#x27;, type: String})
+    async checkInviteKey(@Res() res, 
+      @Param(&#x27;inviteKey&#x27;, new ValidateObjectId()) inviteKey) {
+      const id &#x3D; new ObjectId(inviteKey);
+      const course &#x3D; await this.inviteUserService.checkInviteKey(id);
+      return res.status(HttpStatus.OK).json({
+        id: course._id,
+        courseName: course.courseName});
+    }
    
 }
 </code></pre>

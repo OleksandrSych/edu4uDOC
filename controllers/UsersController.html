@@ -150,14 +150,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Post(&#x27;/add&#x27;)<br />@ApiForbiddenResponse({description: &#x27;User with this email already exists&#x27;})<br /></code>
+                    <code>@Post(&#x27;/add&#x27;)<br />@ApiForbiddenResponse({description: &#x27;User with this email already exists&#x27;})<br />@ApiOkResponse({description: &#x27;New user profile&#x27;})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="62"
-                            class="link-to-prism">src/users/users.controller.ts:62</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">src/users/users.controller.ts:63</a></div>
                 </td>
             </tr>
 
@@ -242,14 +242,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Delete(&#x27;/delete&#x27;)<br />@ApiNotFoundResponse({description: &#x27;User does not exist!&#x27;})<br />@ApiQuery({name: &#x27;userID&#x27;, type: String})<br /></code>
+                    <code>@Delete(&#x27;/delete&#x27;)<br />@ApiNotFoundResponse({description: &#x27;User doesn&#x27;t exist!&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiOkResponse({description: &#x27;Deleted user profile&#x27;})<br />@ApiQuery({name: &#x27;userID&#x27;, type: String})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="110"
-                            class="link-to-prism">src/users/users.controller.ts:110</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="118"
+                            class="link-to-prism">src/users/users.controller.ts:118</a></div>
                 </td>
             </tr>
 
@@ -328,14 +328,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Put(&#x27;/edit&#x27;)<br />@ApiQuery({name: &#x27;userID&#x27;, type: String})<br />@ApiForbiddenResponse({description: &#x27;User with this new email already exists&#x27;})<br /></code>
+                    <code>@Put(&#x27;/edit&#x27;)<br />@ApiQuery({name: &#x27;userID&#x27;, type: String})<br />@ApiForbiddenResponse({description: &#x27;User with this new email already exists&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiOkResponse({description: &#x27;Updated user profile&#x27;})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="80"
-                            class="link-to-prism">src/users/users.controller.ts:80</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/users/users.controller.ts:83</a></div>
                 </td>
             </tr>
 
@@ -431,7 +431,7 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Get(&#x27;:userID&#x27;)<br />@ApiOkResponse({description: &#x27;The user has been successfully returned.&#x27;})<br />@ApiForbiddenResponse({description: &#x27;Forbidden.&#x27;})<br />@ApiNotFoundResponse({description: &#x27;User does not exist.&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid ID!&#x27;})<br />@ApiParam({name: &#x27;userID&#x27;, type: String})<br /></code>
+                    <code>@Get(&#x27;:userID&#x27;)<br />@ApiOkResponse({description: &#x27;The user has been successfully returned.&#x27;})<br />@ApiForbiddenResponse({description: &#x27;Forbidden.&#x27;})<br />@ApiNotFoundResponse({description: &#x27;User doesn&#x27;t exist.&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiParam({name: &#x27;userID&#x27;, type: String})<br /></code>
                 </td>
             </tr>
 
@@ -573,13 +573,13 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Get, Res, HttpStatus, Param, NotFoundException, Post, Body, Put, Query, Delete ,UseGuards, ForbiddenException} from &#x27;@nestjs/common&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Get, Res, HttpStatus, Param, NotFoundException, Post, Body, Put, Query, Delete ,UseGuards} from &#x27;@nestjs/common&#x27;;
 import { UsersService } from &#x27;./users.service&#x27;;
 import { CreateUserDTO } from &#x27;./dto/create-user.dto&#x27;;
 import { ValidateObjectId } from &#x27;../pipes/validate-object-id.pipes&#x27;;
 import { JwtAuthGuard } from &#x27;../auth/jwt-auth.guard&#x27;;
 import { ApiTags, ApiOkResponse, ApiForbiddenResponse, ApiBearerAuth, ApiParam, ApiQuery, ApiNotFoundResponse, ApiBadRequestResponse, ApiUnauthorizedResponse } from &#x27;@nestjs/swagger&#x27;;
-import { ObjectID } from &#x27;mongodb&#x27;;
+import { ObjectId } from &#x27;mongodb&#x27;;
 
 /**
  * Users Controller
@@ -588,25 +588,25 @@ import { ObjectID } from &#x27;mongodb&#x27;;
 @Controller(&#x27;users&#x27;)
 @ApiTags(&#x27;Users&#x27;)
 @ApiBearerAuth()
-@ApiUnauthorizedResponse({description:&#x27;Access Token is not valid or has expired&#x27;})
+@ApiUnauthorizedResponse({description: &#x27;Access Token is not valid or has expired&#x27;})
 export class UsersController{
   /**
    * @ignore
    * @param usersService 
    */
-    constructor(private usersService: UsersService) { }  
+  constructor(private usersService: UsersService) { }  
     
     /**
      * Fetch all users
      * @param res 
      */
     @Get(&#x27;/users&#x27;)
-    @ApiOkResponse({description:&#x27;The users list has been successfully returned.&#x27;})
-    @ApiForbiddenResponse({description:&#x27;Forbidden.&#x27;})
-    async getUsers(@Res() res) {
-      const users &#x3D; await this.usersService.getUsers();
-      return res.status(HttpStatus.OK).json(users);
-    }
+    @ApiOkResponse({description: &#x27;The users list has been successfully returned.&#x27;})
+    @ApiForbiddenResponse({description: &#x27;Forbidden.&#x27;})
+  async getUsers(@Res() res) {
+    const users &#x3D; await this.usersService.getUsers();
+    return res.status(HttpStatus.OK).json(users);
+  }
     
     /**
      * Fetch a particular user using ID
@@ -614,15 +614,15 @@ export class UsersController{
      * @param userID 
      */
     @Get(&#x27;:userID&#x27;)
-    @ApiOkResponse({ description:&#x27;The user has been successfully returned.&#x27;})
-    @ApiForbiddenResponse({description:&#x27;Forbidden.&#x27;})
-    @ApiNotFoundResponse({description:&#x27;User does not exist.&#x27;})
-    @ApiBadRequestResponse({description:&#x27;Invalid ID!&#x27;})
-    @ApiParam({ name: &#x27;userID&#x27;, type: String })
+    @ApiOkResponse({description: &#x27;The user has been successfully returned.&#x27;})
+    @ApiForbiddenResponse({description: &#x27;Forbidden.&#x27;})
+    @ApiNotFoundResponse({description: &#x27;User doesn\&#x27;t exist.&#x27;})
+    @ApiBadRequestResponse({description:&#x27;Invalid id!&#x27;})
+    @ApiParam({name: &#x27;userID&#x27;, type: String})
     async getUser(@Res() res, @Param(&#x27;userID&#x27;, new ValidateObjectId()) userID) {
-      const user &#x3D; await this.usersService.getUser(new ObjectID(userID));
+      const user &#x3D; await this.usersService.getUser(new ObjectId(userID));
       if (!user) {
-          throw new NotFoundException(&#x27;User does not exist!&#x27;);
+        throw new NotFoundException(&#x27;User doesn\&#x27;t exist!&#x27;);
       }
       return res.status(HttpStatus.OK).json(user);
     }
@@ -633,7 +633,8 @@ export class UsersController{
      * @param createUserDTO 
      */    
     @Post(&#x27;/add&#x27;)
-    @ApiForbiddenResponse({description:&#x27;User with this email already exists&#x27;})
+    @ApiForbiddenResponse({description: &#x27;User with this email already exists&#x27;})
+    @ApiOkResponse({description: &#x27;New user profile&#x27;})
     async addUser(@Res() res, @Body() createUserDTO: CreateUserDTO) {
       await this.usersService.checkEmail(createUserDTO.email); 
       const newUser &#x3D; await this.usersService.addUser(createUserDTO);
@@ -651,7 +652,9 @@ export class UsersController{
      */
     @Put(&#x27;/edit&#x27;)
     @ApiQuery({ name: &#x27;userID&#x27;, type: String })
-    @ApiForbiddenResponse({description:&#x27;User with this new email already exists&#x27;})
+    @ApiForbiddenResponse({description: &#x27;User with this new email already exists&#x27;})
+    @ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})
+    @ApiOkResponse({description: &#x27;Updated user profile&#x27;})
     async editUser(
       @Res() res,
       @Query(&#x27;userID&#x27;, new ValidateObjectId()) userID,
@@ -660,13 +663,16 @@ export class UsersController{
       if (userID !&#x3D; createUserDTO._id) {
         throw new NotFoundException(&#x27;Incorrect user ID&#x27;);
       }
-      const user &#x3D; await this.usersService.getUser(new ObjectID(userID));
-      if (user &amp;&amp; user.email !&#x3D;  createUserDTO.email) {
+      const user &#x3D; await this.usersService.getUser(new ObjectId(userID));
+      if (user &amp;&amp; user.email !&#x3D; createUserDTO.email) {
         await this.usersService.checkEmail(createUserDTO.email);
       }
-      const editedUser &#x3D; await this.usersService.editUser(userID, createUserDTO);
+      const editedUser &#x3D; 
+            await this.usersService.editUser(
+              new ObjectId(userID), createUserDTO
+            );
       if (!editedUser) {
-          throw new NotFoundException(&#x27;User does not exist!&#x27;);
+        throw new NotFoundException(&#x27;User doesn\&#x27;t exist!&#x27;);
       }
       return res.status(HttpStatus.OK).json({
         message: &#x27;User has been successfully updated&#x27;,
@@ -680,19 +686,22 @@ export class UsersController{
      * @param userID 
      */
     @Delete(&#x27;/delete&#x27;)
-    @ApiNotFoundResponse({description:&#x27;User does not exist!&#x27;})
-    @ApiQuery({ name: &#x27;userID&#x27;, type: String })
+    @ApiNotFoundResponse({description: &#x27;User doesn\&#x27;t exist!&#x27;})
+    @ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})
+    @ApiOkResponse({description: &#x27;Deleted user profile&#x27;})
+    @ApiQuery({name: &#x27;userID&#x27;, type: String})
     async deleteUser(@Res() res, @Query(&#x27;userID&#x27;, new ValidateObjectId()) userID) {
-      const deletedUser &#x3D; await this.usersService.deleteUser(userID);
+      const deletedUser &#x3D; 
+        await this.usersService.deleteUser(new ObjectId(userID));
       if (!deletedUser) {
-          throw new NotFoundException(&#x27;User does not exist!&#x27;);
+        throw new NotFoundException(&#x27;User doesn\&#x27;t exist!&#x27;);
       }
       return res.status(HttpStatus.OK).json({
         message: &#x27;User has been deleted!&#x27;,
         user: deletedUser,
       });
     }
-  }</code></pre>
+}</code></pre>
     </div>
 </div>
 

@@ -121,7 +121,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>transform(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, metadata: ArgumentMetadata)</code>
+                    <code>transform(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
@@ -162,18 +162,6 @@
 
 
                                 </tr>
-                                <tr>
-                                    <td>metadata</td>
-                                    <td>
-                                            <code>ArgumentMetadata</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -196,7 +184,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { PipeTransform, Injectable, ArgumentMetadata, BadRequestException } from &#x27;@nestjs/common&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { PipeTransform, Injectable, BadRequestException } from &#x27;@nestjs/common&#x27;;
 import * as mongoose from &#x27;mongoose&#x27;;
 
 /**
@@ -209,10 +197,10 @@ export class ValidateObjectId implements PipeTransform&lt;string&gt; {
    * @param value 
    * @param metadata 
    */
-  async transform(value: string, metadata: ArgumentMetadata) {
+  async transform(value: string) {
     const isValid &#x3D; mongoose.Types.ObjectId.isValid(value);
     if (!isValid) {
-        throw new BadRequestException(&#x27;Invalid ID!&#x27;);
+      throw new BadRequestException(&#x27;Invalid ID!&#x27;);
     }
     return value;
   }

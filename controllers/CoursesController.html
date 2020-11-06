@@ -90,7 +90,23 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#addUser">addUser</a>
+                                <a href="#addActivity">addActivity</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#addActivityLink">addActivityLink</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#addCourse">addCourse</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteActivity">deleteActivity</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteActivityLink">deleteActivityLink</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
@@ -98,7 +114,27 @@
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
+                                <a href="#deleteMentor">deleteMentor</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteStudent">deleteStudent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteTopic">deleteTopic</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#editActivity">editActivity</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
                                 <a href="#editCourse">editCourse</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#editTopic">editTopic</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
@@ -110,7 +146,31 @@
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
+                                <a href="#getMentors">getMentors</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getMentorsCourseId">getMentorsCourseId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getStudents">getStudents</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getStudentsCourseId">getStudentsCourseId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getTeacherOwnerCourseId">getTeacherOwnerCourseId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
                                 <a href="#getUsers">getUsers</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#updateInviteKey">updateInviteKey</a>
                             </li>
                         </ul>
                     </td>
@@ -133,20 +193,20 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="addUser"></a>
+                    <a name="addActivity"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Async</span>
-                            addUser
+                            addActivity
                         </b>
-                        <a href="#addUser"><span class="icon ion-ios-link"></span></a>
+                        <a href="#addActivity"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>addUser(res, createCourseDTO: <a href="../interfaces/Course.html">CreateCourseDTO</a>)</code>
+                    <code>addActivity(res, courseId, topicId, activityDTO: <a href="../interfaces/Activity.html">ActivityDTO</a>)</code>
                 </td>
             </tr>
 
@@ -154,14 +214,232 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Post(&#x27;/add&#x27;)<br /></code>
+                    <code>@Post(&#x27;/activity/add&#x27;)<br />@ApiOperation({description: &#x27;Add new Activity&#x27;, summary: &#x27;Add new Activity&#x27;})<br />@ApiOkResponse({description: &#x27;Course has been submitted successfully!&#x27;})<br />@ApiForbiddenResponse({description: &#x27;It is not a teacher&#x27;})<br />@ApiQuery({name: &#x27;courseId&#x27;, type: String})<br />@ApiQuery({name: &#x27;topicId&#x27;, type: String})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="75"
-                            class="link-to-prism">src/courses/courses.controller.ts:75</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="295"
+                            class="link-to-prism">src/courses/courses.controller.ts:295</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Add new Activity</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>courseId</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>topicId</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>activityDTO</td>
+                                    <td>
+                                                <code><a href="../interfaces/Activity.html" target="_self" >ActivityDTO</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addActivityLink"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            addActivityLink
+                        </b>
+                        <a href="#addActivityLink"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addActivityLink(res, courseId, activityId, link)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Post(&#x27;/activity/link/add&#x27;)<br />@ApiOperation({description: &#x27;Add new Activity Link&#x27;, summary: &#x27;Add new Activity Link&#x27;})<br />@ApiOkResponse({description: &#x27;Course has been submitted successfully!&#x27;})<br />@ApiForbiddenResponse({description: &#x27;It is not a teacher&#x27;})<br />@ApiQuery({name: &#x27;courseId&#x27;, type: String})<br />@ApiQuery({name: &#x27;activityId&#x27;, type: String})<br />@ApiQuery({name: &#x27;link&#x27;, type: String})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="341"
+                            class="link-to-prism">src/courses/courses.controller.ts:341</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Add new Activity Link</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>courseId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>activityId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>link</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addCourse"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            addCourse
+                        </b>
+                        <a href="#addCourse"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addCourse(res, createCourseDTO: <a href="../interfaces/Course.html">CreateCourseDTO</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Post(&#x27;/add&#x27;)<br />@ApiOperation({description: &#x27;Add new Course&#x27;, summary: &#x27;Add new Course&#x27;})<br />@ApiOkResponse({description: &#x27;Course has been submitted successfully!&#x27;})<br />@ApiForbiddenResponse({description: &#x27;It is not a teacher&#x27;})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="262"
+                            class="link-to-prism">src/courses/courses.controller.ts:262</a></div>
                 </td>
             </tr>
 
@@ -225,6 +503,215 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="deleteActivity"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            deleteActivity
+                        </b>
+                        <a href="#deleteActivity"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteActivity(res, courseId, activityId)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Delete(&#x27;/activity/delete&#x27;)<br />@ApiOperation({description: &#x27;Delete Activity&#x27;, summary: &#x27;Delete Activity&#x27;})<br />@ApiNotFoundResponse({description: &#x27;Course doesn&#x27;t exist!&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid courseId!&#x27;})<br />@ApiOkResponse({description: &#x27;Activity has been deleted!&#x27;})<br />@ApiQuery({name: &#x27;courseId&#x27;, type: String})<br />@ApiQuery({name: &#x27;activityId&#x27;, type: String})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="581"
+                            class="link-to-prism">src/courses/courses.controller.ts:581</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Delete Activity</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>courseId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>activityId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteActivityLink"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            deleteActivityLink
+                        </b>
+                        <a href="#deleteActivityLink"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteActivityLink(res, courseId, activityId, link: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Delete(&#x27;/activity/link/delete&#x27;)<br />@ApiOperation({description: &#x27;Delete Activity link&#x27;, summary: &#x27;Delete Activity link&#x27;})<br />@ApiNotFoundResponse({description: &#x27;Course doesn&#x27;t exist!&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid courseId!&#x27;})<br />@ApiOkResponse({description: &#x27;Activity has been deleted!&#x27;})<br />@ApiQuery({name: &#x27;courseId&#x27;, type: String})<br />@ApiQuery({name: &#x27;activityId&#x27;, type: String})<br />@ApiQuery({name: &#x27;link&#x27;, type: String})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="632"
+                            class="link-to-prism">src/courses/courses.controller.ts:632</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Delete Activity link</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>courseId</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>activityId</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>link</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="deleteCourse"></a>
                     <span class="name">
                         <b>
@@ -246,14 +733,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Delete(&#x27;/delete&#x27;)<br />@ApiNotFoundResponse({description: &#x27;Course does not exist!&#x27;})<br />@ApiQuery({name: &#x27;id&#x27;, type: String})<br /></code>
+                    <code>@Delete(&#x27;/delete&#x27;)<br />@ApiOperation({description: &#x27;Delete Course&#x27;, summary: &#x27;Delete Course&#x27;})<br />@ApiNotFoundResponse({description: &#x27;Course doesn&#x27;t exist!&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiOkResponse({description: &#x27;Course has been deleted!&#x27;})<br />@ApiQuery({name: &#x27;id&#x27;, type: String})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="118"
-                            class="link-to-prism">src/courses/courses.controller.ts:118</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="518"
+                            class="link-to-prism">src/courses/courses.controller.ts:518</a></div>
                 </td>
             </tr>
 
@@ -311,6 +798,404 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="deleteMentor"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            deleteMentor
+                        </b>
+                        <a href="#deleteMentor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteMentor(res, courseId, mentorId)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Delete(&#x27;/mentor&#x27;)<br />@ApiOperation({description: &#x27;Delete the mentor from the course arry mentors&#x27;, summary: &#x27;Delete mentor&#x27;})<br />@ApiNotFoundResponse({description: &#x27;Course or mentorId doesn&#x27;t exist!&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiOkResponse({description: &#x27;Mentor has been deleted!&#x27;})<br />@ApiQuery({name: &#x27;courseId&#x27;, type: String})<br />@ApiQuery({name: &#x27;mentorId&#x27;, type: String})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="683"
+                            class="link-to-prism">src/courses/courses.controller.ts:683</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Delete mentor from the Course mentors array </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>courseId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>mentorId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteStudent"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            deleteStudent
+                        </b>
+                        <a href="#deleteStudent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteStudent(res, courseId, studentId)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Delete(&#x27;/student&#x27;)<br />@ApiOperation({description: &#x27;Delete the student from the course arry students&#x27;, summary: &#x27;Delete student&#x27;})<br />@ApiNotFoundResponse({description: &#x27;Course or studentId doesn&#x27;t exist!&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiOkResponse({description: &#x27;Student has been deleted!&#x27;})<br />@ApiQuery({name: &#x27;courseId&#x27;, type: String})<br />@ApiQuery({name: &#x27;studentId&#x27;, type: String})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="717"
+                            class="link-to-prism">src/courses/courses.controller.ts:717</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Delete student from the Course students array </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>courseId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>studentId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteTopic"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            deleteTopic
+                        </b>
+                        <a href="#deleteTopic"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteTopic(res, courseId, topicDTO: <a href="../interfaces/Topic.html">TopicDTO</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Delete(&#x27;/topic/delete&#x27;)<br />@ApiOperation({description: &#x27;Delete Topic&#x27;, summary: &#x27;Delete Topic&#x27;})<br />@ApiNotFoundResponse({description: &#x27;Course doesn&#x27;t exist!&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid courseId!&#x27;})<br />@ApiOkResponse({description: &#x27;Topic has been deleted!&#x27;})<br />@ApiQuery({name: &#x27;courseId&#x27;, type: String})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="542"
+                            class="link-to-prism">src/courses/courses.controller.ts:542</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Delete a Topic</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>courseId</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>topicDTO</td>
+                                    <td>
+                                                <code><a href="../interfaces/Topic.html" target="_self" >TopicDTO</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editActivity"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            editActivity
+                        </b>
+                        <a href="#editActivity"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>editActivity(res, courseId, activityDTO: <a href="../interfaces/Activity.html">ActivityDTO</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Put(&#x27;/activity/edit&#x27;)<br />@ApiOperation({description: Update course Activity
+                                
+id - courseId, summary: &#x27;Update course Activity&#x27;})<br />@ApiQuery({name: &#x27;courseId&#x27;, type: String})<br />@ApiBadRequestResponse({description: &#x27;Invalid courseId!&#x27;})<br />@ApiOkResponse({description: &#x27;Activity has been successfully updated!&#x27;})<br />@ApiNotFoundResponse({description: &#x27;Course or topics or activity doesn&#x27;t exist!&#x27;})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="468"
+                            class="link-to-prism">src/courses/courses.controller.ts:468</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Edit a course activity</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>courseId</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>activityDTO</td>
+                                    <td>
+                                                <code><a href="../interfaces/Activity.html" target="_self" >ActivityDTO</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="editCourse"></a>
                     <span class="name">
                         <b>
@@ -332,14 +1217,16 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Put(&#x27;/edit&#x27;)<br />@ApiQuery({name: &#x27;id&#x27;, type: String})<br />@ApiForbiddenResponse({description: &#x27;Course with this new email already exists&#x27;})<br /></code>
+                    <code>@Put(&#x27;/edit&#x27;)<br />@ApiOperation({description: Update course 
+                                
+id - courseId, summary: &#x27;Update course&#x27;})<br />@ApiQuery({name: &#x27;id&#x27;, type: String})<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiOkResponse({description: &#x27;Course has been successfully updated!&#x27;})<br />@ApiNotFoundResponse({description: &#x27;Incorrect the course id or the course doesn&#x27;t exist!&#x27;})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="92"
-                            class="link-to-prism">src/courses/courses.controller.ts:92</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="390"
+                            class="link-to-prism">src/courses/courses.controller.ts:390</a></div>
                 </td>
             </tr>
 
@@ -414,6 +1301,111 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="editTopic"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            editTopic
+                        </b>
+                        <a href="#editTopic"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>editTopic(res, courseId, topicDTO: <a href="../interfaces/Topic.html">TopicDTO</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Put(&#x27;/topic/edit&#x27;)<br />@ApiOperation({description: Update course Topic name and description
+                                
+id - courseId, summary: &#x27;Update course Topic&#x27;})<br />@ApiQuery({name: &#x27;courseId&#x27;, type: String})<br />@ApiBadRequestResponse({description: &#x27;Invalid courseId!&#x27;})<br />@ApiOkResponse({description: &#x27;Topic has been successfully updated!&#x27;})<br />@ApiNotFoundResponse({description: &#x27;Course or topics or activity doesn&#x27;t exist!&#x27;})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="422"
+                            class="link-to-prism">src/courses/courses.controller.ts:422</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Edit a course topic</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>courseId</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>topicDTO</td>
+                                    <td>
+                                                <code><a href="../interfaces/Topic.html" target="_self" >TopicDTO</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="getCourse"></a>
                     <span class="name">
                         <b>
@@ -435,14 +1427,18 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Get(&#x27;:id&#x27;)<br />@ApiOkResponse({description: &#x27;The course has been successfully returned.&#x27;})<br />@ApiForbiddenResponse({description: &#x27;Forbidden.&#x27;})<br />@ApiNotFoundResponse({description: &#x27;Course does not exist.&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiParam({name: &#x27;id&#x27;, type: String})<br /></code>
+                    <code>@Get(&#x27;/:id&#x27;)<br />@ApiOperation({description: Get course by id
+      
+If user role is &#x27;admin&#x27; return course
+      
+Else return couse where user is course owner, summary: &#x27;Fetch a particular course using id&#x27;})<br />@ApiOkResponse({description: &#x27;The course has been successfully returned.&#x27;})<br />@ApiForbiddenResponse({description: &#x27;Forbidden.&#x27;})<br />@ApiNotFoundResponse({description: &#x27;Course doesn&#x27;t exist.&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiParam({name: &#x27;id&#x27;, type: String})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="45"
-                            class="link-to-prism">src/courses/courses.controller.ts:45</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="85"
+                            class="link-to-prism">src/courses/courses.controller.ts:85</a></div>
                 </td>
             </tr>
 
@@ -521,14 +1517,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Get(&#x27;courses/:departmentiId&#x27;)<br />@ApiOkResponse({description: &#x27;The courses has been successfully returned by department id&#x27;})<br />@ApiForbiddenResponse({description: &#x27;Forbidden.&#x27;})<br />@ApiNotFoundResponse({description: &#x27;Course does not exist.&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiParam({name: &#x27;departmentiId&#x27;, type: String})<br /></code>
+                    <code>@Get(&#x27;/courses/:departmentId&#x27;)<br />@ApiOperation({description: &#x27;Get courses by department Id&#x27;, summary: &#x27;Fetch courses using department ID&#x27;})<br />@ApiOkResponse({description: &#x27;The courses has been successfully returned by department id&#x27;})<br />@ApiForbiddenResponse({description: &#x27;Forbidden.&#x27;})<br />@ApiNotFoundResponse({description: &#x27;Courses doesn&#x27;t exist.&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiParam({name: &#x27;departmentId&#x27;, type: String})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="64"
-                            class="link-to-prism">src/courses/courses.controller.ts:64</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="109"
+                            class="link-to-prism">src/courses/courses.controller.ts:109</a></div>
                 </td>
             </tr>
 
@@ -536,6 +1532,420 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Fetch courses using department ID</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMentors"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            getMentors
+                        </b>
+                        <a href="#getMentors"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getMentors(res)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;/mentors/all&#x27;)<br />@ApiOperation({description: &#x27;Fetch all mentors&#x27;, summary: &#x27;Fetch all mentors&#x27;})<br />@ApiOkResponse({description: This Request is OK})<br />@ApiForbiddenResponse({description: &#x27;Forbidden.&#x27;})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="155"
+                            class="link-to-prism">src/courses/courses.controller.ts:155</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fetch all mentors</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMentorsCourseId"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            getMentorsCourseId
+                        </b>
+                        <a href="#getMentorsCourseId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getMentorsCourseId(res, id)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;/mentors/:courseId&#x27;)<br />@ApiOperation({description: &#x27;Get mentors profiles by course Id&#x27;, summary: &#x27;Fetch mentors profiles&#x27;})<br />@ApiOkResponse({description: This Request is OK})<br />@ApiForbiddenResponse({description: &#x27;Forbidden.&#x27;})<br />@ApiNotFoundResponse({description: &#x27;Mentors profiles do not exist.&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiParam({name: &#x27;courseId&#x27;, type: String})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="174"
+                            class="link-to-prism">src/courses/courses.controller.ts:174</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fetch mentors profiles using course ID</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getStudents"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            getStudents
+                        </b>
+                        <a href="#getStudents"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getStudents(res)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;/students/all&#x27;)<br />@ApiOperation({description: &#x27;Fetch all students&#x27;, summary: &#x27;Fetch all students&#x27;})<br />@ApiOkResponse({description: This Request is OK})<br />@ApiForbiddenResponse({description: &#x27;Forbidden.&#x27;})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="197"
+                            class="link-to-prism">src/courses/courses.controller.ts:197</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fetch all students </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getStudentsCourseId"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            getStudentsCourseId
+                        </b>
+                        <a href="#getStudentsCourseId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getStudentsCourseId(res, id)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;/students/:courseId&#x27;)<br />@ApiOperation({description: &#x27;Get students profiles by course Id&#x27;, summary: &#x27;Fetch students profiles&#x27;})<br />@ApiOkResponse({description: The students profiles 
+      have been successfully returned by course id!})<br />@ApiForbiddenResponse({description: &#x27;Forbidden.&#x27;})<br />@ApiNotFoundResponse({description: &#x27;Students profiles do not exist.&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiParam({name: &#x27;courseId&#x27;, type: String})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="217"
+                            class="link-to-prism">src/courses/courses.controller.ts:217</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fetch students profiles using course ID</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTeacherOwnerCourseId"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            getTeacherOwnerCourseId
+                        </b>
+                        <a href="#getTeacherOwnerCourseId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getTeacherOwnerCourseId(res, id)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;/teacher/:courseId&#x27;)<br />@ApiOperation({description: &#x27;Fetch techer owner profile using course ID&#x27;, summary: &#x27;Fetch techer owner profile&#x27;})<br />@ApiOkResponse({description: The teacher owner profile 
+      has been successfully returned by course id})<br />@ApiForbiddenResponse({description: &#x27;Forbidden.&#x27;})<br />@ApiNotFoundResponse({description: &#x27;Techer profile doesn&#x27;t exist.&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiParam({name: &#x27;courseId&#x27;, type: String})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="133"
+                            class="link-to-prism">src/courses/courses.controller.ts:133</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fetch techer owner profile using course ID</p>
 </div>
 
                     <div class="io-description">
@@ -607,14 +2017,18 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Get(&#x27;/courses&#x27;)<br />@ApiOkResponse({description: &#x27;The courses list has been successfully returned.&#x27;})<br />@ApiForbiddenResponse({description: &#x27;Forbidden.&#x27;})<br /></code>
+                    <code>@Get(&#x27;/courses&#x27;)<br />@ApiOperation({description: Get courses
+      
+If user role is &#x27;admin&#x27; return all couses
+      
+Else return couses where user is course owner, summary: &#x27;Fetch all courses&#x27;})<br />@ApiOkResponse({description: &#x27;The courses list has been successfully returned.&#x27;})<br />@ApiForbiddenResponse({description: &#x27;Forbidden.&#x27;})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">src/courses/courses.controller.ts:29</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/courses/courses.controller.ts:64</a></div>
                 </td>
             </tr>
 
@@ -659,17 +2073,136 @@
             </tr>
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateInviteKey"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            updateInviteKey
+                        </b>
+                        <a href="#updateInviteKey"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateInviteKey(res, id)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Post(&#x27;/updatekey/:id&#x27;)<br />@ApiOperation({description: &#x27;Update key for invite mentors and students&#x27;, summary: &#x27;Update an invite key&#x27;})<br />@ApiNotFoundResponse({description: &#x27;Course doesn&#x27;t exist.&#x27;})<br />@ApiOkResponse({description: &#x27;The course info&#x27;})<br />@ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})<br />@ApiParam({name: &#x27;id&#x27;, type: String})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="243"
+                            class="link-to-prism">src/courses/courses.controller.ts:243</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Update an invite key for the course</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Course id </p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>    </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, UseGuards, Get, Res, HttpStatus, Post, Body, Param, Put, Query, NotFoundException, Delete } from &#x27;@nestjs/common&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, 
+  UseGuards, 
+  Get, 
+  Res, 
+  HttpStatus, 
+  Post, 
+  Body, 
+  Param, 
+  Put, 
+  Query, 
+  NotFoundException, 
+  Delete, 
+  ForbiddenException} from &#x27;@nestjs/common&#x27;;
+import { ApiTags, 
+  ApiBearerAuth, 
+  ApiUnauthorizedResponse, 
+  ApiOkResponse, 
+  ApiForbiddenResponse, 
+  ApiBadRequestResponse, 
+  ApiNotFoundResponse, 
+  ApiParam, 
+  ApiQuery, 
+  ApiOperation } from &#x27;@nestjs/swagger&#x27;;
 import { JwtAuthGuard } from &#x27;src/auth/jwt-auth.guard&#x27;;
-import { CoursesService} from &#x27;./courses.service&#x27;;
-import { ApiTags, ApiBearerAuth, ApiUnauthorizedResponse, ApiOkResponse, ApiForbiddenResponse, ApiBadRequestResponse, ApiNotFoundResponse, ApiParam, ApiQuery } from &#x27;@nestjs/swagger&#x27;;
-import { ObjectID } from &#x27;mongodb&#x27;;
+import { CoursesService } from &#x27;./courses.service&#x27;;
+import { UsersService } from &#x27;../users/users.service&#x27;;
+import { UniversitiesService } from &#x27;../universities/universities.service&#x27;;
 import { ValidateObjectId } from &#x27;src/pipes/validate-object-id.pipes&#x27;;
 import { CreateCourseDTO } from &#x27;./dto/create-course.dto&#x27;;
+import { ActivityDTO } from &#x27;./dto/activity.dto&#x27;;
+import { ObjectId } from &#x27;mongodb&#x27;;
+import { TopicDTO } from &#x27;./dto/topic.dto&#x27;;
+ 
 
 
 /**
@@ -679,38 +2212,54 @@ import { CreateCourseDTO } from &#x27;./dto/create-course.dto&#x27;;
 @Controller(&#x27;courses&#x27;)
 @ApiTags(&#x27;Courses&#x27;)
 @ApiBearerAuth()
-@ApiUnauthorizedResponse({description:&#x27;Access Token is not valid or has expired&#x27;})
+@ApiUnauthorizedResponse(
+  {description: &#x27;Access Token is not valid or has expired&#x27;})
 export class CoursesController {
-    /**@ignore */
-    constructor(private coursesService: CoursesService) { }  
+  /**@ignore */
+  constructor(private coursesService: CoursesService,
+      private univerService: UniversitiesService,
+      private usersService: UsersService,
+  ) { }  
     
     /**
      * Fetch all courses
      * @param res 
      */
     @Get(&#x27;/courses&#x27;)
-    @ApiOkResponse({description:&#x27;The courses list has been successfully returned.&#x27;})
+    @ApiOperation({description: &#x60;Get courses
+      \nIf user role is &#x27;admin&#x27; return all couses
+      \nElse return couses where user is course owner&#x60;
+    ,summary: &#x27;Fetch all courses&#x27;})
+    @ApiOkResponse(
+      {description: &#x27;The courses list has been successfully returned.&#x27;})
     @ApiForbiddenResponse({description:&#x27;Forbidden.&#x27;})
-    async getUsers(@Res() res) {
-      const courses &#x3D; await this.coursesService.getCourses();
-      return res.status(HttpStatus.OK).json(courses);
-    }
+  async getUsers(@Res() res) {
+    const courses &#x3D; await this.coursesService
+      .getCourses(new ObjectId(res.req.user._id));    
+    return res.status(HttpStatus.OK).json(courses);
+  }
     
     /**
      * Fetch a particular course using id
      * @param res 
      * @param id 
      */
-    @Get(&#x27;:id&#x27;)
+    @Get(&#x27;/:id&#x27;)
+    @ApiOperation({description: &#x60;Get course by id
+      \nIf user role is &#x27;admin&#x27; return course
+      \nElse return couse where user is course owner&#x60;
+    ,summary: &#x27;Fetch a particular course using id&#x27;})
     @ApiOkResponse({ description:&#x27;The course has been successfully returned.&#x27;})
     @ApiForbiddenResponse({description:&#x27;Forbidden.&#x27;})
-    @ApiNotFoundResponse({description:&#x27;Course does not exist.&#x27;})
+    @ApiNotFoundResponse({description:&#x27;Course doesn\&#x27;t exist.&#x27;})
     @ApiBadRequestResponse({description:&#x27;Invalid id!&#x27;})
     @ApiParam({ name: &#x27;id&#x27;, type: String })
     async getCourse(@Res() res, @Param(&#x27;id&#x27;, new ValidateObjectId()) id) {
-      const course &#x3D; await this.coursesService.getCourse(new ObjectID(id));
-      if (!id) {
-          throw new NotFoundException(&#x27;Course does not exist!&#x27;);
+      const course &#x3D; await this.coursesService.getCourse(new ObjectId(id));
+      const userId &#x3D; new ObjectId(res.req.user._id);
+      const user &#x3D; await this.usersService.getUser(userId); 
+      if (!course || (user.role !&#x3D; &#x27;admin&#x27; &amp;&amp; !user._id.equals(course._id))) {
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t exist!&#x27;);
       }
       return res.status(HttpStatus.OK).json(course);
     }
@@ -720,31 +2269,282 @@ export class CoursesController {
      * @param res 
      * @param id 
      */
-    @Get(&#x27;courses/:departmentiId&#x27;)
-    @ApiOkResponse({ description:&#x27;The courses has been successfully returned by department id&#x27;})
+    @Get(&#x27;/courses/:departmentId&#x27;)
+    @ApiOperation({description: &#x27;Get courses by department Id&#x27;,
+      summary: &#x27;Fetch courses using department ID&#x27;})
+    @ApiOkResponse({description:
+      &#x27;The courses has been successfully returned by department id&#x27;})
     @ApiForbiddenResponse({description:&#x27;Forbidden.&#x27;})
-    @ApiNotFoundResponse({description:&#x27;Course does not exist.&#x27;})
+    @ApiNotFoundResponse({description:&#x27;Courses doesn\&#x27;t exist.&#x27;})
     @ApiBadRequestResponse({description:&#x27;Invalid id!&#x27;})
-    @ApiParam({ name: &#x27;departmentiId&#x27;, type: String })
-    async getCoursesDepartmentId(@Res() res, @Param(&#x27;departmentiId&#x27;, new ValidateObjectId()) id) {
-        const departments &#x3D; await this.coursesService.getCoursesDepartmentId(id);
-        return res.status(HttpStatus.OK).json(departments);
+    @ApiParam({ name: &#x27;departmentId&#x27;, type: String })
+    async getCoursesDepartmentId(@Res() res, 
+      @Param(&#x27;departmentId&#x27;, new ValidateObjectId()) id) {
+      const courses &#x3D; 
+        await this.coursesService.getCoursesDepartmentId(new ObjectId(id));
+      if(!courses || courses.length &#x3D;&#x3D; 0){
+        throw new NotFoundException(&#x27;Courses doesn\&#x27;t exist!&#x27;);
+      }
+      return res.status(HttpStatus.OK).json(courses);
     }
 
+    /**
+     * Fetch techer owner profile using course ID
+     * @param res 
+     * @param id 
+     */
+    @Get(&#x27;/teacher/:courseId&#x27;)
+    @ApiOperation({description: &#x27;Fetch techer owner profile using course ID&#x27;,
+      summary: &#x27;Fetch techer owner profile&#x27;})
+    @ApiOkResponse({description: &#x60;The teacher owner profile 
+      has been successfully returned by course id&#x60;})
+    @ApiForbiddenResponse({description:&#x27;Forbidden.&#x27;})
+    @ApiNotFoundResponse({description:&#x27;Techer profile doesn\&#x27;t exist.&#x27;})
+    @ApiBadRequestResponse({description:&#x27;Invalid id!&#x27;})
+    @ApiParam({ name: &#x27;courseId&#x27;, type: String })
+    async getTeacherOwnerCourseId(@Res() res, 
+      @Param(&#x27;courseId&#x27;, new ValidateObjectId()) id) {
+      const course &#x3D; await this.coursesService.getCourse(new ObjectId(id));
+      if (!course) {
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t exist!&#x27;);
+      }
+      const user &#x3D; await this.usersService.getUser(course.teacherOwner); 
+      if (!user) {
+        throw new NotFoundException(&#x27;Teacher doesn\&#x27;t exist!&#x27;);
+      }
+      return res.status(HttpStatus.OK).json(user);
+    }
+
+    /**
+     * Fetch all mentors
+     * @param res 
+     */
+    @Get(&#x27;/mentors/all&#x27;)
+    @ApiOperation({description: &#x27;Fetch all mentors&#x27;,
+      summary: &#x27;Fetch all mentors&#x27;})
+    @ApiOkResponse({description: &#x60;This Request is OK&#x60;})
+    @ApiForbiddenResponse({description:&#x27;Forbidden.&#x27;})
+    async getMentors(@Res() res) {
+      const mentors &#x3D; await this.coursesService
+        .getMentors(new ObjectId(res.req.user._id));
+      return res.status(HttpStatus.OK).json(mentors);
+    }
+
+    /**
+     * Fetch mentors profiles using course ID
+     * @param res 
+     * @param id 
+     */
+    @Get(&#x27;/mentors/:courseId&#x27;)
+    @ApiOperation({description: &#x27;Get mentors profiles by course Id&#x27;,
+      summary: &#x27;Fetch mentors profiles&#x27;})
+    @ApiOkResponse({description: &#x60;This Request is OK&#x60;})
+    @ApiForbiddenResponse({description:&#x27;Forbidden.&#x27;})
+    @ApiNotFoundResponse({description:&#x27;Mentors profiles do not exist.&#x27;})
+    @ApiBadRequestResponse({description:&#x27;Invalid id!&#x27;})
+    @ApiParam({ name: &#x27;courseId&#x27;, type: String })
+    async getMentorsCourseId(@Res() res, 
+      @Param(&#x27;courseId&#x27;, new ValidateObjectId()) id) {
+      const course &#x3D; await this.coursesService.getCourse(new ObjectId(id));
+      if (!course) {
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t exist!&#x27;);
+      }
+      const users &#x3D; await this.usersService.getUsers(); 
+      const mentors &#x3D; users.filter(user &#x3D;&gt; course.mentors.includes(user._id));
+      if (!mentors || mentors.length &#x3D;&#x3D; 0) {
+        throw new NotFoundException(&#x27;Mentors do not exist!&#x27;);
+      }
+      return res.status(HttpStatus.OK).json(mentors);
+    }    
+
+    /**
+     * Fetch all students 
+     * @param res 
+     */
+    @Get(&#x27;/students/all&#x27;)
+    @ApiOperation({description: &#x27;Fetch all students&#x27;,
+      summary: &#x27;Fetch all students&#x27;})
+    @ApiOkResponse({description: &#x60;This Request is OK&#x60;})
+    @ApiForbiddenResponse({description:&#x27;Forbidden.&#x27;})
+    async getStudents(@Res() res) {
+      const students &#x3D; await this.coursesService
+        .getStudents(new ObjectId(res.req.user._id));    
+      return res.status(HttpStatus.OK).json(students);
+    }
+
+    /**
+     * Fetch students profiles using course ID
+     * @param res 
+     * @param id 
+     */
+    @Get(&#x27;/students/:courseId&#x27;)
+    @ApiOperation({description: &#x27;Get students profiles by course Id&#x27;,
+      summary: &#x27;Fetch students profiles&#x27;})
+    @ApiOkResponse({description: &#x60;The students profiles 
+      have been successfully returned by course id!&#x60;})
+    @ApiForbiddenResponse({description:&#x27;Forbidden.&#x27;})
+    @ApiNotFoundResponse({description:&#x27;Students profiles do not exist.&#x27;})
+    @ApiBadRequestResponse({description:&#x27;Invalid id!&#x27;})
+    @ApiParam({ name: &#x27;courseId&#x27;, type: String })
+    async getStudentsCourseId(@Res() res, 
+      @Param(&#x27;courseId&#x27;, new ValidateObjectId()) id) {
+      const course &#x3D; await this.coursesService.getCourse(new ObjectId(id));
+      if (!course) {
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t exist!&#x27;);
+      }
+      const users &#x3D; await this.usersService.getUsers(); 
+      const students &#x3D; users.filter(user &#x3D;&gt; course.students.includes(user._id));
+      if (!students || students.length &#x3D;&#x3D; 0) {
+        throw new NotFoundException(&#x27;Mentors do not exist!&#x27;);
+      }
+      return res.status(HttpStatus.OK).json(students);
+    }
+    
+    /**
+     * Update an invite key for the course
+     * @param res 
+     * @param id  Course id 
+     */
+    @Post(&#x27;/updatekey/:id&#x27;)
+    @ApiOperation({description: &#x27;Update key for invite mentors and students&#x27;,
+      summary: &#x27;Update an invite key&#x27;})
+    @ApiNotFoundResponse({description: &#x27;Course doesn\&#x27;t exist.&#x27;})
+    @ApiOkResponse({description: &#x27;The course info&#x27;})
+    @ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})
+    @ApiParam({name: &#x27;id&#x27;, type: String })
+    async updateInviteKey(@Res() res, @Param(&#x27;id&#x27;, new ValidateObjectId()) id) { 
+      const course &#x3D; 
+        await this.coursesService.updateCourseInviteKey(new ObjectId(id));
+      if (!course) {
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t exist!&#x27;);
+      }
+      return res.status(HttpStatus.OK).json(course);
+    }   
+    
     /**
      * Submit a course
      * @param res 
      * @param createCourseDTO 
      */
     @Post(&#x27;/add&#x27;) 
-    async addUser(@Res() res, @Body() createCourseDTO: CreateCourseDTO) { 
+    @ApiOperation({description: &#x27;Add new Course&#x27;
+      ,summary: &#x27;Add new Course&#x27;})
+    @ApiOkResponse({description: &#x27;Course has been submitted successfully!&#x27;})
+    @ApiForbiddenResponse({description: &#x27;It is not a teacher&#x27;})
+    async addCourse(@Res() res, @Body() createCourseDTO: CreateCourseDTO) { 
+      createCourseDTO.createdDate &#x3D; new Date();
+      createCourseDTO.createdUser &#x3D; new ObjectId(res.req.user._id);
+      if(!createCourseDTO.teacherOwner){
+        createCourseDTO.teacherOwner &#x3D; new ObjectId(res.req.user._id);
+      } 
+      const deps &#x3D; 
+      await this.univerService.getTeacherNode(new ObjectId(res.req.user._id));
+      if(deps.length &#x3D;&#x3D; 0){
+        throw new ForbiddenException(&#x27;It is not a teacher&#x27;);
+      }
+      createCourseDTO.parentDepartment &#x3D; deps[0]._id;       
       const newCourse &#x3D; await this.coursesService.addCourse(createCourseDTO);
       return res.status(HttpStatus.OK).json({
         message: &#x27;Course has been submitted successfully!&#x27;,
         course: newCourse,
       });
-    }   
+    }
+    
+    /**
+     * Add new Activity
+     * @param res 
+     * @param courseId 
+     * @param topicId 
+     * @param activityDTO 
+     */
+    @Post(&#x27;/activity/add&#x27;) 
+    @ApiOperation({description: &#x27;Add new Activity&#x27;
+      ,summary: &#x27;Add new Activity&#x27;})
+    @ApiOkResponse({description: &#x27;Course has been submitted successfully!&#x27;})
+    @ApiForbiddenResponse({description: &#x27;It is not a teacher&#x27;})
+    @ApiQuery({name: &#x27;courseId&#x27;, type: String })
+    @ApiQuery({name: &#x27;topicId&#x27;, type: String })
+    async addActivity(@Res() res, 
+                      @Query(&#x27;courseId&#x27;, new ValidateObjectId()) courseId , 
+                      @Query(&#x27;topicId&#x27;, new ValidateObjectId()) topicId, 
+                      @Body() activityDTO: ActivityDTO) { 
+      let course &#x3D; await this.coursesService.getCourse(new ObjectId(courseId));
+      if (!course) {
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t exist!&#x27;);
+      }
+      if (!course.topics) {
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t have topics!&#x27;);
+      }
+      let topicUpdated &#x3D; false; 
+      course.topics.forEach(function(topic){
+        if(!topicUpdated &amp;&amp; topic._id.equals(new ObjectId(topicId))){
+          if(!topic.activities){
+            topic.activities &#x3D; [];
+          }
+          topic.activities.push(activityDTO);
+          topicUpdated &#x3D; true;
+        }
+      });
+      if(!topicUpdated){
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t have this topic&#x27;);
+      }
+      course &#x3D; await this.coursesService.editCourse(course);
+      return res.status(HttpStatus.OK).json({
+        message: &#x27;Course has been submitted successfully!&#x27;,
+        course: course,
+      });
+    }
 
+    /**
+     * Add new Activity Link
+     * @param res 
+     * @param courseId 
+     * @param topicId 
+     * @param activityDTO 
+     */
+    @Post(&#x27;/activity/link/add&#x27;) 
+    @ApiOperation({description: &#x27;Add new Activity Link&#x27;
+      ,summary: &#x27;Add new Activity Link&#x27;})
+    @ApiOkResponse({description: &#x27;Course has been submitted successfully!&#x27;})
+    @ApiForbiddenResponse({description: &#x27;It is not a teacher&#x27;})
+    @ApiQuery({name: &#x27;courseId&#x27;, type: String })
+    @ApiQuery({name: &#x27;activityId&#x27;, type: String })
+    @ApiQuery({name: &#x27;link&#x27;, type: String })
+    async addActivityLink(@Res() res, 
+                      @Query(&#x27;courseId&#x27;, new ValidateObjectId()) courseId , 
+                      @Query(&#x27;activityId&#x27;, new ValidateObjectId()) activityId, 
+                      @Query(&#x27;link&#x27;) link, ) { 
+      let course &#x3D; await this.coursesService.getCourse(new ObjectId(courseId));
+      if (!course) {
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t exist!&#x27;);
+      }
+      if (!course.topics) {
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t have topics!&#x27;);
+      }
+      let activityUpdated &#x3D; false; 
+      course.topics.forEach(function(topic){
+        if(!activityUpdated &amp;&amp; topic.activities){
+          topic.activities.forEach(function(act){
+            if(act._id &#x3D;&#x3D; activityId){
+              if(!act.links){
+                act.links &#x3D; [];
+              }
+              act.links.push(link);
+              activityUpdated &#x3D; true;
+            }
+          });          
+        }
+      });
+      if(!activityUpdated){
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t have this activity&#x27;);
+      }
+      course &#x3D; await this.coursesService.editCourse(course);
+      return res.status(HttpStatus.OK).json({
+        message: &#x27;Course has been submitted successfully!&#x27;,
+        course: course,
+      });
+    }
+     
     /**
      * Edit a course
      * @param res 
@@ -752,8 +2552,13 @@ export class CoursesController {
      * @param createCourseDTO 
      */
     @Put(&#x27;/edit&#x27;)
-    @ApiQuery({ name: &#x27;id&#x27;, type: String })
-    @ApiForbiddenResponse({description:&#x27;Course with this new email already exists&#x27;})
+    @ApiOperation({description: &#x60;Update course 
+                                \nid - courseId&#x60;,
+    summary: &#x27;Update course&#x27;})
+    @ApiQuery({name: &#x27;id&#x27;, type: String })
+    @ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})
+    @ApiOkResponse({description: &#x27;Course has been successfully updated!&#x27;})
+    @ApiNotFoundResponse({description: &#x27;Incorrect the course id or the course doesn\&#x27;t exist!&#x27;})
     async editCourse(
       @Res() res,
       @Query(&#x27;id&#x27;, new ValidateObjectId()) id,
@@ -761,14 +2566,112 @@ export class CoursesController {
     ) {
       if (id !&#x3D; createCourseDTO._id) {
         throw new NotFoundException(&#x27;Incorrect course id&#x27;);
-      }
-      const editedCourse&#x3D; await this.coursesService.editCourse(id, createCourseDTO);
+      }      
+      const editedCourse&#x3D; await this.coursesService.editCourse(createCourseDTO);
       if (!editedCourse) {
-          throw new NotFoundException(&#x27;Course does not exist!&#x27;);
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t exist!&#x27;);
       }
       return res.status(HttpStatus.OK).json({
-        message: &#x27;Course has been successfully updated&#x27;,
+        message: &#x27;Course has been successfully updated!&#x27;,
         course: editedCourse,
+      });
+    }
+
+    /**
+     * Edit a course topic
+     * @param res 
+     * @param id 
+     * @param createCourseDTO 
+     */
+    @Put(&#x27;/topic/edit&#x27;)
+    @ApiOperation({description: &#x60;Update course Topic name and description
+                                \nid - courseId&#x60;,
+    summary: &#x27;Update course Topic&#x27;})
+    @ApiQuery({name: &#x27;courseId&#x27;, type: String })
+    @ApiBadRequestResponse({description: &#x27;Invalid courseId!&#x27;}) 
+    @ApiOkResponse({description: &#x27;Topic has been successfully updated!&#x27;})
+    @ApiNotFoundResponse({description: &#x27;Course or topics or activity doesn\&#x27;t exist!&#x27;})
+    async editTopic(
+      @Res() res,
+      @Query(&#x27;courseId&#x27;, new ValidateObjectId()) courseId,
+      @Body() topicDTO: TopicDTO,
+    ) {
+      let course &#x3D; await this.coursesService.getCourse(new ObjectId(courseId));
+      if (!course) {
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t exist!&#x27;);
+      }
+      if (!course.topics) {
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t have topics!&#x27;);
+      }
+      let topicUpdated &#x3D; false; 
+      course.topics.forEach(function(topic){
+        if(!topicUpdated &amp;&amp; topic._id &#x3D;&#x3D; topicDTO._id){
+          topic.topicName &#x3D; topicDTO.topicName;
+          topic.description &#x3D; topicDTO.description;
+          topicUpdated &#x3D; true;
+        }
+      });
+      if(!topicUpdated){
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t have this topic&#x27;);
+      }
+      course &#x3D; await this.coursesService.editCourse(course);
+      return res.status(HttpStatus.OK).json({
+        message: &#x27;Course has been successfully updated!&#x27;,
+        course: course,
+        topicName: topicDTO.topicName,
+        description: topicDTO.description
+      });
+    }
+
+    /**
+     * Edit a course activity
+     * @param res 
+     * @param id 
+     * @param createCourseDTO 
+     */
+    @Put(&#x27;/activity/edit&#x27;)
+    @ApiOperation({description: &#x60;Update course Activity
+                                \nid - courseId&#x60;,
+    summary: &#x27;Update course Activity&#x27;})
+    @ApiQuery({name: &#x27;courseId&#x27;, type: String })
+    @ApiBadRequestResponse({description: &#x27;Invalid courseId!&#x27;}) 
+    @ApiOkResponse({description: &#x27;Activity has been successfully updated!&#x27;})
+    @ApiNotFoundResponse({description: &#x27;Course or topics or activity doesn\&#x27;t exist!&#x27;})
+    async editActivity(
+      @Res() res,
+      @Query(&#x27;courseId&#x27;, new ValidateObjectId()) courseId,
+      @Body() activityDTO: ActivityDTO,
+    ) {
+      let course &#x3D; await this.coursesService.getCourse(new ObjectId(courseId));
+      if (!course) {
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t exist!&#x27;);
+      }
+      if (!course.topics) {
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t have topics!&#x27;);
+      }
+      let activityUpdated &#x3D; false;
+      course.topics.forEach(function(topic){
+        if(!topic.activities || activityUpdated){
+          return;
+        }
+        topic.activities.forEach(function(activitiy){
+          if(activitiy._id &#x3D;&#x3D; activityDTO._id){
+            activitiy.activityName &#x3D; activityDTO.activityName;
+            activitiy.activityType &#x3D; activityDTO.activityType;
+            activitiy.hours &#x3D; activityDTO.hours;            
+            activityUpdated &#x3D; true;
+            return;
+          }
+        });
+      });
+      if(!activityUpdated){
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t have this activity&#x27;);
+      }
+      course &#x3D; await this.coursesService.editCourse(course);
+      return res.status(HttpStatus.OK).json({
+        message: &#x27;Course has been successfully updated!&#x27;,
+        course: course,
+        activitiy: activityDTO,
       });
     }
     
@@ -778,19 +2681,231 @@ export class CoursesController {
      * @param id 
      */
     @Delete(&#x27;/delete&#x27;)
-    @ApiNotFoundResponse({description:&#x27;Course does not exist!&#x27;})
-    @ApiQuery({ name: &#x27;id&#x27;, type: String })
+    @ApiOperation({description: &#x27;Delete Course&#x27;,
+      summary: &#x27;Delete Course&#x27;})
+    @ApiNotFoundResponse({description: &#x27;Course doesn\&#x27;t exist!&#x27;})
+    @ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})
+    @ApiOkResponse({description: &#x27;Course has been deleted!&#x27;})
+    @ApiQuery({name: &#x27;id&#x27;, type: String })
     async deleteCourse(@Res() res, @Query(&#x27;id&#x27;, new ValidateObjectId()) id) {
-      const deletedCourse &#x3D; await this.coursesService.deleteCourse(id);
+      const deletedCourse &#x3D; 
+        await this.coursesService.deleteCourse(new ObjectId(id));
       if (!deletedCourse) {
-          throw new NotFoundException(&#x27;Course does not exist!&#x27;);
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t exist!&#x27;);
       }
       return res.status(HttpStatus.OK).json({
         message: &#x27;Course has been deleted!&#x27;,
         course: deletedCourse,
       });
     }
-  }</code></pre>
+
+    /**
+     * Delete a Topic
+     * @param res 
+     * @param id 
+     */
+    @Delete(&#x27;/topic/delete&#x27;)
+    @ApiOperation({description: &#x27;Delete Topic&#x27;,
+      summary: &#x27;Delete Topic&#x27;})
+    @ApiNotFoundResponse({description: &#x27;Course doesn\&#x27;t exist!&#x27;})
+    @ApiBadRequestResponse({description: &#x27;Invalid courseId!&#x27;})
+    @ApiOkResponse({description: &#x27;Topic has been deleted!&#x27;})
+    @ApiQuery({name: &#x27;courseId&#x27;, type: String })
+    async deleteTopic(@Res() res,
+                      @Query(&#x27;courseId&#x27;, new ValidateObjectId()) courseId,
+                      @Body() topicDTO: TopicDTO,
+    ) {
+      let course &#x3D; await this.coursesService.getCourse(new ObjectId(courseId));
+      if (!course) {
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t exist!&#x27;);
+      }
+      if (!course.topics) {
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t have topics!&#x27;);
+      }
+      const topicsCount &#x3D; course.topics.length;
+      course.topics &#x3D; course.topics.filter(function(topic) {
+        return !(topic._id &#x3D;&#x3D; topicDTO._id);
+      });
+      if(topicsCount &#x3D;&#x3D; course.topics.length){
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t have this topic&#x27;);
+      }
+      course &#x3D; await this.coursesService.editCourse(course);
+      return res.status(HttpStatus.OK).json({
+        message: &#x27;Course has been successfully updated!&#x27;,
+        course: course,
+      });      
+    }
+
+    /**
+     * Delete Activity
+     * @param res 
+     * @param courseId 
+     * @param activityDTO 
+     */
+    @Delete(&#x27;/activity/delete&#x27;)
+    @ApiOperation({description: &#x27;Delete Activity&#x27;,
+      summary: &#x27;Delete Activity&#x27;})
+    @ApiNotFoundResponse({description: &#x27;Course doesn\&#x27;t exist!&#x27;})
+    @ApiBadRequestResponse({description: &#x27;Invalid courseId!&#x27;})
+    @ApiOkResponse({description: &#x27;Activity has been deleted!&#x27;})
+    @ApiQuery({name: &#x27;courseId&#x27;, type: String })
+    @ApiQuery({name: &#x27;activityId&#x27;, type: String })
+    async deleteActivity(@Res() res,
+                      @Query(&#x27;courseId&#x27;, new ValidateObjectId()) courseId,
+                      @Query(&#x27;activityId&#x27;, new ValidateObjectId()) activityId
+    ) {
+      let course &#x3D; await this.coursesService.getCourse(new ObjectId(courseId));
+      if (!course) {
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t exist!&#x27;);
+      }
+      if (!course.topics) {
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t have topics!&#x27;);
+      }
+      let activityDeleted &#x3D; false;
+      course.topics.forEach(function(topic){
+        if(!topic.activities || activityDeleted){
+          return;
+        }
+        topic.activities.forEach(function(act){
+          if(act._id &#x3D;&#x3D; activityId){
+            activityDeleted &#x3D; true;
+            return;
+          }}); 
+        topic.activities &#x3D; topic.activities.filter(function(act) {
+          return !(act._id &#x3D;&#x3D; activityId);
+        });
+      });     
+      if(!activityDeleted){
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t have the activity!&#x27;);
+      } 
+      course &#x3D; await this.coursesService.editCourse(course);
+      return res.status(HttpStatus.OK).json({
+        message: &#x27;Course has been successfully updated!&#x27;,
+        course: course,
+      });      
+    }
+
+    /**
+     * Delete Activity link
+     * @param res 
+     * @param courseId 
+     * @param activityId 
+     * @param link 
+     */
+    @Delete(&#x27;/activity/link/delete&#x27;)
+    @ApiOperation({description: &#x27;Delete Activity link&#x27;,
+      summary: &#x27;Delete Activity link&#x27;})
+    @ApiNotFoundResponse({description: &#x27;Course doesn\&#x27;t exist!&#x27;})
+    @ApiBadRequestResponse({description: &#x27;Invalid courseId!&#x27;})
+    @ApiOkResponse({description: &#x27;Activity has been deleted!&#x27;})
+    @ApiQuery({name: &#x27;courseId&#x27;, type: String })
+    @ApiQuery({name: &#x27;activityId&#x27;, type: String })
+    @ApiQuery({name: &#x27;link&#x27;, type: String })
+    async deleteActivityLink(@Res() res,
+                      @Query(&#x27;courseId&#x27;, new ValidateObjectId()) courseId,
+                      @Query(&#x27;activityId&#x27;, new ValidateObjectId()) activityId,
+                      @Query(&#x27;link&#x27;) link: string,
+    ) {
+      let course &#x3D; await this.coursesService.getCourse(new ObjectId(courseId));
+      if (!course) {
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t exist!&#x27;);
+      }
+      if (!course.topics) {
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t have topics!&#x27;);
+      }
+      let linkDeleted &#x3D; false;
+      course.topics.forEach(function(topic){
+        if(!topic.activities || linkDeleted){
+          return;
+        }
+        topic.activities.forEach(function(act){
+          if(act._id &#x3D;&#x3D; activityId){
+            if(act.links.includes(link)){
+              act.links &#x3D; act.links.filter(function(aLink) {
+                return aLink !&#x3D;&#x3D; link;
+              });
+              linkDeleted &#x3D; true;
+            }             
+          }});  
+      });
+      if(!linkDeleted){
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t have the activity link!&#x27;);
+      }     
+      course &#x3D; await this.coursesService.editCourse(course);
+      return res.status(HttpStatus.OK).json({
+        message: &#x27;Course has been successfully updated!&#x27;,
+        course: course,
+      });      
+    }
+
+    /**
+     * Delete mentor from the Course mentors array 
+     * @param res 
+     * @param courseId 
+     * @param mentorId 
+     */
+    @Delete(&#x27;/mentor&#x27;)
+    @ApiOperation({description: &#x27;Delete the mentor from the course arry mentors&#x27;,
+      summary: &#x27;Delete mentor&#x27;})
+    @ApiNotFoundResponse({description: &#x27;Course or mentorId doesn\&#x27;t exist!&#x27;})
+    @ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})
+    @ApiOkResponse({description: &#x27;Mentor has been deleted!&#x27;})
+    @ApiQuery({name: &#x27;courseId&#x27;, type: String })
+    @ApiQuery({name: &#x27;mentorId&#x27;, type: String })
+    async deleteMentor(@Res() res, 
+        @Query(&#x27;courseId&#x27;, new ValidateObjectId()) courseId, 
+        @Query(&#x27;mentorId&#x27;, new ValidateObjectId()) mentorId, ) {
+      const course &#x3D; 
+        await this.coursesService.getCourse(new ObjectId(courseId));
+      if (!course) {
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t exist!&#x27;);
+      }
+      const mentorIdx &#x3D; course.mentors.indexOf(new ObjectId(mentorId));
+      if(mentorIdx &#x3D;&#x3D; -1){
+        throw new NotFoundException(&#x27;The mentorId doesn\&#x27;t exist in the arry mentors!&#x27;);
+      }
+      course.mentors.splice(mentorIdx, 1);
+      const editedCourse &#x3D; await this.coursesService.editCourse(course);
+      return res.status(HttpStatus.OK).json({
+        message: &#x27;Mentor has been deleted!&#x27;,
+        course: editedCourse,
+      });
+    }
+
+    /**
+     * Delete student from the Course students array 
+     * @param res 
+     * @param courseId 
+     * @param studentId 
+     */
+    @Delete(&#x27;/student&#x27;)
+    @ApiOperation({description: &#x27;Delete the student from the course arry students&#x27;,
+      summary: &#x27;Delete student&#x27;})
+    @ApiNotFoundResponse({description: &#x27;Course or studentId doesn\&#x27;t exist!&#x27;})
+    @ApiBadRequestResponse({description: &#x27;Invalid id!&#x27;})
+    @ApiOkResponse({description: &#x27;Student has been deleted!&#x27;})
+    @ApiQuery({name: &#x27;courseId&#x27;, type: String })
+    @ApiQuery({name: &#x27;studentId&#x27;, type: String })
+    async deleteStudent(@Res() res, 
+        @Query(&#x27;courseId&#x27;, new ValidateObjectId()) courseId, 
+        @Query(&#x27;studentId&#x27;, new ValidateObjectId()) studentId, ) {
+      const course &#x3D; 
+        await this.coursesService.getCourse(new ObjectId(courseId));
+      if (!course) {
+        throw new NotFoundException(&#x27;Course doesn\&#x27;t exist!&#x27;);
+      }
+      const studentIdx &#x3D; course.students.indexOf(new ObjectId(studentId));
+      if(studentIdx &#x3D;&#x3D; -1){
+        throw new NotFoundException(&#x27;The studentId doesn\&#x27;t exist in the arry mentors!&#x27;);
+      }
+      course.students.splice(studentIdx, 1);
+      const editedCourse &#x3D; await this.coursesService.editCourse(course);
+      return res.status(HttpStatus.OK).json({
+        message: &#x27;Student has been deleted!&#x27;,
+        course: editedCourse,
+      });
+    }
+}</code></pre>
     </div>
 </div>
 

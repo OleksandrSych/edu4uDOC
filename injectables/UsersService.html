@@ -104,6 +104,10 @@
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
+                                <a href="#getTeachers">getTeachers</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
                                 <a href="#getUser">getUser</a>
                             </li>
                             <li>
@@ -152,8 +156,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="53"
-                            class="link-to-prism">src/users/users.service.ts:53</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="57"
+                            class="link-to-prism">src/users/users.service.ts:57</a></div>
                 </td>
             </tr>
 
@@ -231,8 +235,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="91"
-                            class="link-to-prism">src/users/users.service.ts:91</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="97"
+                            class="link-to-prism">src/users/users.service.ts:97</a></div>
                 </td>
             </tr>
 
@@ -276,7 +280,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                        <b>Returns : </b>        <code><a href="../interfaces/User.html" target="_self" >Promise&lt;User&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -303,15 +307,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>deleteUser(id: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    <code>deleteUser(id: ObjectId)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="81"
-                            class="link-to-prism">src/users/users.service.ts:81</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="87"
+                            class="link-to-prism">src/users/users.service.ts:87</a></div>
                 </td>
             </tr>
 
@@ -336,7 +340,7 @@
                                 <tr>
                                     <td>id</td>
                                     <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            <code>ObjectId</code>
                                     </td>
 
                                     <td>
@@ -355,7 +359,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+                        <b>Returns : </b>        <code><a href="../interfaces/User.html" target="_self" >Promise&lt;User&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -382,15 +386,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>editUser(id: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, createUserDTO: <a href="../interfaces/User.html">CreateUserDTO</a>)</code>
+                    <code>editUser(id: ObjectId, createUserDTO: <a href="../interfaces/User.html">CreateUserDTO</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="65"
-                            class="link-to-prism">src/users/users.service.ts:65</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">src/users/users.service.ts:70</a></div>
                 </td>
             </tr>
 
@@ -415,7 +419,7 @@
                                 <tr>
                                     <td>id</td>
                                     <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            <code>ObjectId</code>
                                     </td>
 
                                     <td>
@@ -484,8 +488,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="44"
-                            class="link-to-prism">src/users/users.service.ts:44</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="40"
+                            class="link-to-prism">src/users/users.service.ts:40</a></div>
                 </td>
             </tr>
 
@@ -543,6 +547,49 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="getTeachers"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            getTeachers
+                        </b>
+                        <a href="#getTeachers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getTeachers()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/users/users.service.ts:48</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Find all Teachers</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;[] | undefined&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="getUser"></a>
                     <span class="name">
                         <b>
@@ -556,15 +603,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getUser(userID)</code>
+                    <code>getUser(userID: ObjectId)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">src/users/users.service.ts:32</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/users/users.service.ts:29</a></div>
                 </td>
             </tr>
 
@@ -580,12 +627,16 @@
                             <thead>
                                 <tr>
                                     <td>Name</td>
+                                    <td>Type</td>
                                     <td>Optional</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>userID</td>
+                                    <td>
+                                            <code>ObjectId</code>
+                                    </td>
 
                                     <td>
                                         No
@@ -633,8 +684,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">src/users/users.service.ts:23</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">src/users/users.service.ts:20</a></div>
                 </td>
             </tr>
 
@@ -664,15 +715,12 @@ import { InjectModel } from &#x27;@nestjs/mongoose&#x27;;
 import { User } from &#x27;./interfaces/user.interface&#x27;;
 import { CreateUserDTO } from &#x27;./dto/create-user.dto&#x27;;
 import { ObjectId } from &#x27;mongodb&#x27;;
-import { Exception } from &#x27;handlebars&#x27;;
-import { use } from &#x27;passport&#x27;;
-/**@ignore */
-const bcrypt &#x3D; require(&#x27;bcrypt&#x27;);
+
 /**
  * Users Service
  */
 @Injectable()
-export class UsersService {
+export class UsersService {  
   
   /** @ignore */
   constructor(@InjectModel(&#x27;User&#x27;) private readonly userModel: Model&lt;User&gt;) { }
@@ -689,13 +737,12 @@ export class UsersService {
    * Get user by ID
    * @param {ObjectId} userID 
    */
-  async getUser(userID): Promise&lt;User&gt; { 
+  async getUser(userID : ObjectId ): Promise&lt;User&gt; { 
     const user &#x3D; await this.userModel
-      .findOne({&quot;_id&quot;:userID})
+      .findOne(userID)
       .exec(); 
     return user;
   }
-
   
   /**
    * Find user by email
@@ -707,12 +754,21 @@ export class UsersService {
   }
 
   /**
+   * Find all Teachers
+   */
+  async getTeachers(): Promise&lt;User[] | undefined&gt; { 
+    const user &#x3D; await this.userModel.find({&quot;role&quot; : /^[a,t]/}).exec(); 
+    return user;
+  }
+
+  /**
    * Add user to users table
    * @param createUserDTO new user DTO
    */
   async addUser(createUserDTO: CreateUserDTO): Promise&lt;User&gt; {
     createUserDTO._id &#x3D; new ObjectId();
-    createUserDTO.password &#x3D;  await bcrypt.hash(createUserDTO.password, 10);
+    // eslint-disable-next-line
+    createUserDTO.password &#x3D;  await require(&#x27;bcrypt&#x27;).hash(createUserDTO.password, 10);
     const newUser &#x3D; await new this.userModel(createUserDTO);
     return newUser.save();
   }
@@ -722,12 +778,13 @@ export class UsersService {
    * @param id User id
    * @param createUserDTO new user DTO
    */
-  async editUser(id: any, createUserDTO: CreateUserDTO): Promise&lt;User&gt; {
+  async editUser(id: ObjectId, createUserDTO: CreateUserDTO): Promise&lt;User&gt; {
     if(!createUserDTO.password || createUserDTO.password.length &#x3D;&#x3D; 0){
-        createUserDTO.password &#x3D;  (await this.getUser(id)).password;
+      createUserDTO.password &#x3D; (await this.getUser(id)).password;
     }    
     if(createUserDTO.password.length !&#x3D; 60){
-        createUserDTO.password &#x3D;  await bcrypt.hash(createUserDTO.password, 10);
+      // eslint-disable-next-line
+        createUserDTO.password &#x3D;  await require(&#x27;bcrypt&#x27;).hash(createUserDTO.password, 10);
     }
     const editedUser &#x3D; await this.userModel
       .findByIdAndUpdate(id, createUserDTO, { new: true });
@@ -738,7 +795,7 @@ export class UsersService {
    * Delete user from users table
    * @param id User id
    */
-  async deleteUser(id: any): Promise&lt;any&gt; {
+  async deleteUser(id: ObjectId): Promise&lt;User&gt; {
     const deletedUser &#x3D; await this.userModel
       .findByIdAndRemove(id);
     return deletedUser;
@@ -748,11 +805,12 @@ export class UsersService {
    * Checking an address for its existence in the users table
    * @param email email address
    */
-  async checkEmail(email: string) {
+  async checkEmail(email: string): Promise&lt;User&gt; {
     const user &#x3D; await this.findUserByEmail(email);
     if (user) {
       throw new ForbiddenException(&#x27;User with this email already exists&#x27;);
     }
+    return user;
   }
 }  </code></pre>
     </div>

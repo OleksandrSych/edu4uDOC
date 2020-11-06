@@ -247,13 +247,12 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Module } from &#x27;@nestjs/common&#x27;;
 import { AuthModule } from &#x27;./auth/auth.module&#x27;;
 import { UsersModule } from &#x27;./users/users.module&#x27;;
-import { UsersController} from &#x27;./users/users.controller&#x27;;
+import { UsersController } from &#x27;./users/users.controller&#x27;;
 import { AppController } from &#x27;./app.controler&#x27;;
 import { MongooseModule } from &#x27;@nestjs/mongoose&#x27;; 
 import { UniversitiesModule } from &#x27;./universities/universities.module&#x27;;
 import { CoursesModule } from &#x27;./courses/courses.module&#x27;; 
-import { MailerModule } from &#x27;@nestjs-modules/mailer&#x27;;  
-import { HandlebarsAdapter } from &#x27;@nestjs-modules/mailer/dist/adapters/handlebars.adapter&#x27;;
+import { MailerModule } from &#x27;@nestjs-modules/mailer&#x27;;   
 import { InviteUserModule } from &#x27;./invite-user/invite-user.module&#x27;;
 import { MailerEdu4uModule } from &#x27;./mailer-edu4u/mailer-edu4u.module&#x27;;
 import { TeachersModule } from &#x27;./teachers/teachers.module&#x27;;
@@ -261,7 +260,7 @@ import { TeachersModule } from &#x27;./teachers/teachers.module&#x27;;
 /**
  * DataBase url
  */
-let url &#x3D;  process.env.DB_URI || &quot;mongodb+srv://alex:admin@cluster0.jczgn.mongodb.net/edu4u?retryWrites&#x3D;true&amp;w&#x3D;majority&quot;;
+const url &#x3D; process.env.DB_URI || &quot;mongodb+srv://alex:admin@cluster0.jczgn.mongodb.net/edu4u?retryWrites&#x3D;true&amp;w&#x3D;majority&quot;;
 
 @Module({
   imports: [ 
@@ -284,7 +283,7 @@ let url &#x3D;  process.env.DB_URI || &quot;mongodb+srv://alex:admin@cluster0.jc
       }
     }),
     MailerEdu4uModule,
-    TeachersModule,
+    TeachersModule
   ],
   controllers: [
     AppController,

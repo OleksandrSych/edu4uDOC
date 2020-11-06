@@ -99,19 +99,24 @@
                             </li>
                             <li>
                                     <span class="modifier">Readonly</span>
+                                <a href="#courseDescription">courseDescription</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Readonly</span>
                                 <a href="#courseName">courseName</a>
                             </li>
                             <li>
-                                    <span class="modifier">Readonly</span>
                                 <a href="#createdDate">createdDate</a>
                             </li>
                             <li>
-                                    <span class="modifier">Readonly</span>
                                 <a href="#createdUser">createdUser</a>
                             </li>
                             <li>
                                     <span class="modifier">Readonly</span>
                                 <a href="#hoursNumber">hoursNumber</a>
+                            </li>
+                            <li>
+                                <a href="#inviteKey">inviteKey</a>
                             </li>
                             <li>
                                     <span class="modifier">Readonly</span>
@@ -123,6 +128,9 @@
                             </li>
                             <li>
                                     <span class="modifier">Readonly</span>
+                                <a href="#mentors">mentors</a>
+                            </li>
+                            <li>
                                 <a href="#parentDepartment">parentDepartment</a>
                             </li>
                             <li>
@@ -140,6 +148,19 @@
                             <li>
                                     <span class="modifier">Readonly</span>
                                 <a href="#students">students</a>
+                            </li>
+                            <li>
+                                <a href="#teacherName">teacherName</a>
+                            </li>
+                            <li>
+                                <a href="#teacherOwner">teacherOwner</a>
+                            </li>
+                            <li>
+                                <a href="#topics">topics</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#worksNumber">worksNumber</a>
                             </li>
                         </ul>
                     </td>
@@ -174,13 +195,13 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                            <i>Type : </i>    <code>ObjectId</code>
 
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/courses/dto/create-course.dto.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/courses/dto/create-course.dto.ts:12</a></div>
                             </td>
                         </tr>
 
@@ -223,7 +244,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/courses/dto/create-course.dto.ts:70</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">src/courses/dto/create-course.dto.ts:89</a></div>
                             </td>
                         </tr>
 
@@ -266,13 +287,56 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/courses/dto/create-course.dto.ts:64</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/courses/dto/create-course.dto.ts:83</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
                         <div class="io-description"><p>Course control works number</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="courseDescription"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Readonly</span>
+                            courseDescription</b>
+                            <a href="#courseDescription"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ApiProperty({description: &#x27;Course Description&#x27;})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/courses/dto/create-course.dto.ts:24</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Course Description</p>
 </div>
                     </td>
                 </tr>
@@ -309,7 +373,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/courses/dto/create-course.dto.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/courses/dto/create-course.dto.ts:18</a></div>
                             </td>
                         </tr>
 
@@ -329,7 +393,6 @@
                         <a name="createdDate"></a>
                         <span class="name">
                             <b>
-                                <span class="modifier">Readonly</span>
                             createdDate</b>
                             <a href="#createdDate"><span class="icon ion-ios-link"></span></a>
                         </span>
@@ -352,7 +415,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="82" class="link-to-prism">src/courses/dto/create-course.dto.ts:82</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">src/courses/dto/create-course.dto.ts:113</a></div>
                             </td>
                         </tr>
 
@@ -372,7 +435,6 @@
                         <a name="createdUser"></a>
                         <span class="name">
                             <b>
-                                <span class="modifier">Readonly</span>
                             createdUser</b>
                             <a href="#createdUser"><span class="icon ion-ios-link"></span></a>
                         </span>
@@ -380,7 +442,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                            <i>Type : </i>    <code>ObjectId</code>
 
                         </td>
                     </tr>
@@ -395,7 +457,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="88" class="link-to-prism">src/courses/dto/create-course.dto.ts:88</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">src/courses/dto/create-course.dto.ts:119</a></div>
                             </td>
                         </tr>
 
@@ -438,13 +500,55 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/courses/dto/create-course.dto.ts:28</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/courses/dto/create-course.dto.ts:47</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
                         <div class="io-description"><p>Course hours number</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="inviteKey"></a>
+                        <span class="name">
+                            <b>
+                            inviteKey</b>
+                            <a href="#inviteKey"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>ObjectId</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ApiProperty({description: &#x27;Invite key&#x27;})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="125" class="link-to-prism">src/courses/dto/create-course.dto.ts:125</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Invite key</p>
 </div>
                     </td>
                 </tr>
@@ -481,7 +585,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/courses/dto/create-course.dto.ts:52</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/courses/dto/create-course.dto.ts:71</a></div>
                             </td>
                         </tr>
 
@@ -524,7 +628,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/courses/dto/create-course.dto.ts:34</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/courses/dto/create-course.dto.ts:53</a></div>
                             </td>
                         </tr>
 
@@ -541,10 +645,52 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="parentDepartment"></a>
+                        <a name="mentors"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Readonly</span>
+                            mentors</b>
+                            <a href="#mentors"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;ObjectId&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ApiProperty({description: &#x27;Course mentors id&#x27;, required: false})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="107" class="link-to-prism">src/courses/dto/create-course.dto.ts:107</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Course mentors id</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="parentDepartment"></a>
+                        <span class="name">
+                            <b>
                             parentDepartment</b>
                             <a href="#parentDepartment"><span class="icon ion-ios-link"></span></a>
                         </span>
@@ -552,7 +698,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                            <i>Type : </i>    <code>ObjectId</code>
 
                         </td>
                     </tr>
@@ -567,7 +713,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/courses/dto/create-course.dto.ts:22</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/courses/dto/create-course.dto.ts:30</a></div>
                             </td>
                         </tr>
 
@@ -610,7 +756,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/courses/dto/create-course.dto.ts:46</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/courses/dto/create-course.dto.ts:65</a></div>
                             </td>
                         </tr>
 
@@ -653,7 +799,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/courses/dto/create-course.dto.ts:58</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/courses/dto/create-course.dto.ts:77</a></div>
                             </td>
                         </tr>
 
@@ -696,7 +842,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/courses/dto/create-course.dto.ts:40</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/courses/dto/create-course.dto.ts:59</a></div>
                             </td>
                         </tr>
 
@@ -724,7 +870,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>Array&lt;String&gt;</code>
+                            <i>Type : </i>    <code>Array&lt;ObjectId&gt;</code>
 
                         </td>
                     </tr>
@@ -739,13 +885,182 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">src/courses/dto/create-course.dto.ts:76</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="101" class="link-to-prism">src/courses/dto/create-course.dto.ts:101</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
                         <div class="io-description"><p>Course students id</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="teacherName"></a>
+                        <span class="name">
+                            <b>
+                            teacherName</b>
+                            <a href="#teacherName"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ApiProperty({description: &#x27;Course teacher owner Name&#x27;})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/courses/dto/create-course.dto.ts:42</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Course teacher owner Name</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="teacherOwner"></a>
+                        <span class="name">
+                            <b>
+                            teacherOwner</b>
+                            <a href="#teacherOwner"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>ObjectId</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ApiProperty({description: &#x27;Course teacher owner id&#x27;})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/courses/dto/create-course.dto.ts:36</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Course teacher owner id</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="topics"></a>
+                        <span class="name">
+                            <b>
+                            topics</b>
+                            <a href="#topics"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Topic.html" target="_self" >Topic[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ApiProperty({description: &#x27;Course topics&#x27;})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="131" class="link-to-prism">src/courses/dto/create-course.dto.ts:131</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Course topics</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="worksNumber"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Readonly</span>
+                            worksNumber</b>
+                            <a href="#worksNumber"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ApiProperty({description: &#x27;Course total works number&#x27;, required: false})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">src/courses/dto/create-course.dto.ts:95</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Course total works number</p>
 </div>
                     </td>
                 </tr>
@@ -765,6 +1080,8 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ApiProperty } from &#x27;@nestjs/swagger&#x27;;
+import { ObjectId } from &#x27;mongodb&#x27;;
+import { Topic } from &#x27;../interfaces/topic.interface&#x27;;
  
 /**
  * CreateCourseDTO
@@ -773,7 +1090,7 @@ export class CreateCourseDTO {
     /**
      * Course id
      */
-    _id: any;
+    _id: ObjectId;
 
     /**
      * Course Name
@@ -782,11 +1099,28 @@ export class CreateCourseDTO {
     readonly courseName: string;
 
     /**
+     * Course Description
+     */
+    @ApiProperty({description: &#x27;Course Description&#x27;})
+    readonly courseDescription: string;
+
+    /**
      * Course parent Department id
      */
     @ApiProperty({description: &#x27;Course parent Department id&#x27;})
-    readonly parentDepartment: string;
+    parentDepartment: ObjectId;
 
+    /**
+     * Course teacher owner id
+     */
+    @ApiProperty({description: &#x27;Course teacher owner id&#x27;})
+    teacherOwner: ObjectId;
+
+    /**
+     * Course teacher owner Name
+     */
+    @ApiProperty({description: &#x27;Course teacher owner Name&#x27;})
+    teacherName: string;
     /**
      * Course hours number
      */
@@ -835,23 +1169,47 @@ export class CreateCourseDTO {
     @ApiProperty({description: &#x27;Course consultations number&#x27;,required: false})
     readonly consultationsNumber: number;
 
-     /**
+    /**
+     * Course total works number
+     */
+    @ApiProperty({description: &#x27;Course total works number&#x27;,required: false})
+    readonly worksNumber: number;
+
+    /**
      * Course students id
      */
     @ApiProperty({description: &#x27;Course students id&#x27;,required: false})
-    readonly students: Array&lt;String&gt;;
+    readonly students: Array&lt;ObjectId&gt;;
+
+    /**
+     * Course mentors id
+     */
+    @ApiProperty({description: &#x27;Course mentors id&#x27;,required: false})
+    readonly mentors: Array&lt;ObjectId&gt;;
 
     /**
      * Course created Date
      */
     @ApiProperty({description: &#x27;Course created Date&#x27;})
-    readonly createdDate: Date;
+    createdDate: Date;
 
     /**
      * Course created User id
      */
     @ApiProperty({description: &#x27;Course created User id&#x27;})
-    readonly createdUser: string; 
+    createdUser: ObjectId; 
+
+    /**
+     * Invite key
+     */
+    @ApiProperty({description: &#x27;Invite key&#x27;})
+    inviteKey: ObjectId; 
+
+    /**
+     * Course topics
+     */
+    @ApiProperty({description: &#x27;Course topics&#x27;})
+    topics: Topic[]; 
 }</code></pre>
     </div>
 </div>

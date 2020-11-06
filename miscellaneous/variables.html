@@ -58,9 +58,6 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
-                            <a href="#bcrypt" title="src/teachers/teachers.service.ts"><b>bcrypt</b>&nbsp;&nbsp;&nbsp;(src/.../teachers.service.ts)</a>
-                        </li>
-                        <li>
                             <a href="#CourseSchema" title="src/courses/schemas/course.schema.ts"><b>CourseSchema</b>&nbsp;&nbsp;&nbsp;(src/.../course.schema.ts)</a>
                         </li>
                         <li>
@@ -79,36 +76,6 @@
     </table>
 </section>
 
-    <h3>src/teachers/teachers.service.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="bcrypt"></a>
-                        <span class="name">
-                            <b>
-                            bcrypt</b>
-                            <a href="#bcrypt"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>require(&#x27;bcrypt&#x27;)</code>
-                        </td>
-                    </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>bcrypt</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-</section>
     <h3>src/courses/schemas/course.schema.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
@@ -126,20 +93,27 @@
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>new mongoose.Schema({
-    _id: String,
-    courseName: String,
-    parentDepartment: String,
-    hoursNumber: Number,
-    lecturesNumber: Number,
-    seminarsNumber: Number,
-    practicesNumber: Number,
-    laboratoryWorksNumber: Number,
-    selfEducationHours: Number,
-    controlWorksNumber: Number,
-    consultationsNumber: Number,
-    students: Array,
-    createdDate: Date,
-    createdDUser: String 
+  _id: ObjectId,
+  courseName: String,
+  courseDescription: String,
+  parentDepartment: ObjectId,
+  teacherOwner: ObjectId,
+  teacherName: String,
+  hoursNumber: Number,
+  lecturesNumber: Number,
+  seminarsNumber: Number,
+  practicesNumber: Number,
+  laboratoryWorksNumber: Number,
+  selfEducationHours: Number,
+  controlWorksNumber: Number,
+  consultationsNumber: Number,
+  worksNumber: Number,
+  students: Array,
+  mentors: Array,
+  createdDate: Date,
+  createdDUser: ObjectId,
+  inviteKey: ObjectId,
+  topics: Array
 })</code>
                         </td>
                     </tr>
@@ -171,13 +145,13 @@
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>new mongoose.Schema({
-    _id: String,
-    nodeName: String,
-    parentNode: String,
-    teachers: Array,
-    mentors: Array,
-    createdDate: Date,
-    createdDUser: String,
+  _id: ObjectId,
+  nodeName: String,
+  parentNode: ObjectId,
+  teachers: Array,
+  mentors: Array,
+  createdDate: Date,
+  createdDUser: String,
 })</code>
                         </td>
                     </tr>
@@ -239,15 +213,16 @@
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>new mongoose.Schema({
-    _id: String,
-    firstName: String,
-    lastName: String,
-    email: String,
-    password: String,
-    contactPhone: String,
-    title: String,
-    interests: String,
-    role: String,
+  _id: ObjectId,
+  firstName: String,
+  lastName: String,
+  email: String,
+  confirmedEmail: Boolean,
+  password: String,
+  contactPhone: String,
+  title: String,
+  interests: String,
+  role: String,
 })</code>
                         </td>
                     </tr>
